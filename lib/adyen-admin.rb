@@ -6,11 +6,7 @@ require 'debugger'
 
 module Adyen
   module Admin
-
-    def login(accountname, username, password)
-      @client = Client.new(accountname, username, password)
-    end
-    module_function :login
+    extend Adyen::Admin::Client
 
   end
 end

@@ -1,27 +1,32 @@
 require "spec_helper"
 
+require "adyen-admin/client"
 require "adyen-admin/skin"
 
-describe Adyen::Admin do
-  let(:client) { Adyen::Admin.login("SoundCloud", "Test", "12312311") }
+describe Adyen::Admin::Client, :vcr  do
+  let(:login) { Adyen::Admin.login("SoundCloud", "Test", "12312311") }
 
-  describe "#login", :vcr do
+  describe "#login" do
     it 'passes with correct username + password' do
       expect do
-        client
+        login
       end.to_not raise_error
     end
 
     it 'fails on wrong username + password' do
       expect do
-        Adyen::Admin.new("fake", "wrong")
+        Adyen::Admin.login("Test", "fake", "wrong")
       end
     end
   end
 
-  describe "#skins", :vcr do
+  describe "#skins" do
+    before do
+      login
+    end
+
     it 'returns the skins' do
-      client.skins.should == [
+      Adyen::Admin.skins.should == [
         Adyen::Admin::Skin.new("7hFAQnmt", "example"),
         Adyen::Admin::Skin.new("Kx9axnRf", "demo")
       ]

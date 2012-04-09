@@ -2,18 +2,14 @@ require "adyen-admin/skin"
 
 module Adyen
   module Admin
-    class Client
+    module Client
       LOGIN       = "https://ca-test.adyen.com/ca/ca/login.shtml"
       DASHBOARD   = "https://ca-test.adyen.com/ca/ca/overview/default.shtml"
       SKINS       = "https://ca-test.adyen.com/ca/ca/skin/skins.shtml"
 
-      def initialize(accountname, username, password)
-        login(accountname, username, password)
-      end
-
       def login(accountname, username, password)
-        page = agent.get(LOGIN)
-        page = agent.submit(page.form.tap do |form|
+        page = Adyen::Admin.client.get(LOGIN)
+        page = Adyen::Admin.client.submit(page.form.tap do |form|
           form.j_account  = accountname
           form.j_username  = username
           form.j_password = password
@@ -22,7 +18,7 @@ module Adyen
       end
 
       def skins
-        page = agent.get(SKINS)
+        page = Adyen::Admin.client.get(SKINS)
         page.search(".data tbody tr").map do |node|
           skin_code = node.search("a")[0].content.strip
           description = node.search("td")[1].content.strip
@@ -30,8 +26,7 @@ module Adyen
         end
       end
 
-      private
-      def agent
+      def client
         @agent ||= Mechanize.new
       end
 
