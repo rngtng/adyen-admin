@@ -17,6 +17,8 @@ http_interactions:
       - ISO-8859-1,utf-8;q=0.7,*;q=0.7
       Accept-Language: 
       - en-us,en;q=0.5
+      Cookie: 
+      - JSESSIONID=8B6F6027FB64519949B432989D3DBB65.test5e
       Host: 
       - ca-test.adyen.com
       Connection: 
@@ -29,7 +31,7 @@ http_interactions:
       message: OK
     headers: 
       Date: 
-      - Tue, 10 Apr 2012 17:04:14 GMT
+      - Tue, 10 Apr 2012 17:04:15 GMT
       Server: 
       - Apache
       Cache-Control: 
@@ -40,8 +42,6 @@ http_interactions:
       - "-1"
       X-Frame-Options: 
       - SAMEORIGIN
-      Set-Cookie: 
-      - JSESSIONID=7DC48F7B45B0783A797070828D0F8A3C.test5e; Path=/ca/; Secure; HttpOnly
       Content-Language: 
       - en-GB
       Keep-Alive: 
@@ -66,27 +66,30 @@ http_interactions:
         	<meta http-equiv="imagetoolbar" content="no" />
         	<meta content="TRUE" name="MSSmartTagsPreventParsing" />
         
-        	<link rel="shortcut icon" href="/ca/img/adyen/favicon.ico;jsessionid=7DC48F7B45B0783A797070828D0F8A3C.test5e" type="image/ico"/>
+        	<link rel="shortcut icon" href="/ca/img/adyen/favicon.ico" type="image/ico"/>
         	
-        	<script type="text/javascript" src="/ca/js/functions.js;jsessionid=7DC48F7B45B0783A797070828D0F8A3C.test5e"></script>
-        	<script src="/ca/js/prototype.js;jsessionid=7DC48F7B45B0783A797070828D0F8A3C.test5e" type="text/javascript"></script>
-        	<script src="/ca/js/scriptaculous.js;jsessionid=7DC48F7B45B0783A797070828D0F8A3C.test5e" type="text/javascript"></script>
+        	<script type="text/javascript" src="/ca/js/functions.js"></script>
+        	<script src="/ca/js/prototype.js" type="text/javascript"></script>
+        	<script src="/ca/js/scriptaculous.js" type="text/javascript"></script>
         	
-        	<link rel="stylesheet" type="text/css" href="/ca/css/adyen/style.css;jsessionid=7DC48F7B45B0783A797070828D0F8A3C.test5e" />
+        	<link rel="stylesheet" type="text/css" href="/ca/css/adyen/style.css" />
         	<!--[if lt IE 7]>
-        	<link rel="stylesheet" type="text/css" href="/ca/css/adyen/style_ie6.css;jsessionid=7DC48F7B45B0783A797070828D0F8A3C.test5e" />
+        	<link rel="stylesheet" type="text/css" href="/ca/css/adyen/style_ie6.css" />
         	<![endif]-->
         
-        	        
+        		<link rel="alternate" title="Payments Per Hour RSS" href="https://ca-test.adyen.com/reports/token/rss/lasttx/Company/SoundCloud/?user=skinadmin%40Company.SoundCloud&amp;amp%3Bkey=1334075779504&amp;amp%3Btoken=KV7veoeR9GsL%2FH%2BZrgI1Yhiio5I%3D" type="application/rss+xml" />
+        	        <link rel="alternate" title="Authorised Volume RSS" href="https://ca-test.adyen.com/reports/token/rss/authorisedtxrss/Company/SoundCloud/?user=skinadmin%40Company.SoundCloud&amp;amp%3Bkey=1334075779504&amp;amp%3Btoken=KV7veoeR9GsL%2FH%2BZrgI1Yhiio5I%3D" type="application/rss+xml" />
+                    <link rel="alternate" title="System Messages RSS" href="https://ca-test.adyen.com/reports/token/rss/systemmessagesrss/Company/SoundCloud/?user=skinadmin%40Company.SoundCloud&amp;amp%3Bkey=1334075779504&amp;amp%3Btoken=KV7veoeR9GsL%2FH%2BZrgI1Yhiio5I%3D" type="application/rss+xml" />
+            
         </head>
         <body>
         
         	<div id="topbar"><div class="iefillerdiv"></div></div>
         	<div id="middlebarcontainer">
         			<div id="middlebar">
-        				<a href="/ca/ca/overview/default.shtml;jsessionid=7DC48F7B45B0783A797070828D0F8A3C.test5e"><img id="mainlogo" src="/ca/img/adyen.png;jsessionid=7DC48F7B45B0783A797070828D0F8A3C.test5e" alt="Logo"/>
-        				<img id="testsystemwarning" src="/ca/img/adyen_test.png;jsessionid=7DC48F7B45B0783A797070828D0F8A3C.test5e" alt="test"/></a>
-        				<img id="maintagline" src="/ca/img/adyen_tagline.png;jsessionid=7DC48F7B45B0783A797070828D0F8A3C.test5e" alt="Complex Finance, Online Insight" />
+        				<a href="/ca/ca/overview/default.shtml"><img id="mainlogo" src="/ca/img/adyen.png" alt="Logo"/>
+        				<img id="testsystemwarning" src="/ca/img/adyen_test.png" alt="test"/></a>
+        				<img id="maintagline" src="/ca/img/adyen_tagline.png" alt="Complex Finance, Online Insight" />
         			</div>
         	</div>
         	<div id="bottombar"><div id="bottombar2"></div></div>
@@ -98,12 +101,16 @@ http_interactions:
         			</ul>
         			<div id="infoboxcontent">
         								<div>
-        								</div>
+        															<div style="padding-left: 0px;">
+        												<a class="accountnav" href="/ca/ca/accounts/choose.shtml?setActiveAccountKey=Company.SoundCloud" 
+        							  style="text-decoration: underline; color: #666;" >SoundCloud</a>
+        							 						</div>
+        																		</div>
         	
         				<div style="text-align: left; margin-top: 5px">
-        					<!--a class="icon" href="/ca/ca/overview/default.shtml;jsessionid=7DC48F7B45B0783A797070828D0F8A3C.test5e" title="Home"><img src="/ca/img/home.gif;jsessionid=7DC48F7B45B0783A797070828D0F8A3C.test5e" alt="Home"/></a-->
-        				  				  <a class="icon" href="/ca/ca/overview/default.shtml;jsessionid=7DC48F7B45B0783A797070828D0F8A3C.test5e"><img src="/ca/img/home.png;jsessionid=7DC48F7B45B0783A797070828D0F8A3C.test5e" alt="Home"/> home</a><br/>
-        				  				  <a class="icon" href="/ca/logoff.shtml;jsessionid=7DC48F7B45B0783A797070828D0F8A3C.test5e" title="Sign Off"><img src="/ca/img/exit.png;jsessionid=7DC48F7B45B0783A797070828D0F8A3C.test5e" alt="Sign Off"/> sign off</a>
+        					<!--a class="icon" href="/ca/ca/overview/default.shtml" title="Home"><img src="/ca/img/home.gif" alt="Home"/></a-->
+        				  				  <a class="icon" href="/ca/ca/overview/default.shtml"><img src="/ca/img/home.png" alt="Home"/> home</a><br/>
+        				  				  <a class="icon" href="/ca/logoff.shtml" title="Sign Off"><img src="/ca/img/exit.png" alt="Sign Off"/> sign off</a>
         				  				</div>
         			</div>
         		</div>
@@ -193,13 +200,13 @@ http_interactions:
         		 
         		  <tr>
         		    <td colspan="2"><br />
-        				<input type="hidden" name="j_formHash" value="470RjWtx2CFovzLaJqN9MBJY3U5bbA=" />
+        				<input type="hidden" name="j_formHash" value="495Or9VfCwFVjeprwJW5L/wCm15pdE=" />
         				<input type="submit" class="button" value="Submit" /></td>
         		  </tr>
         		</table>
                 </form>
         		<br/>
-        		<a href="/ca/forgotPassword.shtml;jsessionid=7DC48F7B45B0783A797070828D0F8A3C.test5e">Forgot your password?</a>
+        		<a href="/ca/forgotPassword.shtml">Forgot your password?</a>
             </div>
         
         		<div class="bbarl">
@@ -218,13 +225,13 @@ http_interactions:
         </html>
 
     http_version: 
-  recorded_at: Tue, 10 Apr 2012 17:04:14 GMT
+  recorded_at: Tue, 10 Apr 2012 17:04:15 GMT
 - request: 
     method: post
     uri: https://ca-test.adyen.com/ca/ca/config/j_security_check
     body: 
       encoding: UTF-8
-      string: j_account=SoundCloud&j_username=skinadmin&j_password=12312311&j_formHash=470RjWtx2CFovzLaJqN9MBJY3U5bbA%3D
+      string: j_account=SoundCloud&j_username=skinadmin&j_password=12312311&j_formHash=495Or9VfCwFVjeprwJW5L%2FwCm15pdE%3D
     headers: 
       Accept: 
       - "*/*"
@@ -237,7 +244,7 @@ http_interactions:
       Accept-Language: 
       - en-us,en;q=0.5
       Cookie: 
-      - JSESSIONID=7DC48F7B45B0783A797070828D0F8A3C.test5e
+      - JSESSIONID=8B6F6027FB64519949B432989D3DBB65.test5e
       Host: 
       - ca-test.adyen.com
       Referer: 
@@ -256,7 +263,7 @@ http_interactions:
       Content-Type: 
       - application/x-www-form-urlencoded
       Content-Length: 
-      - "106"
+      - "108"
       Connection: 
       - keep-alive
       Keep-Alive: 
@@ -267,11 +274,11 @@ http_interactions:
       message: Moved Temporarily
     headers: 
       Date: 
-      - Tue, 10 Apr 2012 17:04:14 GMT
+      - Tue, 10 Apr 2012 17:04:15 GMT
       Server: 
       - Apache
       Set-Cookie: 
-      - JSESSIONID=8B6F6027FB64519949B432989D3DBB65.test5e; Path=/ca/; Secure; HttpOnly
+      - JSESSIONID=3BD7564D9EB16875CA95ACC9F308C3A8.test5e; Path=/ca/; Secure; HttpOnly
       Location: 
       - https://ca-test.adyen.com/ca/
       Content-Length: 
@@ -286,7 +293,7 @@ http_interactions:
       encoding: US-ASCII
       string: ""
     http_version: 
-  recorded_at: Tue, 10 Apr 2012 17:04:14 GMT
+  recorded_at: Tue, 10 Apr 2012 17:04:15 GMT
 - request: 
     method: get
     uri: https://ca-test.adyen.com/ca/
@@ -305,7 +312,7 @@ http_interactions:
       Accept-Language: 
       - en-us,en;q=0.5
       Cookie: 
-      - JSESSIONID=8B6F6027FB64519949B432989D3DBB65.test5e
+      - JSESSIONID=3BD7564D9EB16875CA95ACC9F308C3A8.test5e
       Host: 
       - ca-test.adyen.com
       Referer: 
@@ -320,7 +327,7 @@ http_interactions:
       message: Moved Temporarily
     headers: 
       Date: 
-      - Tue, 10 Apr 2012 17:04:14 GMT
+      - Tue, 10 Apr 2012 17:04:15 GMT
       Server: 
       - Apache
       Location: 
@@ -339,7 +346,7 @@ http_interactions:
       encoding: US-ASCII
       string: ""
     http_version: 
-  recorded_at: Tue, 10 Apr 2012 17:04:14 GMT
+  recorded_at: Tue, 10 Apr 2012 17:04:15 GMT
 - request: 
     method: get
     uri: https://ca-test.adyen.com/ca/ca/overview/default.shtml
@@ -358,7 +365,7 @@ http_interactions:
       Accept-Language: 
       - en-us,en;q=0.5
       Cookie: 
-      - JSESSIONID=8B6F6027FB64519949B432989D3DBB65.test5e
+      - JSESSIONID=3BD7564D9EB16875CA95ACC9F308C3A8.test5e
       Host: 
       - ca-test.adyen.com
       Referer: 
@@ -373,7 +380,7 @@ http_interactions:
       message: OK
     headers: 
       Date: 
-      - Tue, 10 Apr 2012 17:04:14 GMT
+      - Tue, 10 Apr 2012 17:04:15 GMT
       Server: 
       - Apache
       Cache-Control: 
@@ -501,7 +508,7 @@ http_interactions:
         		
         	
         	
-        	<div style="float: right; text-align: right; font-size: 0.8em;"><h1 title="Page Generation Time">2012-04-10 19:04:14 CEST</h1>
+        	<div style="float: right; text-align: right; font-size: 0.8em;"><h1 title="Page Generation Time">2012-04-10 19:04:15 CEST</h1>
         			<span class="topright">
         		<a href="/ca/ca/overview/default.shtml?configure=true"  title="Configure this page">
         		<img src="/ca/img/icons/layout_edit.png"  alt="Edit Layout" /> Customise this page </a>
@@ -524,7 +531,7 @@ http_interactions:
         			<div class="content">
         								You are logged in under the SoundCloud
         Company account.<br />
-            Your last login was on <b>2012-04-10 19:01:28 CEST</b>.
+            Your last login was on <b>2012-04-10 19:04:14 CEST</b>.
         			</div>
         		</div>
         							<div id="system_messages" class="block">
@@ -564,7 +571,7 @@ http_interactions:
         <script type="text/javascript">
            var chart1 = new FusionCharts("/ca/Charts/AngularGauge.swf", "sampleChart",  "180", "110", "0", "0","#FFFFFF","noScale","EN");
            //debugMode, registerWithJS, c, scaleMode, lang, detectFlashVersion, autoInstallRedirect
-           chart1.setDataURL("/ca/ca/reports/chartdata/speedometer.shtml?random=1334077454979");
+           chart1.setDataURL("/ca/ca/reports/chartdata/speedometer.shtml?random=1334077455761");
            chart1.render("chart2div");
         </script>			</div>
         		</div>
@@ -601,7 +608,7 @@ http_interactions:
             	<script type="text/javascript">
             	   var chart1 = new FusionCharts("/ca/Charts/MSLine.swf", "sampleChart", "374", "180", "0", "1","#FFFFFF","noScale","EN","1","0");
         		   //debugMode, registerWithJS, c, scaleMode, lang, detectFlashVersion, autoInstallRedirect
-            	   chart1.setDataURL("/ca/ca/reports/chartdata/chart_weekhistory.shtml?random=1334077454980");
+            	   chart1.setDataURL("/ca/ca/reports/chartdata/chart_weekhistory.shtml?random=1334077455762");
             	   chart1.render("chart1div");
         </script>			</div>
         		</div>
@@ -617,7 +624,7 @@ http_interactions:
         		Current system time:
         	</th>
         	<td>
-        		2012-04-10 19:04:14 CEST
+        		2012-04-10 19:04:15 CEST
         	</td>
           </tr>
           <tr>

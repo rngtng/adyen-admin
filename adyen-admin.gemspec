@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  %w(mechanize).each do |gem|
+  %w(mechanize rubyzip).each do |gem|
     s.add_runtime_dependency *gem.split(' ')
   end
 

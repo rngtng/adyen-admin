@@ -13,6 +13,12 @@ client = Adyen::Admin.new(<accountname>, <username>, <password>)
 
 ```
 
+## Todo
+
+  * metafile
+  * parent
+
+
 ## Dependencies
 
 Depends on [mechanize](http://mechanize.rubyforge.org/) to access the webinterface

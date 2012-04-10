@@ -8,5 +8,9 @@ module Adyen
   module Admin
     extend Adyen::Admin::Client
 
+    def skin_dir
+      "."
+    end
+    module_function :skin_dir
   end
 end
