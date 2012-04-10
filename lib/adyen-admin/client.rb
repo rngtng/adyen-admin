@@ -1,4 +1,4 @@
-require "adyen-admin/skin"
+require 'mechanize'
 
 module Adyen
   module Admin

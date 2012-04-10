@@ -1,8 +1,6 @@
 # Copyright (c) 2012, SoundCloud Ltd., Tobias Bielohlawek
-
-require 'mechanize'
 require 'adyen-admin/client'
-require 'debugger'
+require 'adyen-admin/skin'
 
 module Adyen
   module Admin
