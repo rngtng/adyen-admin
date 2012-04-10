@@ -75,20 +75,17 @@ module Adyen::Admin
           Skin.new
         end.to raise_error
       end
-
-      # it "auto sets directory when found" do
-      #   Skin.new(:code => "7hFAQnmt" , :name => "example").directory.should == "example-7hFAQnmt"
-      # end
     end
 
     describe "#download"  do
+      let(:zip_filename) { "#{skin.code}.zip"}
       after do
-        `rm -rf #{skin.zip_filename}`
+        `rm -rf #{zip_filename}`
       end
 
       it "gets the file" do
         skin.download
-        File.should be_exists(skin.zip_filename)
+        File.should be_exists(zip_filename)
       end
     end
 
