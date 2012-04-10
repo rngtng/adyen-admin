@@ -92,23 +92,20 @@ module Adyen
         end
       end
 
-      def zip_filename
-        "#{code}.zip"
-      end
-
       ##########################################
 
       # http://stackoverflow.com/questions/4360043/using-wwwmechanize-to-download-a-file-to-disk-without-loading-it-all-in-memory
       # Adyen::Admin.client.pluggable_parser.default = Mechanize::FileSaver
       def download
-        Adyen::Admin.client.download(DOWNLOAD % code, zip_filename)
+        "#{code}.zip".tap do |filename|
+          Adyen::Admin.client.download(DOWNLOAD % code, filename)
 
-        if path
-          # create backup of current
-          # compile
+          if path
+            # create backup of current
+            # compile
+          end
+          # unzip
         end
-        # unzip
-        zip_filename
       end
 
       def compile
@@ -158,14 +155,6 @@ module Adyen
       end
 
       #################################
-
-      # def guess_path
-      #   [code, "#{code}-#{name}"].each do |file_name|
-      #     dir = skin_path(file_name)
-      #     return dir if File.exists?(dir)
-      #   end
-      #   nil
-      # end
 
       def skin_path(skin_code)
         skin_dir = path ? File.dirname(path) : Adyen::Admin.skin_dir

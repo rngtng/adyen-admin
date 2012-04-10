@@ -1,23 +1,40 @@
 # Adyen Admin  [![](http://travis-ci.org/rngtng/adyen-admin.png)](http://travis-ci.org/rngtng/adyen-admin)
 
+Adyen Admin Skin API and Command line tool
+
+A little Gem to make your life easier when dealing with Adyen skins. It offers simple functions to maniu
+
+## Setup
+Install gem
+
+    gem install adyen-admin
+
+Make sure you create a Adyen user with [Technical Setting rights](https://ca-test.adyen.com/ca/ca/config/users.shtml). *Std user rights have to be given as well!*
 
 
 ## Usage
 
-Simple usage case to get error counts
+Simple usage case to get all Skins:
 
 ```ruby
 require 'adyen/admin'
 
-client = Adyen::Admin.new(<accountname>, <username>, <password>)
+Adyen::Admin.login(<accountname>, <username>, <password>)
+
+Adyen::Admin::Skin.all  #returns all remote skins
 
 ```
 
-## Todo
+### Skins
 
-  * metafile
-  * parent
+By now a Skin can be:
 
+  * downloaded
+  * uploaded
+  * compiled
+  * retrieve versions
+  * retrieve test_url
+  * map to local or remote
 
 ## Dependencies
 
