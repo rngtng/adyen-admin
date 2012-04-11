@@ -1,5 +1,6 @@
 $:.unshift File.expand_path("../../lib", __FILE__)
 require "adyen-admin"
+# require "debugger"
 
 require 'vcr'
 

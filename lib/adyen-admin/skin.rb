@@ -13,37 +13,35 @@ module Adyen
       PUBLISH      = "https://ca-test.adyen.com/ca/ca/skin/publishskin.shtml?skinCode=%s"
       SKINS        = "https://ca-test.adyen.com/ca/ca/skin/skins.shtml"
 
-      attr_accessor :code, :name, :path
+      attr_reader :code, :name, :path
 
       def initialize(attributes = {})
         attributes.each do |key, value|
           send("#{key}=", value)
         end
 
-        if !path && code
-          path = skin_path([code,name].join("-"))
-        end
+        path ||= File.join(Adyen::Admin.skin_dir, [code,name].compact.join("-"))
 
         raise ArgumentError unless code
       end
 
       # union remote and local skins. Local skins are frozen to
       # indicate no availble remote counter part which avoid update
-      def self.all(path = nil, force_update = false)
+      def self.all(path = nil)
         {}.tap do |hash|
-          all_remote(force_update).each do |skin|
+          self.all_remote.each do |skin|
             hash[skin.code] = skin unless hash[skin.code]
           end
-          all_local(path).each do |skin|
+          self.all_local(path).each do |skin|
             hash[skin.code] = skin.freeze unless hash[skin.code]
           end
         end.values
       end
 
-      def self.all_remote(force_update = false)
-        @@skins_remote = nil if force_update
+      # fetch all remote skins
+      def self.all_remote
         @@skins_remote ||= begin
-          page = Adyen::Admin.client.get(SKINS)
+          page = Adyen::Admin.get(SKINS)
           page.search(".data tbody tr").map do |node|
             Skin.new({
               :code => node.search("a")[0].content.strip,
@@ -53,45 +51,54 @@ module Adyen
         end
       end
 
+      # fetch all local skins
       def self.all_local(path)
         Dir[File.join(path.to_s, "*")].map do |path|
           Skin.new(:path => path) rescue nil
         end.compact
       end
 
+      # find a skin within remote + local ones
       def self.find(skin_code)
-        all.select do |skin|
+        self.all.select do |skin|
           skin.code == skin_code
         end.first
       end
 
+      def self.purge_cache
+        @@skins_remote = nil
+      end
+
       ##################################
+
       def path=(path)
         if Skin.is_skin_path?(path)
-          code, name = File.basename(path).split("-").reverse
-          self.code ||= code
-          self.name ||= name
-          raise ArgumentError if code && self.code != code
+          new_code, new_name = File.basename(path).split("-").reverse
+          self.code ||= new_code
+          self.name ||= new_name
+          raise ArgumentError if self.code && self.code != new_code
           @path = path
         end
       end
 
+      ##################################
+
       def version(scope = :local)
         case scope
         when :test
-          page = Adyen::Admin.client.get(VERSION_TEST % code)
+          page = Adyen::Admin.get(VERSION_TEST % code)
           page.search("body p").first.content.scan(/Version:(\d+)/).flatten.first.to_i
         when :live
-          page = Adyen::Admin.client.get(VERSION_LIVE % code)
+          page = Adyen::Admin.get(VERSION_LIVE % code)
           page.search("body p").first.content.scan(/Version:(\d+)/).flatten.first.to_i
         else
-          page = Adyen::Admin.client.get(TEST % code)
+          page = Adyen::Admin.get(TEST % code)
           page.search(".data tr td")[2].content.to_i
         end
       end
 
       def test_url(options = {})
-        page = Adyen::Admin.client.get(TEST % code)
+        page = Adyen::Admin.get(TEST % code)
         page = Adyen::Admin.client.submit(page.form.tap do |form|
           #:amount => 199, :currency => :shopper_locale, :country_code, :merchant_reference, :merchant_account, :system, :skip, :one_page
         end)
@@ -130,25 +137,28 @@ module Adyen
               zipfile.add(file.sub(path, code), file)
             end
 
-            if dir = skin_path("base")
-              Dir["#{dir}/**/**"].each do |file|
-                begin
-                  next if file.include?(".yml")
-                  next if file.include?(".erb")
-                  zipfile.add(file.sub(dir, code), file)
-                rescue Zip::ZipEntryExistsError
-                  # NOOP
-                end
+            dir = File.join(File.dirname(path), parent_skin_code)
+            Dir["#{dir}/**/**"].each do |file|
+              begin
+                next if file.include?(".yml")
+                next if file.include?(".erb")
+                zipfile.add(file.sub(dir, code), file)
+              rescue Zip::ZipEntryExistsError
+                # NOOP
               end
             end
           end
         end
       end
 
+      def parent_skin_code
+        "base"
+      end
+
       # http://stackoverflow.com/questions/3420587/ruby-mechanize-multipart-form-with-file-upload-to-a-mediawiki
       def upload
         file = self.compile
-        page = Adyen::Admin.client.get(UPLOAD % code)
+        page = Adyen::Admin.get(UPLOAD % code)
         page = Adyen::Admin.client.submit(page.form.tap do |form|
           form.file_uploads.first.file_name = file
         end)
@@ -159,25 +169,30 @@ module Adyen
       def publish
         raise ArgumentError unless code
 
-        page = Adyen::Admin.client.get(PUBLISH % code)
+        page = Adyen::Admin.get(PUBLISH % code)
         page = Adyen::Admin.client.submit(page.form.tap do |form|
         end)
       end
 
       #################################
 
-      def skin_path(skin_code)
-        skin_dir = path ? File.dirname(path) : Adyen::Admin.skin_dir
-        File.join(skin_dir, skin_code).tap do |path|
-          return nil unless File.directory?(path)
-        end
+      def to_s
+        self.code
       end
 
       def ==(skin)
         self.code == skin.code
       end
 
-      private
+      protected
+      def code=(c)
+        @code = c
+      end
+
+      def name=(n)
+        @name = n
+      end
+
       def self.is_skin_path?(path)
         %w(skin.html.erb inc css js).each do |sub_path|
           return true if File.exists?(File.join(path, sub_path))

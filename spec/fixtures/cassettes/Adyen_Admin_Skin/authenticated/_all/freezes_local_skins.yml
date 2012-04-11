@@ -18,7 +18,7 @@ http_interactions:
       Accept-Language: 
       - en-us,en;q=0.5
       Cookie: 
-      - JSESSIONID=3BD7564D9EB16875CA95ACC9F308C3A8.test5e
+      - JSESSIONID=90A4E71B7C6A54FEF7409AB3B2BFB7D4.test5e
       Host: 
       - ca-test.adyen.com
       Connection: 
@@ -31,7 +31,7 @@ http_interactions:
       message: OK
     headers: 
       Date: 
-      - Tue, 10 Apr 2012 17:04:15 GMT
+      - Wed, 11 Apr 2012 17:34:17 GMT
       Server: 
       - Apache
       Cache-Control: 
@@ -227,7 +227,7 @@ http_interactions:
                     	style="vertical-align: middle" title="skins.edit" src="/ca/img/icons/layout_content.png" alt="skins.edit" 
                         />	Kx9axnRf</a>
         					</td>
-            	<td>demo</td>
+            	<td>soundcloud</td>
         		    	<td align="center">
         			<a href="/ca/ca/skin/uploadskin.shtml?skinCode=Kx9axnRf"><img 
                     	style="vertical-align: middle" title="skins.upload" src="/ca/img/icons/disk.png" alt="skins.upload" 
@@ -240,6 +240,29 @@ http_interactions:
         		</td>
         		<td align="center">
         			<a href="/ca/ca/skin/removeskin.shtml?skinCode=Kx9axnRf"><img 
+                    	style="vertical-align: middle" title="skins.remove" src="/ca/img/icons/cross.png" alt="skins.remove" 
+                        /></a>
+        		</td>
+        				</tr>	
+        	    	<tr class="std">
+            	<td>
+        							<a href="/ca/ca/skin/editskin.shtml?skinCode=vQW0fEo8"><img 
+                    	style="vertical-align: middle" title="skins.edit" src="/ca/img/icons/layout_content.png" alt="skins.edit" 
+                        />	vQW0fEo8</a>
+        					</td>
+            	<td>test</td>
+        		    	<td align="center">
+        			<a href="/ca/ca/skin/uploadskin.shtml?skinCode=vQW0fEo8"><img 
+                    	style="vertical-align: middle" title="skins.upload" src="/ca/img/icons/disk.png" alt="skins.upload" 
+                        /></a>
+        		</td>
+        		<td align="center">
+        			<a href="/ca/ca/skin/downloadskin.shtml?skinCode=vQW0fEo8"><img 
+                    	style="vertical-align: middle" title="skins.download" src="/ca/img/icons/disk.png" alt="skins.download" 
+                        /></a>
+        		</td>
+        		<td align="center">
+        			<a href="/ca/ca/skin/removeskin.shtml?skinCode=vQW0fEo8"><img 
                     	style="vertical-align: middle" title="skins.remove" src="/ca/img/icons/cross.png" alt="skins.remove" 
                         /></a>
         		</td>
@@ -265,5 +288,5 @@ http_interactions:
         </html>
 
     http_version: 
-  recorded_at: Tue, 10 Apr 2012 17:04:15 GMT
+  recorded_at: Wed, 11 Apr 2012 17:34:17 GMT
 recorded_with: VCR 2.0.1

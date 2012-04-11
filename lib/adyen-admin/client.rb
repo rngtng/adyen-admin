@@ -7,6 +7,7 @@ module Adyen
       DASHBOARD   = "https://ca-test.adyen.com/ca/ca/overview/default.shtml"
 
       def login(accountname, username, password)
+        @authenticated = false
         page = Adyen::Admin.client.get(LOGIN)
         page = Adyen::Admin.client.submit(page.form.tap do |form|
           form.j_account  = accountname
@@ -14,12 +15,22 @@ module Adyen
           form.j_password = password
         end)
         raise "Wrong username + password combination" if page.uri.to_s != DASHBOARD
+        @authenticated = true
+      end
+
+      def get(url)
+        client.get(url).tap do |page|
+          raise AuthenticationError unless page.uri.to_s.include?(url)
+        end
       end
 
       def client
         @agent ||= Mechanize.new
       end
 
+      def authenticated?
+        @authenticated
+      end
     end
   end
 end

@@ -2,7 +2,7 @@
 http_interactions: 
 - request: 
     method: get
-    uri: https://ca-test.adyen.com/ca/ca/skin/downloadskinsubmit.shtml?skinCode=7hFAQnmt
+    uri: https://ca-test.adyen.com/ca/ca/skin/skins.shtml
     body: 
       encoding: US-ASCII
       string: ""
@@ -18,58 +18,7 @@ http_interactions:
       Accept-Language: 
       - en-us,en;q=0.5
       Cookie: 
-      - JSESSIONID=3BD7564D9EB16875CA95ACC9F308C3A8.test5e
-      Host: 
-      - ca-test.adyen.com
-      Connection: 
-      - keep-alive
-      Keep-Alive: 
-      - 300
-  response: 
-    status: 
-      code: 302
-      message: Moved Temporarily
-    headers: 
-      Date: 
-      - Tue, 10 Apr 2012 17:04:16 GMT
-      Server: 
-      - Apache
-      Location: 
-      - https://ca-test.adyen.com/ca/ca/skin/downloadskin.shtml?skinCode=7hFAQnmt
-      Content-Language: 
-      - en-GB
-      Content-Length: 
-      - "0"
-      Keep-Alive: 
-      - timeout=15, max=100
-      Connection: 
-      - Keep-Alive
-      Content-Type: 
-      - text/plain; charset=UTF-8
-    body: 
-      encoding: US-ASCII
-      string: ""
-    http_version: 
-  recorded_at: Tue, 10 Apr 2012 17:04:16 GMT
-- request: 
-    method: get
-    uri: https://ca-test.adyen.com/ca/ca/skin/downloadskin.shtml?skinCode=7hFAQnmt
-    body: 
-      encoding: US-ASCII
-      string: ""
-    headers: 
-      Accept: 
-      - "*/*"
-      User-Agent: 
-      - Mechanize/2.3 Ruby/1.9.2p290 (http://github.com/tenderlove/mechanize/)
-      Accept-Encoding: 
-      - gzip,deflate,identity
-      Accept-Charset: 
-      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
-      Accept-Language: 
-      - en-us,en;q=0.5
-      Cookie: 
-      - JSESSIONID=3BD7564D9EB16875CA95ACC9F308C3A8.test5e
+      - JSESSIONID=90A4E71B7C6A54FEF7409AB3B2BFB7D4.test5e
       Host: 
       - ca-test.adyen.com
       Connection: 
@@ -82,7 +31,7 @@ http_interactions:
       message: OK
     headers: 
       Date: 
-      - Tue, 10 Apr 2012 17:04:16 GMT
+      - Wed, 11 Apr 2012 17:34:17 GMT
       Server: 
       - Apache
       Cache-Control: 
@@ -206,52 +155,120 @@ http_interactions:
         
         <div id="toolbar">
         	<ul id="tbtabs">
-            	<li id="tbbut1"  ><a href="/ca/ca/skin/skins.shtml">List</a></li>
+            	<li id="tbbut1"  class="activelink"  ><a href="/ca/ca/skin/skins.shtml">List</a></li>
         		    	<li id="tbbut2"  ><a href="/ca/ca/skin/editskin.shtml?newSkin=true">New</a></li>
-        		<li id="tbbut3"  class="activelink" >
-        							<a href="/ca/ca/skin/editskin.shtml?skinCode=7hFAQnmt">
+        		<li id="tbbut3"   class="disabledlink" >
+        							<a href="#">
         						Edit</a>
         		</li>
-        		<li id="tbbut4"  >
-        							<a href="/ca/ca/skin/uploadskin.shtml?skinCode=7hFAQnmt">
+        		<li id="tbbut4"   class="disabledlink" >
+        							<a href="#">
         						Upload</a>
         		</li>
-        		<li id="tbbut5"  >
-        							<a href="/ca/ca/skin/publishskin.shtml?skinCode=7hFAQnmt">
+        		<li id="tbbut5"   class="disabledlink" >
+        							<a href="#">
         						Publish</a>
         		</li>
         		<li id="tbbut6"  ><a href="/ca/ca/skin/testhmac.shtml">Test HMAC</a></li>
-        				<li id="tbbut7"  >
-        							<a href="/ca/ca/skin/testpayment.shtml?skinCode=7hFAQnmt">
+        				<li id="tbbut7"   class="disabledlink" >
+        							<a href="#">
         						Test</a>
         		</li>
         	</ul>
         </div>		
         <div id="subcontent">
-        		
+        	
         	
         		
         		
         	
+        	
+        	<h1 class="pagetitle">Skins for the Payment Pages</h1>
         
-        	<h1 class="pagetitle">Download Skin</h1>
-        
-        		<p style="width: 50%">
-        			Press the download button to download this skin.		</p>
-        		<form name="publishForm" method="post" action="/ca/ca/skin/downloadskinsubmit.shtml">
-                <table class="data">
-        			<tr><th class="row">Skin Code</th><td>7hFAQnmt</td></tr>
-        			<tr><th class="row">Description</th><td>example</td></tr>
-        			<tr><th class="row">Local Version</th><td>25</td></tr>
-        			<tr><td colspan="2">&nbsp;</td></tr>
-             	   <tr>
-                		<td colspan="2">
-        					<input type="hidden" name="skinCode" value="7hFAQnmt" />
-        					<input type="submit" name="downloadSkin" value="Download" />
-        		        </td>
-        		   </tr>
-                </table>
-        		</form>
+        	<table class="data">
+        	<thead>
+        	<tr>
+        		<th>
+        			    			Skin Code
+            								<a href="/ca/ca/skin/modifyFilter.shtml?orderDirection=desc"><img style="vertical-align: middle" src="/ca/img/icons/bullet_arrow_down.png" alt="down"/></a>
+        										</th>
+        		<th>
+        							<a href="/ca/ca/skin/modifyFilter.shtml?orderDirection=asc&amp;orderBy=description">Description</a>
+        			</th>
+        		 <th>Upload</th><th>Download</th><th>Remove</th>  </tr>
+        	</thead>
+        	<tbody>
+        	    	<tr class="std">
+            	<td>
+        							<a href="/ca/ca/skin/editskin.shtml?skinCode=7hFAQnmt"><img 
+                    	style="vertical-align: middle" title="skins.edit" src="/ca/img/icons/layout_content.png" alt="skins.edit" 
+                        />	7hFAQnmt</a>
+        					</td>
+            	<td>example</td>
+        		    	<td align="center">
+        			<a href="/ca/ca/skin/uploadskin.shtml?skinCode=7hFAQnmt"><img 
+                    	style="vertical-align: middle" title="skins.upload" src="/ca/img/icons/disk.png" alt="skins.upload" 
+                        /></a>
+        		</td>
+        		<td align="center">
+        			<a href="/ca/ca/skin/downloadskin.shtml?skinCode=7hFAQnmt"><img 
+                    	style="vertical-align: middle" title="skins.download" src="/ca/img/icons/disk.png" alt="skins.download" 
+                        /></a>
+        		</td>
+        		<td align="center">
+        			<a href="/ca/ca/skin/removeskin.shtml?skinCode=7hFAQnmt"><img 
+                    	style="vertical-align: middle" title="skins.remove" src="/ca/img/icons/cross.png" alt="skins.remove" 
+                        /></a>
+        		</td>
+        				</tr>	
+        	    	<tr class="alt">
+            	<td>
+        							<a href="/ca/ca/skin/editskin.shtml?skinCode=Kx9axnRf"><img 
+                    	style="vertical-align: middle" title="skins.edit" src="/ca/img/icons/layout_content.png" alt="skins.edit" 
+                        />	Kx9axnRf</a>
+        					</td>
+            	<td>soundcloud</td>
+        		    	<td align="center">
+        			<a href="/ca/ca/skin/uploadskin.shtml?skinCode=Kx9axnRf"><img 
+                    	style="vertical-align: middle" title="skins.upload" src="/ca/img/icons/disk.png" alt="skins.upload" 
+                        /></a>
+        		</td>
+        		<td align="center">
+        			<a href="/ca/ca/skin/downloadskin.shtml?skinCode=Kx9axnRf"><img 
+                    	style="vertical-align: middle" title="skins.download" src="/ca/img/icons/disk.png" alt="skins.download" 
+                        /></a>
+        		</td>
+        		<td align="center">
+        			<a href="/ca/ca/skin/removeskin.shtml?skinCode=Kx9axnRf"><img 
+                    	style="vertical-align: middle" title="skins.remove" src="/ca/img/icons/cross.png" alt="skins.remove" 
+                        /></a>
+        		</td>
+        				</tr>	
+        	    	<tr class="std">
+            	<td>
+        							<a href="/ca/ca/skin/editskin.shtml?skinCode=vQW0fEo8"><img 
+                    	style="vertical-align: middle" title="skins.edit" src="/ca/img/icons/layout_content.png" alt="skins.edit" 
+                        />	vQW0fEo8</a>
+        					</td>
+            	<td>test</td>
+        		    	<td align="center">
+        			<a href="/ca/ca/skin/uploadskin.shtml?skinCode=vQW0fEo8"><img 
+                    	style="vertical-align: middle" title="skins.upload" src="/ca/img/icons/disk.png" alt="skins.upload" 
+                        /></a>
+        		</td>
+        		<td align="center">
+        			<a href="/ca/ca/skin/downloadskin.shtml?skinCode=vQW0fEo8"><img 
+                    	style="vertical-align: middle" title="skins.download" src="/ca/img/icons/disk.png" alt="skins.download" 
+                        /></a>
+        		</td>
+        		<td align="center">
+        			<a href="/ca/ca/skin/removeskin.shtml?skinCode=vQW0fEo8"><img 
+                    	style="vertical-align: middle" title="skins.remove" src="/ca/img/icons/cross.png" alt="skins.remove" 
+                        /></a>
+        		</td>
+        				</tr>	
+        		</tbody>
+        	</table>
         </div>
         
         
@@ -271,5 +288,5 @@ http_interactions:
         </html>
 
     http_version: 
-  recorded_at: Tue, 10 Apr 2012 17:04:16 GMT
+  recorded_at: Wed, 11 Apr 2012 17:34:17 GMT
 recorded_with: VCR 2.0.1

@@ -21,7 +21,7 @@ require 'adyen/admin'
 
 Adyen::Admin.login(<accountname>, <username>, <password>)
 
-Adyen::Admin::Skin.all  #returns all remote skins
+Adyen::Admin::Skin.all  #returns all remote + local skins
 
 ```
 

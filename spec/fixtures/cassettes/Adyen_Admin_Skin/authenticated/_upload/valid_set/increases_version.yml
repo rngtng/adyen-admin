@@ -18,7 +18,7 @@ http_interactions:
       Accept-Language: 
       - en-us,en;q=0.5
       Cookie: 
-      - JSESSIONID=3BD7564D9EB16875CA95ACC9F308C3A8.test5e
+      - JSESSIONID=90A4E71B7C6A54FEF7409AB3B2BFB7D4.test5e
       Host: 
       - ca-test.adyen.com
       Connection: 
@@ -31,7 +31,7 @@ http_interactions:
       message: OK
     headers: 
       Date: 
-      - Tue, 10 Apr 2012 17:04:17 GMT
+      - Wed, 11 Apr 2012 17:34:18 GMT
       Server: 
       - Apache
       Cache-Control: 
@@ -193,7 +193,7 @@ http_interactions:
         			</tr>
         			<tr>
         				<th class="row">Latest Version</th>
-        				<td>25</td>
+        				<td>29</td>
         			</tr>
         			<tr>
         				<td colspan="2">
@@ -219,7 +219,7 @@ http_interactions:
         					If the version on Test is not the same as the Latest version, it will be published automatically. Note that there is a few minutes delay after modifying the skin before it is deployed on the Test Hosted Payment Pages. 			</div>
         				</th>
         				<td>
-        					<iframe src="https://test.adyen.com/hpp/version.shtml?skinCode=7hFAQnmt&amp;version=25" height="50" width="450"></iframe>
+        					<iframe src="https://test.adyen.com/hpp/version.shtml?skinCode=7hFAQnmt&amp;version=29" height="50" width="450"></iframe>
         				</td>
         			</tr>
         			<tr>
@@ -237,7 +237,7 @@ http_interactions:
         					If the version on Live is not the same as the Latest version, you will have to Publish the Skin to Live via the Publish Tab. Note that there is a few minutes delay after publishing the skin before it is deployed on the Live Hosted Payment Pages. 			</div>
         				</th>
         				<td>
-        					<iframe src="https://live.adyen.com/hpp/version.shtml?skinCode=7hFAQnmt&amp;version=25" height="50" width="450"></iframe>
+        					<iframe src="https://live.adyen.com/hpp/version.shtml?skinCode=7hFAQnmt&amp;version=29" height="50" width="450"></iframe>
         				</td>
         			</tr>
         						<tr>
@@ -597,7 +597,7 @@ http_interactions:
         			<tr>
         				<th class="row">Merchant Reference</th>
         				<td>
-        					<input type="text" name="merchantReference" value="SKINTEST-1334077457554" size="20" />
+        					<input type="text" name="merchantReference" value="SKINTEST-1334165658790" size="20" />
         				</td>
         			</tr>	
         			<tr>
@@ -662,7 +662,7 @@ http_interactions:
         </html>
 
     http_version: 
-  recorded_at: Tue, 10 Apr 2012 17:04:17 GMT
+  recorded_at: Wed, 11 Apr 2012 17:34:18 GMT
 - request: 
     method: get
     uri: https://ca-test.adyen.com/ca/ca/skin/uploadskin.shtml?skinCode=7hFAQnmt
@@ -681,7 +681,7 @@ http_interactions:
       Accept-Language: 
       - en-us,en;q=0.5
       Cookie: 
-      - JSESSIONID=3BD7564D9EB16875CA95ACC9F308C3A8.test5e
+      - JSESSIONID=90A4E71B7C6A54FEF7409AB3B2BFB7D4.test5e
       Host: 
       - ca-test.adyen.com
       Connection: 
@@ -694,7 +694,7 @@ http_interactions:
       message: OK
     headers: 
       Date: 
-      - Tue, 10 Apr 2012 17:04:17 GMT
+      - Wed, 11 Apr 2012 17:34:19 GMT
       Server: 
       - Apache
       Cache-Control: 
@@ -894,25 +894,25 @@ http_interactions:
         </html>
 
     http_version: 
-  recorded_at: Tue, 10 Apr 2012 17:04:17 GMT
+  recorded_at: Wed, 11 Apr 2012 17:34:19 GMT
 - request: 
     method: post
     uri: https://ca-test.adyen.com/ca/ca/skin/processkin.shtml
     body: 
       encoding: ASCII-8BIT
       base64_string: |
-        LS16WFlUTE5wYXRBblBJQ0h4ckdIcA0KQ29udGVudC1EaXNwb3NpdGlvbjog
-        Zm9ybS1kYXRhOyBuYW1lPSJza2luQ29kZSINCg0KN2hGQVFubXQNCi0telhZ
-        VExOcGF0QW5QSUNIeHJHSHANCkNvbnRlbnQtRGlzcG9zaXRpb246IGZvcm0t
+        LS1sQ0trbmFuS0dGckZ1anpVYmtLYQ0KQ29udGVudC1EaXNwb3NpdGlvbjog
+        Zm9ybS1kYXRhOyBuYW1lPSJza2luQ29kZSINCg0KN2hGQVFubXQNCi0tbENL
+        a25hbktHRnJGdWp6VWJrS2ENCkNvbnRlbnQtRGlzcG9zaXRpb246IGZvcm0t
         ZGF0YTsgbmFtZT0idXBsb2FkRmlsZSI7IGZpbGVuYW1lPSI3aEZBUW5tdC56
         aXAiDQpDb250ZW50LVRyYW5zZmVyLUVuY29kaW5nOiBiaW5hcnkNCkNvbnRl
-        bnQtVHlwZTogYXBwbGljYXRpb24vemlwDQoNClBLAwQUAAAACACImIpAAAAA
-        AAIAAAAAAAAADQAAADdoRkFRbm10L2Nzcy8DAFBLAwQUAAAACACImIpAd8nV
+        bnQtVHlwZTogYXBwbGljYXRpb24vemlwDQoNClBLAwQUAAAACABJnItAAAAA
+        AAIAAAAAAAAADQAAADdoRkFRbm10L2Nzcy8DAFBLAwQUAAAACABJnItAd8nV
         VYsAAADOAAAAFgAAADdoRkFRbm10L2Nzcy9wcmludC5jc3NljDEOwjAMRWdy
         iiBWWrVr2TgA4gqpmxSriR05ZgDE3UkFTB3f1/vvpinal9mNDpZZ+E7TYA8h
         hJPZAUeWSl3XVQpM2hR8+sH2fdb/ElzC+BisE3TxaIuj0hQvWANvY1pM83mT
         BwC7x5RZ1JGuYisePGa98FWQdH1MWHJ0tUxM/hv7SVtljAzL6nwAUEsDBBQA
-        AAAIAIiYikB4b8kwZwoAAJ8pAAAXAAAAN2hGQVFubXQvY3NzL3NjcmVlbi5j
+        AAAIAEmci0B4b8kwZwoAAJ8pAAAXAAAAN2hGQVFubXQvY3NzL3NjcmVlbi5j
         c3O9Wltv2zgWfh7/Cu0EA3SK2JEty7GdpzQXTIFegp3u7mNBS5RNVBIFSnaS
         Kfrf9/AqUqLtON0dB2ktXs75zuG5Utk0RR58H/yywWS9aZbBOAx/uxr8UqCn
         YWcoo2UzrMlfeBmEo8sYF3osQwXJn5dBgza0QOfBDrMUlfAFMYLy86BGZT2s
@@ -972,11 +972,11 @@ http_interactions:
         fjt0djKN2EPERpNs4TAKzBhUoNAwJbjvWl2aunXwAXsFudhHzobYkOQb/FPX
         WwhcKW+EXqi1OHbBnUgo9lDq4zpNX35IpynJD0aYOPSOZfK8x63OTli6j/QJ
         NjvvmMZJZGIPHRuTJAOYS0Vqn7DHF/bJqrbJnMph2sdWjxhOMKmaT/SBEfmn
-        c50/Z2rX7F/xX1BLAwQUAAAACACImIpAOlCJQl0AAAB8AAAAGwAAADdoRkFR
+        c50/Z2rX7F/xX1BLAwQUAAAACABJnItAOlCJQl0AAAB8AAAAGwAAADdoRkFR
         bm10L2Nzcy9zY3JlZW5faWU2LmNzc9PXUvB0VchJrMwvLVFIzi8qSk0uyczP
         U0jLL1IoyUgF0vklqUUKSaUlJfl5xQpa+lzKEKEkw5TMMoVqLs7cxKL0zDzd
-        nNS0EisFQ4OCCmuuWrgiI1RFRZnpGQhVAFBLAwQUAAAACACImIpAAAAAAAIA
-        AAAAAAAADQAAADdoRkFRbm10L2ltZy8DAFBLAwQUAAAACACImIpA5iFdXKwB
+        nNS0EisFQ4OCCmuuWrgiI1RFRZnpGQhVAFBLAwQUAAAACABJnItAAAAAAAIA
+        AAAAAAAADQAAADdoRkFRbm10L2ltZy8DAFBLAwQUAAAACABJnItA5iFdXKwB
         AACnAQAAGwAAADdoRkFRbm10L2ltZy9iYW5uZXJfdG9wLnBuZwGnAVj+iVBO
         Rw0KGgoAAAANSUhEUgAAABQAAACgCAIAAACDsNs5AAAACXBIWXMAAAsTAAAL
         EwEAmpwYAAAAB3RJTUUH1woRDQoch8yJ+gAAAUZJREFUaN7tWbsOwjAMNMhs
@@ -987,10 +987,10 @@ http_interactions:
         Ei7yJYa2947ZrC/2665mPfMUy4XCE82NJwDsg1WMIiV2uN8atN4O7uAO7uAO
         7uAOjj0asQHc6j+uTMnae1qRsKVLTU5SFlD+6pYJ+5kIaWYcpDjbFs94CE1e
         v6ytM83oTIF0BrnO4L9yMp28HmHhIkyWav+YkhXBh+PJDn4+BjP4BcaAxHWn
-        0UgIAAAAAElFTkSuQmCCUEsDBBQAAAAIAIiYikA1KG2uRQAAAEgAAAATAAAA
+        0UgIAAAAAElFTkSuQmCCUEsDBBQAAAAIAEmci0A1KG2uRQAAAEgAAAATAAAA
         N2hGQVFubXQvaW1nL2JnLmdpZnP3dLOwTBRgEGBoYGD49OnT////FX+yMICA
         DogAyTAwyffkL1jdceZOo7caV86Bm0V/K2XYJimFLlKfsin7S1gYI4M1AFBL
-        AwQUAAAACACImIpAhyBpUl4PAAC0DwAAGwAAADdoRkFRbm10L2ltZy9iZ19i
+        AwQUAAAACABJnItAhyBpUl4PAAC0DwAAGwAAADdoRkFRbm10L2ltZy9iZ19i
         dXR0b25zLnBuZz2XeThU7f/HhyGasQzGWJrMYNSkKZNsCdl3JdvTKDsxmOwZ
         GXv2NR5CZc2SLNkjxk41RM88EUJ4RCYhlSXpe/vj97uu+5xzXeec6z7353N/
         3q/35ySaXzbghYnDIBAIr5GhrgW4YsERyX0EnD1veomDy1FfQ1IABAIXOjzY
@@ -1078,7 +1078,7 @@ http_interactions:
         0NcYZDuScvw1U/XdnGxbu4qmgN56FgaSnaaV+NAqmky5eU7x1NcH7HTbCK3z
         Da6vBD90hAhx8UsAuXi/hFPhDj4RbA41XUWz7qr2JDrtQiwF9Fm8wqBVOL8u
         54FLRp3xzOU0ksoPiugpfe3yWS63ZviHyOGo7Oqe3ltf4uKWP6GoLc3ZYbBt
-        H140FcG2EXGUa2yrIyzEHPxxQ4z0LuvWajtG/w9QSwMEFAAAAAgAiJiKQHcx
+        H140FcG2EXGUa2yrIyzEHPxxQ4z0LuvWajtG/w9QSwMEFAAAAAgASZyLQHcx
         5vMaBAAABAwAACAAAAA3aEZBUW5tdC9pbWcvYnV0dG9uX3RlbXBsYXRlLnhj
         Zu2TfUxbVRTAW/o1KiB02H+GSTGGsBgWmPvHaIxZJGowmdmMiSOLYY+2NHm0
         pJSPNaUwNreAyAbso0yDpPtIEcm68VEEwblp0emSDZAJOAhaBmz0u++1fV/X
@@ -1103,7 +1103,7 @@ http_interactions:
         GLtGp1dhHA/4Kfzx/IT1TGMVqixFBIi/VFVh+PLS+PRDHwznAS9DYuuLd0f7
         zBfOdrS3t3HbuO2BjvNdlsGJ2RVfmAYC+GTJoGdl7t5vt26MjwnH8Jv2OzNL
         6wGCBiKAwVce9LkerSwvO4SO4MO1dQ/GvmUxCEFPOITjmAgL48EwAaEAJMYm
-        MTaJsUmMTWJsEmPz/4/Nf1BLAwQUAAAACACImIpAHXa0LFAYAABLGAAAGQAA
+        MTaJsUmMTWJsEmPz/4/Nf1BLAwQUAAAACABJnItAHXa0LFAYAABLGAAAGQAA
         ADdoRkFRbm10L2ltZy9ncmFkaWVudC5wbmcBSxi054lQTkcNChoKAAAADUlI
         RFIAAAAUAAACWAgCAAAA7e5RZAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0
         SU1FB9cKEQwoIXnU6fwAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRo
@@ -1243,7 +1243,7 @@ http_interactions:
         jCP9bq+ejmxYx7n2ghWGvAbigJ/SekmIRmTekZ4mcwSyKoXTMauEtxy6POSd
         R0KyJ7K3KqMfNJkzWeCoPyeCaTxEQT9YgftwljMzqR/mPo6ireHED7zf+beG
         EZd/+23/D3zY/3/z/3/z/6Nv/r+cLxW8Ry/z/gAAAABJRU5ErkJgglBLAwQU
-        AAAACACImIpAFpVHqlQIAABSCAAAFQAAADdoRkFRbm10L2ltZy9sb2dvLnBu
+        AAAACABJnItAFpVHqlQIAABSCAAAFQAAADdoRkFRbm10L2ltZy9sb2dvLnBu
         ZzWWeTgU2hvHpx+PtRlX/YRhCiVLZbkJWRvMiMwwqJAl3JGx01zLjCWGccee
         NYSR7OsUIwkhuZbMuCZLtpBtNKY0DK7lRz2/9/m85/uc9zzf9/xx/jgvyQpp
         ChQCCwEAAKDZTRPrI604yrsCfEdrWioo9Ej43G6ZmgB+xo5xa9SRCAbctH8I
@@ -1291,7 +1291,7 @@ http_interactions:
         E3PsOT1KnhIsLhTC+aT/NY+wzr9XoMvkIcUQjs8W7ihsZo7+8EnvqlH9eXsB
         7Prm+AVRuckLpKTZoROrMiLA437l8bKjIEZJYVKhCi7+2WRUxMqX6aSf+1dm
         QmETj457uWeYMPzS+Ra77frudwkcf33PbcLTVNoz3J7gGO7ilm3RI/+C2/TE
-        MtZDXpkdjwZmMKRJndH9mP8BUEsDBBQAAAAIAIiYikAMwRS3bAgAAAkdAAAV
+        MtZDXpkdjwZmMKRJndH9mP8BUEsDBBQAAAAIAEmci0AMwRS3bAgAAAkdAAAV
         AAAAN2hGQVFubXQvaW1nL2xvZ28ueGNm7VgNbFvFHb+z/ezY8VdEl3asaU0H
         +ehU1kpbp2ljbjsxWFuWkEadAE0spI5raJzWNnGbZntO6Fa0rdBpQlSTNmkt
         AgSNmiUhCYkE2YdGNdDIl5MKxtC0gti0DRC0amq/u/3/7917PsduqTQmDSlP
@@ -1340,16 +1340,16 @@ http_interactions:
         nkE6FB6kUgr8AxTSkNHTQKU0+PrpmbCeClqcCpGPTJZK+fDO0Wx4jko5Cc5S
         yAuZpVJe/DMUcpPRc0Ol3Pim6HRYz4/LykyzlY86tZCFFsv7esvz3ZbT6y2H
         G5OHLVfr4t2Wl3WjBQdbLN/qLb92Wy6tt9xpHDhsOVLXr5Kz8wUfWqyrry9c
-        NTllXW3jzGHrCuum4EnBr/Sk+A9QSwMEFAAAAAgAiJiKQAAAAAACAAAAAAAA
-        AA0AAAA3aEZBUW5tdC9pbmMvAwBQSwMEFAAAAAgAiJiKQJMG1zIDAAAAAQAA
-        ABgAAAA3aEZBUW5tdC9pbmMvY2Zvb3Rlci50eHTjAgBQSwMEFAAAAAgAiJiK
+        NTllXW3jzGHrCuum4EnBr/Sk+A9QSwMEFAAAAAgASZyLQAAAAAACAAAAAAAA
+        AA0AAAA3aEZBUW5tdC9pbmMvAwBQSwMEFAAAAAgASZyLQJMG1zIDAAAAAQAA
+        ABgAAAA3aEZBUW5tdC9pbmMvY2Zvb3Rlci50eHTjAgBQSwMEFAAAAAgASZyL
         QGsT41sEAAAAAgAAABgAAAA3aEZBUW5tdC9pbmMvY2hlYWRlci50eHTj4gIA
-        UEsDBBQAAAAIAIiYikCAja3KCAAAAAYAAAAZAAAAN2hGQVFubXQvaW5jL3Bt
-        Zm9vdGVyLnR4dLPRT8ksswMAUEsDBBQAAAAIAIiYikBf6nEeKgAAADAAAAAZ
+        UEsDBBQAAAAIAEmci0CAja3KCAAAAAYAAAAZAAAAN2hGQVFubXQvaW5jL3Bt
+        Zm9vdGVyLnR4dLPRT8ksswMAUEsDBBQAAAAIAEmci0Bf6nEeKgAAADAAAAAZ
         AAAAN2hGQVFubXQvaW5jL3BtaGVhZGVyLnR4dLNJySxTyEyxVcrJT8/PSE1M
-        SS1SsrPRB4racdnA5Apyk/PzSlLzSpTsAFBLAwQUAAAACACImIpAAAAAAAIA
-        AAAAAAAADAAAADdoRkFRbm10L2pzLwMAUEsDBBQAAAAIAIiYikAAAAAAAgAA
-        AAAAAAANAAAAN2hGQVFubXQvcmVzLwMAUEsDBBQAAAAIAIiYikAIlEw46PQB
+        SS1SsrPRB4racdnA5Apyk/PzSlLzSpTsAFBLAwQUAAAACABJnItAAAAAAAIA
+        AAAAAAAADAAAADdoRkFRbm10L2pzLwMAUEsDBBQAAAAIAEmci0AAAAAAAgAA
+        AAAAAAANAAAAN2hGQVFubXQvcmVzLwMAUEsDBBQAAAAIAEmci0AIlEw46PQB
         AIkhAgA0AAAAN2hGQVFubXQvaW1nL0FpcmxpbmVyLmFpcmphbWFpY2EuYTM0
         MC5hcnAuNzUwcGl4LmpwZ+y8B1BUTdcuumcIA0gOisDACEgUBIQhZ4mSswhK
         VBiGnPMQRERyMIAkyfiSlIwkiYooOWeQPEOQKCBnQN/wne/77/lvqHvurfKp
@@ -4201,7 +4201,7 @@ http_interactions:
         71bCL0rQHuO+RjI2rguwG1Aen9uN2vudxSu1KEbmmA3W5XhpqpVh2C/xw815
         LxT4QKGhG3hTACil5alK0NT0PgPHDXJeTiFHetOn68QeiaDRQHetV608MQfm
         q301IrQVr1p44iXejhC3hsaDl4D2yV9F4ejvRHL/ACafZ+j9WC9qY0H/2VBL
-        AwQUAAAACACImIpAaBtbs1cBAADAAQAAFgAAADdoRkFRbm10L2ltZy9iZ19n
+        AwQUAAAACABJnItAaBtbs1cBAADAAQAAFgAAADdoRkFRbm10L2ltZy9iZ19n
         ci5qcGf7f+P/AwYBLzdPNwZGJgaGFCBk+P+GQdClNDm7koGRgYWBgSEYKPSO
         gc8xJT8plSHlAFCE8f9thhYGJkZGRiZGJiBgBmFmZhDBwgwCLKwsYMDKysbG
         zsbGysHBycnBwcPNzc2DACCtQDUcrKwc3JzsnNy8EACWg1I8vDx4wP8DDIIc
@@ -4209,15 +4209,15 @@ http_interactions:
         AKTZUTUECiYyCQmLiBYuTAIaiqqJgUFQiPH/LQYeoA4mQWZBBnuGHzdfnWNQ
         WnzkxYF1Dl4NsR4/E7T4HJY5eKdo53iZus27EhC0pviJv8/uc2HqrtWzWkwv
         VumVnxJYLL7zy0ZZrnstJzNXLVv/zO/rwtuZSbkuB8SDnqWFi3S+bHPVFtbe
-        +CTDqfLi8ZalxqdvRnhFWyRm6nQ99Tj1xYTrhbH9/5sAUEsDBBQAAAAIAIiY
-        ikA3l7rbEgEAAKkBAAAYAAAAN2hGQVFubXQvaW1nL2Jsb2dfZ3IuanBnlY6x
+        +CTDqfLi8ZalxqdvRnhFWyRm6nQ99Tj1xYTrhbH9/5sAUEsDBBQAAAAIAEmc
+        i0A3l7rbEgEAAKkBAAAYAAAAN2hGQVFubXQvaW1nL2Jsb2dfZ3IuanBnlY6x
         SgNBEEBndvb29rycl4FAfsHKQoOiFiJIQIk/oScKgiGCESsVtElvYS2SUgQ1
         aBWDXUCwM9HCxi76C+tcBEkawTe7s/BmZxj34t4hu1xcKgIqgEQCXA94cXdt
         ax8QNACURH3B6EJSXl2HpCkG3SscA6kUyaRJrqdJkvFSjDW+kWNtEIwEgc30
         iVLiX5CIjDGhtSFHYcS5VOa4X+OfJ+b4D1wT2Mre44QMipEY3SNsAiLCENaI
         UTTk0Mi2Wfmo/UGtdMF4N1V/eq/BKLPNYBdWHo7UxE5rUhc814UMyVQmhnl4
         Kuft22yr0776aLQ/ayunl2fnU/lSb/sQ/s3txdjGfTWeOeHnubvrerdWOXCd
-        b1BLAwQUAAAACACImIpAbQy29KANAADDDQAAGQAAADdoRkFRbm10L2ltZy9j
+        b1BLAwQUAAAACABJnItAbQy29KANAADDDQAAGQAAADdoRkFRbm10L2ltZy9j
         YXRlZ29yeS5naWadj/k/040DwD8bZsTMnNvIbIRIS5TpUea+Qo40kfsMzZWb
         GWWO2sbM5hxGnoqQR1PyjMoR1XIrObrIox4V9Sw9+b6+3z/h+/7h/f757eBk
         b04Ifg/sA6YBwDE03ej4yd3d3WM+54No11PLWkOyyys6hkpa+kjJxS6RuTGX
@@ -4295,8 +4295,8 @@ http_interactions:
         V2Kd0M/LrVOLwIYdYCUPLjudy+Fyq3q5NfPcOjGXh6xqJFTxSVUtvdzQUY6k
         GIbNt5ZkWO9dBqngq7tJ1T3p1QJu9d3e6r756n5xtRBZM0ioecitDv6Qc06G
         9bdVGV1c9VRcI0LWThBqp0i1M+m1c9zaF721C/O1i6Ram3nPUQJ6DMlqS69b
-        49at99ZtzNd9EtdtIuu/EOq3SPXfDOqzth3ejIKIAHDsP1BLAwQUAAAACACI
-        mIpA/bz7SztXAAA6gwAAHAAAADdoRkFRbm10L2ltZy9FdXJvZmlnaHRlci5q
+        49at99ZtzNd9EtdtIuu/EOq3SPXfDOqzth3ejIKIAHDsP1BLAwQUAAAACABJ
+        nItA/bz7SztXAAA6gwAAHAAAADdoRkFRbm10L2ltZy9FdXJvZmlnaHRlci5q
         cGesvAdcU8n3Phy6IuKiAbEhCCKhl4TeIUDoCaGFIp2E3ktooQohtCS00HsT
         FQXLWlERsAIia18rAnYXdW2779wEFNvufn//V8+dz5Dkhmeeec6ZM3Nn+Pvq
         33dgv1hbYCxgXNwwGBf4D/v7zkaqtYWbG2yNsayCSjAwOZUAeeUgYArKRGCK
@@ -4793,7 +4793,7 @@ http_interactions:
         ooDamxoF1d5k8D+FEP8atLybxwbEawNpAhws1R+DQU1ijapjgPTxEXcW7itL
         sQVZF7R1LeLoyWKNDEBBQ1vDCiUAJCtAWWyQYSp4xDgWVTJ2wCixSWm2Vy4j
         QWlyGS5fZ1Eh/DmcH/QiKGUbaSyRZFNi9lTZDIkMHyZH+ujixgogVDISphAf
-        ZSPm37MR67bWh1v/A1BLAwQUAAAACACImIpAqSyfcySnAAAlqgAAFAAAADdo
+        ZSPm37MR67bWh1v/A1BLAwQUAAAACABJnItAqSyfcySnAAAlqgAAFAAAADdo
         RkFRbm10L2ltZy9taWcuanBnzLllWFTR1zd8ZughhCEEBBmGGlpK6Ri6O0bp
         LumWFpTukG4BRVpJQUpKGpHuLgXpfNB/3P/7fe/3et4Pz4dnndn77Nlr7bN+
         e511zv7t69xO3i4ChAoy8jIACAwC5O4O4HYPV0rN2tHN0dXa0QnGw/EI4EfK
@@ -5745,7 +5745,7 @@ http_interactions:
         EeP7yKHH412ocNoR4fEhxXYF2HzbO395VKn6S7FUhwCKHFBBUcF9ZU/D2kOP
         xocQhsOwbCuwLsKHAqld6+qjxP5UEePxVbOweZHihsOw8VTso7PMhx+JHgjx
         R7V2LvXb+8h8Pa2FdiKp4FfWCHD4kVT2IfS+JdiPbsHFfV2fWK7EeCCGwcfj
-        Xd50eC+sFVwX/9lQSwMEFAAAAAgAiJiKQHV9RfnRDwAANRAAABUAAAA3aEZB
+        Xd50eC+sFVwX/9lQSwMEFAAAAAgASZyLQHV9RfnRDwAANRAAABUAAAA3aEZB
         UW5tdC9pbWcvdG9wMS5qcGd9VXk0lO/ffmasI5qQFkLKRDT2KNtYCjP2ZZA1
         u7HTINmybxWyTJYwGGPs+75mK0KyRaaIiJA9yfKO7/d3fue87x/vdZ/7fs75
         3M/5XNf1uT/P/Zx8OpkFzqFUkCoACAwAtpQBnKwCzPe8bZz9ABBADQCALiW0
@@ -5836,7 +5836,7 @@ http_interactions:
         unPqEqa0winAQEBiETv5qYO9z1P4E+faKlvq5l36XC4wTXS5+wmRJ0cbFs94
         KXpFts18KPGQ302twuNMfLJLzM5W5JMIQl7wuxthYURnrFxLELHsmsCNpMhZ
         NhL640gTdvjTckhhg0mZ5HSzzz2yoI0pWUBqzPXXmCNdwagva6meVv6Q5+QW
-        uheHEP618MgPu7+KOJn6H1BLAwQUAAAACACImIpAy2XFLZNOAADuTwAAFQAA
+        uheHEP618MgPu7+KOJn6H1BLAwQUAAAACABJnItAy2XFLZNOAADuTwAAFQAA
         ADdoRkFRbm10L2ltZy90b3AyLmpwZ5R3VVBcbbDt4AQN7u7u7iS4BRvcnWEg
         uBOCO8EJ7j64a5DgEFxmkGBJ0DB40Jv/P3Lr1Lkvt3fVfli1uvvrrtWfvKy9
         fAe8VlVUUQQgIAIAtn8/wMsJAO+ttw3IH4AAQAYAAGJ/oTMAjpytm7UdwPbL
@@ -6284,7 +6284,7 @@ http_interactions:
         /ntrnIqWMZMWKu2Ep8L9I9v28Sj4vMGC7nBNQImmOTNj0+u2bHVSMsss2QVv
         OYfBM+n/VcRMN0UMFyrxt9S/BkXDTZeLLSIn3mxUbR1fqBX7u+SookWAsMef
         ra+fHlv8I1NqN9PIq0M6M5mA8AMVpl+P7cHOAChRuvpI9J+GZbJyIQoxv0bf
-        Tz8s+X/T36IMq9PuGKxEnPhRjTHxf1BLAwQUAAAACACImIpA/O2i1KgMAABG
+        Tz8s+X/T36IMq9PuGKxEnPhRjTHxf1BLAwQUAAAACABJnItA/O2i1KgMAABG
         DQAAFQAAADdoRkFRbm10L2ltZy90b3AzLmpwZ31VeTyUbfe/Z7MzM2TJpJAs
         Q7YalDH2JVsh+5IsydgmWxSKrNkaki1LkS1rRiZSdiEh+5L1yZKsIzFZXp6e
         T7/f8/7xfu/Pua/r/l7nOudc51zncx8MH0wBCG2NSxoACAwADocPcPAdQKr5
@@ -6357,54 +6357,54 @@ http_interactions:
         v8JsQ7M/zg8s9ddOery/gz/OsbmlkeeC+7WCjEaQ6+l2ipiDGn72UW7c02rA
         LZicUt6mb5mhgss5p+aPczJI9X6NzZJUxEohNgI+tqrdb2qniBemJAPRXav1
         nx2C+y9ujP98XnNCspXC47+icEOajuw1Xi6/Bp7NV2ioHjVwavaef2OH7mD3
-        flhm3FEb9GFLsbAA70bwZpkg8pzqv2xz6mDkP1BLAwQUAAAACACImIpAAAAA
+        flhm3FEb9GFLsbAA70bwZpkg8pzqv2xz6mDkP1BLAwQUAAAACABJnItAAAAA
         AAIAAAAAAAAAIQAAADdoRkFRbm10L3Jlcy9yZXNvdXJjZXMucHJvcGVydGll
-        cwMAUEsBAjQDFAAAAAgAiJiKQAAAAAACAAAAAAAAAA0AAAAAAAAAAQAAAO1B
-        AAAAADdoRkFRbm10L2Nzcy9QSwECNAMUAAAACACImIpAd8nVVYsAAADOAAAA
+        cwMAUEsBAjQDFAAAAAgASZyLQAAAAAACAAAAAAAAAA0AAAAAAAAAAQAAAO1B
+        AAAAADdoRkFRbm10L2Nzcy9QSwECNAMUAAAACABJnItAd8nVVYsAAADOAAAA
         FgAAAAAAAAABAAAApIEtAAAAN2hGQVFubXQvY3NzL3ByaW50LmNzc1BLAQI0
-        AxQAAAAIAIiYikB4b8kwZwoAAJ8pAAAXAAAAAAAAAAEAAACkgewAAAA3aEZB
-        UW5tdC9jc3Mvc2NyZWVuLmNzc1BLAQI0AxQAAAAIAIiYikA6UIlCXQAAAHwA
+        AxQAAAAIAEmci0B4b8kwZwoAAJ8pAAAXAAAAAAAAAAEAAACkgewAAAA3aEZB
+        UW5tdC9jc3Mvc2NyZWVuLmNzc1BLAQI0AxQAAAAIAEmci0A6UIlCXQAAAHwA
         AAAbAAAAAAAAAAEAAACkgYgLAAA3aEZBUW5tdC9jc3Mvc2NyZWVuX2llNi5j
-        c3NQSwECNAMUAAAACACImIpAAAAAAAIAAAAAAAAADQAAAAAAAAABAAAA7UEe
-        DAAAN2hGQVFubXQvaW1nL1BLAQI0AxQAAAAIAIiYikDmIV1crAEAAKcBAAAb
+        c3NQSwECNAMUAAAACABJnItAAAAAAAIAAAAAAAAADQAAAAAAAAABAAAA7UEe
+        DAAAN2hGQVFubXQvaW1nL1BLAQI0AxQAAAAIAEmci0DmIV1crAEAAKcBAAAb
         AAAAAAAAAAEAAACkgUsMAAA3aEZBUW5tdC9pbWcvYmFubmVyX3RvcC5wbmdQ
-        SwECNAMUAAAACACImIpANShtrkUAAABIAAAAEwAAAAAAAAABAAAApIEwDgAA
-        N2hGQVFubXQvaW1nL2JnLmdpZlBLAQI0AxQAAAAIAIiYikCHIGlSXg8AALQP
+        SwECNAMUAAAACABJnItANShtrkUAAABIAAAAEwAAAAAAAAABAAAApIEwDgAA
+        N2hGQVFubXQvaW1nL2JnLmdpZlBLAQI0AxQAAAAIAEmci0CHIGlSXg8AALQP
         AAAbAAAAAAAAAAEAAACkgaYOAAA3aEZBUW5tdC9pbWcvYmdfYnV0dG9ucy5w
-        bmdQSwECNAMUAAAACACImIpAdzHm8xoEAAAEDAAAIAAAAAAAAAABAAAApIE9
+        bmdQSwECNAMUAAAACABJnItAdzHm8xoEAAAEDAAAIAAAAAAAAAABAAAApIE9
         HgAAN2hGQVFubXQvaW1nL2J1dHRvbl90ZW1wbGF0ZS54Y2ZQSwECNAMUAAAA
-        CACImIpAHXa0LFAYAABLGAAAGQAAAAAAAAABAAAApIGVIgAAN2hGQVFubXQv
-        aW1nL2dyYWRpZW50LnBuZ1BLAQI0AxQAAAAIAIiYikAWlUeqVAgAAFIIAAAV
+        CABJnItAHXa0LFAYAABLGAAAGQAAAAAAAAABAAAApIGVIgAAN2hGQVFubXQv
+        aW1nL2dyYWRpZW50LnBuZ1BLAQI0AxQAAAAIAEmci0AWlUeqVAgAAFIIAAAV
         AAAAAAAAAAEAAACkgRw7AAA3aEZBUW5tdC9pbWcvbG9nby5wbmdQSwECNAMU
-        AAAACACImIpADMEUt2wIAAAJHQAAFQAAAAAAAAABAAAApIGjQwAAN2hGQVFu
-        bXQvaW1nL2xvZ28ueGNmUEsBAjQDFAAAAAgAiJiKQAAAAAACAAAAAAAAAA0A
-        AAAAAAAAAQAAAO1BQkwAADdoRkFRbm10L2luYy9QSwECNAMUAAAACACImIpA
+        AAAACABJnItADMEUt2wIAAAJHQAAFQAAAAAAAAABAAAApIGjQwAAN2hGQVFu
+        bXQvaW1nL2xvZ28ueGNmUEsBAjQDFAAAAAgASZyLQAAAAAACAAAAAAAAAA0A
+        AAAAAAAAAQAAAO1BQkwAADdoRkFRbm10L2luYy9QSwECNAMUAAAACABJnItA
         kwbXMgMAAAABAAAAGAAAAAAAAAABAAAApIFvTAAAN2hGQVFubXQvaW5jL2Nm
-        b290ZXIudHh0UEsBAjQDFAAAAAgAiJiKQGsT41sEAAAAAgAAABgAAAAAAAAA
+        b290ZXIudHh0UEsBAjQDFAAAAAgASZyLQGsT41sEAAAAAgAAABgAAAAAAAAA
         AQAAAKSBqEwAADdoRkFRbm10L2luYy9jaGVhZGVyLnR4dFBLAQI0AxQAAAAI
-        AIiYikCAja3KCAAAAAYAAAAZAAAAAAAAAAEAAACkgeJMAAA3aEZBUW5tdC9p
-        bmMvcG1mb290ZXIudHh0UEsBAjQDFAAAAAgAiJiKQF/qcR4qAAAAMAAAABkA
+        AEmci0CAja3KCAAAAAYAAAAZAAAAAAAAAAEAAACkgeJMAAA3aEZBUW5tdC9p
+        bmMvcG1mb290ZXIudHh0UEsBAjQDFAAAAAgASZyLQF/qcR4qAAAAMAAAABkA
         AAAAAAAAAQAAAKSBIU0AADdoRkFRbm10L2luYy9wbWhlYWRlci50eHRQSwEC
-        NAMUAAAACACImIpAAAAAAAIAAAAAAAAADAAAAAAAAAABAAAA7UGCTQAAN2hG
-        QVFubXQvanMvUEsBAjQDFAAAAAgAiJiKQAAAAAACAAAAAAAAAA0AAAAAAAAA
-        AQAAAO1Brk0AADdoRkFRbm10L3Jlcy9QSwECNAMUAAAACACImIpACJRMOOj0
+        NAMUAAAACABJnItAAAAAAAIAAAAAAAAADAAAAAAAAAABAAAA7UGCTQAAN2hG
+        QVFubXQvanMvUEsBAjQDFAAAAAgASZyLQAAAAAACAAAAAAAAAA0AAAAAAAAA
+        AQAAAO1Brk0AADdoRkFRbm10L3Jlcy9QSwECNAMUAAAACABJnItACJRMOOj0
         AQCJIQIANAAAAAAAAAABAAAApIHbTQAAN2hGQVFubXQvaW1nL0FpcmxpbmVy
-        LmFpcmphbWFpY2EuYTM0MC5hcnAuNzUwcGl4LmpwZ1BLAQI0AxQAAAAIAIiY
-        ikBoG1uzVwEAAMABAAAWAAAAAAAAAAEAAACkgRVDAgA3aEZBUW5tdC9pbWcv
-        YmdfZ3IuanBnUEsBAjQDFAAAAAgAiJiKQDeXutsSAQAAqQEAABgAAAAAAAAA
+        LmFpcmphbWFpY2EuYTM0MC5hcnAuNzUwcGl4LmpwZ1BLAQI0AxQAAAAIAEmc
+        i0BoG1uzVwEAAMABAAAWAAAAAAAAAAEAAACkgRVDAgA3aEZBUW5tdC9pbWcv
+        YmdfZ3IuanBnUEsBAjQDFAAAAAgASZyLQDeXutsSAQAAqQEAABgAAAAAAAAA
         AQAAAKSBoEQCADdoRkFRbm10L2ltZy9ibG9nX2dyLmpwZ1BLAQI0AxQAAAAI
-        AIiYikBtDLb0oA0AAMMNAAAZAAAAAAAAAAEAAACkgehFAgA3aEZBUW5tdC9p
-        bWcvY2F0ZWdvcnkuZ2lmUEsBAjQDFAAAAAgAiJiKQP28+0s7VwAAOoMAABwA
+        AEmci0BtDLb0oA0AAMMNAAAZAAAAAAAAAAEAAACkgehFAgA3aEZBUW5tdC9p
+        bWcvY2F0ZWdvcnkuZ2lmUEsBAjQDFAAAAAgASZyLQP28+0s7VwAAOoMAABwA
         AAAAAAAAAQAAAKSBv1MCADdoRkFRbm10L2ltZy9FdXJvZmlnaHRlci5qcGdQ
-        SwECNAMUAAAACACImIpAqSyfcySnAAAlqgAAFAAAAAAAAAABAAAApIE0qwIA
-        N2hGQVFubXQvaW1nL21pZy5qcGdQSwECNAMUAAAACACImIpAdX1F+dEPAAA1
+        SwECNAMUAAAACABJnItAqSyfcySnAAAlqgAAFAAAAAAAAAABAAAApIE0qwIA
+        N2hGQVFubXQvaW1nL21pZy5qcGdQSwECNAMUAAAACABJnItAdX1F+dEPAAA1
         EAAAFQAAAAAAAAABAAAApIGKUgMAN2hGQVFubXQvaW1nL3RvcDEuanBnUEsB
-        AjQDFAAAAAgAiJiKQMtlxS2TTgAA7k8AABUAAAAAAAAAAQAAAKSBjmIDADdo
-        RkFRbm10L2ltZy90b3AyLmpwZ1BLAQI0AxQAAAAIAIiYikD87aLUqAwAAEYN
+        AjQDFAAAAAgASZyLQMtlxS2TTgAA7k8AABUAAAAAAAAAAQAAAKSBjmIDADdo
+        RkFRbm10L2ltZy90b3AyLmpwZ1BLAQI0AxQAAAAIAEmci0D87aLUqAwAAEYN
         AAAVAAAAAAAAAAEAAACkgVSxAwA3aEZBUW5tdC9pbWcvdG9wMy5qcGdQSwEC
-        NAMUAAAACACImIpAAAAAAAIAAAAAAAAAIQAAAAAAAAABAAAApIEvvgMAN2hG
+        NAMUAAAACABJnItAAAAAAAIAAAAAAAAAIQAAAAAAAAABAAAApIEvvgMAN2hG
         QVFubXQvcmVzL3Jlc291cmNlcy5wcm9wZXJ0aWVzUEsFBgAAAAAdAB0A1wcA
-        AHC+AwAAAA0KLS16WFlUTE5wYXRBblBJQ0h4ckdIcC0tDQo=
+        AHC+AwAAAA0KLS1sQ0trbmFuS0dGckZ1anpVYmtLYS0tDQo=
 
     headers: 
       Accept: 
@@ -6418,7 +6418,7 @@ http_interactions:
       Accept-Language: 
       - en-us,en;q=0.5
       Cookie: 
-      - JSESSIONID=3BD7564D9EB16875CA95ACC9F308C3A8.test5e
+      - JSESSIONID=90A4E71B7C6A54FEF7409AB3B2BFB7D4.test5e
       Host: 
       - ca-test.adyen.com
       Referer: 
@@ -6435,7 +6435,7 @@ http_interactions:
         scheme: https
         user: 
       Content-Type: 
-      - multipart/form-data; boundary=zXYTLNpatAnPICHxrGHp
+      - multipart/form-data; boundary=lCKknanKGFrFujzUbkKa
       Content-Length: 
       - "247670"
       Connection: 
@@ -6448,7 +6448,7 @@ http_interactions:
       message: Moved Temporarily
     headers: 
       Date: 
-      - Tue, 10 Apr 2012 17:04:18 GMT
+      - Wed, 11 Apr 2012 17:34:19 GMT
       Server: 
       - Apache
       Cache-Control: 
@@ -6475,7 +6475,7 @@ http_interactions:
       encoding: US-ASCII
       string: ""
     http_version: 
-  recorded_at: Tue, 10 Apr 2012 17:04:18 GMT
+  recorded_at: Wed, 11 Apr 2012 17:34:19 GMT
 - request: 
     method: get
     uri: https://ca-test.adyen.com/ca/ca/skin/uploadskin.shtml?activate=true&skinCode=7hFAQnmt
@@ -6494,7 +6494,7 @@ http_interactions:
       Accept-Language: 
       - en-us,en;q=0.5
       Cookie: 
-      - JSESSIONID=3BD7564D9EB16875CA95ACC9F308C3A8.test5e
+      - JSESSIONID=90A4E71B7C6A54FEF7409AB3B2BFB7D4.test5e
       Host: 
       - ca-test.adyen.com
       Referer: 
@@ -6509,7 +6509,7 @@ http_interactions:
       message: OK
     headers: 
       Date: 
-      - Tue, 10 Apr 2012 17:04:18 GMT
+      - Wed, 11 Apr 2012 17:34:19 GMT
       Server: 
       - Apache
       Cache-Control: 
@@ -6748,7 +6748,7 @@ http_interactions:
         </html>
 
     http_version: 
-  recorded_at: Tue, 10 Apr 2012 17:04:18 GMT
+  recorded_at: Wed, 11 Apr 2012 17:34:19 GMT
 - request: 
     method: post
     uri: https://ca-test.adyen.com/ca/ca/skin/processkin.shtml
@@ -6767,7 +6767,7 @@ http_interactions:
       Accept-Language: 
       - en-us,en;q=0.5
       Cookie: 
-      - JSESSIONID=3BD7564D9EB16875CA95ACC9F308C3A8.test5e
+      - JSESSIONID=90A4E71B7C6A54FEF7409AB3B2BFB7D4.test5e
       Host: 
       - ca-test.adyen.com
       Referer: 
@@ -6797,7 +6797,7 @@ http_interactions:
       message: Moved Temporarily
     headers: 
       Date: 
-      - Tue, 10 Apr 2012 17:04:18 GMT
+      - Wed, 11 Apr 2012 17:34:19 GMT
       Server: 
       - Apache
       Cache-Control: 
@@ -6824,7 +6824,7 @@ http_interactions:
       encoding: US-ASCII
       string: ""
     http_version: 
-  recorded_at: Tue, 10 Apr 2012 17:04:18 GMT
+  recorded_at: Wed, 11 Apr 2012 17:34:20 GMT
 - request: 
     method: get
     uri: https://ca-test.adyen.com/ca/ca/skin/skins.shtml
@@ -6843,7 +6843,7 @@ http_interactions:
       Accept-Language: 
       - en-us,en;q=0.5
       Cookie: 
-      - JSESSIONID=3BD7564D9EB16875CA95ACC9F308C3A8.test5e
+      - JSESSIONID=90A4E71B7C6A54FEF7409AB3B2BFB7D4.test5e
       Host: 
       - ca-test.adyen.com
       Referer: 
@@ -6858,7 +6858,7 @@ http_interactions:
       message: OK
     headers: 
       Date: 
-      - Tue, 10 Apr 2012 17:04:19 GMT
+      - Wed, 11 Apr 2012 17:34:20 GMT
       Server: 
       - Apache
       Cache-Control: 
@@ -7064,7 +7064,7 @@ http_interactions:
                     	style="vertical-align: middle" title="skins.edit" src="/ca/img/icons/layout_content.png" alt="skins.edit" 
                         />	Kx9axnRf</a>
         					</td>
-            	<td>demo</td>
+            	<td>soundcloud</td>
         		    	<td align="center">
         			<a href="/ca/ca/skin/uploadskin.shtml?skinCode=Kx9axnRf"><img 
                     	style="vertical-align: middle" title="skins.upload" src="/ca/img/icons/disk.png" alt="skins.upload" 
@@ -7077,6 +7077,29 @@ http_interactions:
         		</td>
         		<td align="center">
         			<a href="/ca/ca/skin/removeskin.shtml?skinCode=Kx9axnRf"><img 
+                    	style="vertical-align: middle" title="skins.remove" src="/ca/img/icons/cross.png" alt="skins.remove" 
+                        /></a>
+        		</td>
+        				</tr>	
+        	    	<tr class="std">
+            	<td>
+        							<a href="/ca/ca/skin/editskin.shtml?skinCode=vQW0fEo8"><img 
+                    	style="vertical-align: middle" title="skins.edit" src="/ca/img/icons/layout_content.png" alt="skins.edit" 
+                        />	vQW0fEo8</a>
+        					</td>
+            	<td>test</td>
+        		    	<td align="center">
+        			<a href="/ca/ca/skin/uploadskin.shtml?skinCode=vQW0fEo8"><img 
+                    	style="vertical-align: middle" title="skins.upload" src="/ca/img/icons/disk.png" alt="skins.upload" 
+                        /></a>
+        		</td>
+        		<td align="center">
+        			<a href="/ca/ca/skin/downloadskin.shtml?skinCode=vQW0fEo8"><img 
+                    	style="vertical-align: middle" title="skins.download" src="/ca/img/icons/disk.png" alt="skins.download" 
+                        /></a>
+        		</td>
+        		<td align="center">
+        			<a href="/ca/ca/skin/removeskin.shtml?skinCode=vQW0fEo8"><img 
                     	style="vertical-align: middle" title="skins.remove" src="/ca/img/icons/cross.png" alt="skins.remove" 
                         /></a>
         		</td>
@@ -7102,7 +7125,7 @@ http_interactions:
         </html>
 
     http_version: 
-  recorded_at: Tue, 10 Apr 2012 17:04:19 GMT
+  recorded_at: Wed, 11 Apr 2012 17:34:20 GMT
 - request: 
     method: get
     uri: https://ca-test.adyen.com/ca/ca/skin/testpayment.shtml?skinCode=7hFAQnmt
@@ -7121,7 +7144,7 @@ http_interactions:
       Accept-Language: 
       - en-us,en;q=0.5
       Cookie: 
-      - JSESSIONID=3BD7564D9EB16875CA95ACC9F308C3A8.test5e
+      - JSESSIONID=90A4E71B7C6A54FEF7409AB3B2BFB7D4.test5e
       Host: 
       - ca-test.adyen.com
       Connection: 
@@ -7134,7 +7157,7 @@ http_interactions:
       message: OK
     headers: 
       Date: 
-      - Tue, 10 Apr 2012 17:04:19 GMT
+      - Wed, 11 Apr 2012 17:34:20 GMT
       Server: 
       - Apache
       Cache-Control: 
@@ -7296,7 +7319,7 @@ http_interactions:
         			</tr>
         			<tr>
         				<th class="row">Latest Version</th>
-        				<td>26</td>
+        				<td>30</td>
         			</tr>
         			<tr>
         				<td colspan="2">
@@ -7322,7 +7345,7 @@ http_interactions:
         					If the version on Test is not the same as the Latest version, it will be published automatically. Note that there is a few minutes delay after modifying the skin before it is deployed on the Test Hosted Payment Pages. 			</div>
         				</th>
         				<td>
-        					<iframe src="https://test.adyen.com/hpp/version.shtml?skinCode=7hFAQnmt&amp;version=26" height="50" width="450"></iframe>
+        					<iframe src="https://test.adyen.com/hpp/version.shtml?skinCode=7hFAQnmt&amp;version=30" height="50" width="450"></iframe>
         				</td>
         			</tr>
         			<tr>
@@ -7340,7 +7363,7 @@ http_interactions:
         					If the version on Live is not the same as the Latest version, you will have to Publish the Skin to Live via the Publish Tab. Note that there is a few minutes delay after publishing the skin before it is deployed on the Live Hosted Payment Pages. 			</div>
         				</th>
         				<td>
-        					<iframe src="https://live.adyen.com/hpp/version.shtml?skinCode=7hFAQnmt&amp;version=26" height="50" width="450"></iframe>
+        					<iframe src="https://live.adyen.com/hpp/version.shtml?skinCode=7hFAQnmt&amp;version=30" height="50" width="450"></iframe>
         				</td>
         			</tr>
         						<tr>
@@ -7700,7 +7723,7 @@ http_interactions:
         			<tr>
         				<th class="row">Merchant Reference</th>
         				<td>
-        					<input type="text" name="merchantReference" value="SKINTEST-1334077459229" size="20" />
+        					<input type="text" name="merchantReference" value="SKINTEST-1334165660439" size="20" />
         				</td>
         			</tr>	
         			<tr>
@@ -7765,5 +7788,5 @@ http_interactions:
         </html>
 
     http_version: 
-  recorded_at: Tue, 10 Apr 2012 17:04:19 GMT
+  recorded_at: Wed, 11 Apr 2012 17:34:20 GMT
 recorded_with: VCR 2.0.1

@@ -2,7 +2,7 @@
 http_interactions: 
 - request: 
     method: get
-    uri: https://live.adyen.com/hpp/version.shtml?skinCode=Kx9axnRf
+    uri: https://test.adyen.com/hpp/version.shtml?skinCode=Kx9axnRf
     body: 
       encoding: US-ASCII
       string: ""
@@ -18,7 +18,7 @@ http_interactions:
       Accept-Language: 
       - en-us,en;q=0.5
       Host: 
-      - live.adyen.com
+      - test.adyen.com
       Connection: 
       - keep-alive
       Keep-Alive: 
@@ -29,11 +29,11 @@ http_interactions:
       message: OK
     headers: 
       Date: 
-      - Tue, 10 Apr 2012 17:04:20 GMT
+      - Wed, 11 Apr 2012 17:34:21 GMT
       Server: 
       - Apache
       Set-Cookie: 
-      - JSESSIONID=14ADA2D0153C18695283DD9EF94A3688.live6e; Path=/hpp/; Secure; HttpOnly
+      - JSESSIONID=83CFD5D05734C5E24E1A2979EF15102A.test4e; Path=/hpp/; Secure; HttpOnly
       P3p: 
       - policyref="/w3c/policy.xml", CP="NOI DSP COR CURa ADMa DEVa OUR NOR BUS FIN STA"
       Cache-Control: 
@@ -43,7 +43,7 @@ http_interactions:
       Expires: 
       - "-1"
       Keep-Alive: 
-      - timeout=10, max=250
+      - timeout=15, max=100
       Connection: 
       - Keep-Alive
       Transfer-Encoding: 
@@ -66,12 +66,12 @@ http_interactions:
         	</head>
         	<body>	
             <p>
-            Version:0
+            Version:14
             <br />
-            Modification Date:unknown
+            Modification Date:2012-04-10T22:51:05.99Z
             </p>
         	</body>
         </html>
     http_version: 
-  recorded_at: Tue, 10 Apr 2012 17:04:20 GMT
+  recorded_at: Wed, 11 Apr 2012 17:34:21 GMT
 recorded_with: VCR 2.0.1
