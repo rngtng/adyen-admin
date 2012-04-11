@@ -20,41 +20,49 @@ module Adyen
           send("#{key}=", value)
         end
 
-        path ||= File.join(Adyen::Admin.skin_dir, [code,name].compact.join("-"))
+        self.path ||= File.join(Skin.default_path, [name,code].compact.join("-"))
 
         raise ArgumentError unless code
       end
 
+      def self.default_path
+        @default_path || "."
+      end
+
+      def self.default_path=(path)
+        @default_path = path
+      end
+
       # union remote and local skins. Local skins are frozen to
       # indicate no availble remote counter part which avoid update
-      def self.all(path = nil)
+      def self.all(path = Skin.default_path)
         {}.tap do |hash|
           self.all_remote.each do |skin|
             hash[skin.code] = skin unless hash[skin.code]
           end
           self.all_local(path).each do |skin|
-            hash[skin.code] = skin.freeze unless hash[skin.code]
+            hash[skin.code] = skin unless hash[skin.code]
           end
         end.values
       end
 
       # fetch all remote skins
       def self.all_remote
-        @@skins_remote ||= begin
+        @skins_remote ||= begin
           page = Adyen::Admin.get(SKINS)
           page.search(".data tbody tr").map do |node|
             Skin.new({
               :code => node.search("a")[0].content.strip,
-              :name => node.search("td")[1].content.strip
+              :name => node.search("td")[1].content.strip,
             })
           end
         end
       end
 
       # fetch all local skins
-      def self.all_local(path)
+      def self.all_local(path = Skin.default_path)
         Dir[File.join(path.to_s, "*")].map do |path|
-          Skin.new(:path => path) rescue nil
+          Skin.new(:path => path).freeze rescue nil
         end.compact
       end
 
@@ -66,18 +74,18 @@ module Adyen
       end
 
       def self.purge_cache
-        @@skins_remote = nil
+        @skins_remote = nil
       end
 
       ##################################
 
-      def path=(path)
-        if Skin.is_skin_path?(path)
-          new_code, new_name = File.basename(path).split("-").reverse
+      def path=(new_path)
+        if Skin.is_skin_path?(new_path)
+          new_code, new_name = File.basename(new_path).split("-").reverse
           self.code ||= new_code
           self.name ||= new_name
           raise ArgumentError if self.code && self.code != new_code
-          @path = path
+          @path = new_path
         end
       end
 
@@ -195,7 +203,7 @@ module Adyen
 
       def self.is_skin_path?(path)
         %w(skin.html.erb inc css js).each do |sub_path|
-          return true if File.exists?(File.join(path, sub_path))
+          return true if File.exists?(File.join(path.to_s, sub_path))
         end
         false
       end

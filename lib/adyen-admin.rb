@@ -9,9 +9,5 @@ module Adyen
 
     class AuthenticationError < StandardError; end
 
-    def skin_dir
-      "."
-    end
-    module_function :skin_dir
   end
 end

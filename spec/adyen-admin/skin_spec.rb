@@ -29,6 +29,11 @@ module Adyen::Admin
             Skin.new(:code => "vQW0fEo8", :name => "test"),
           ]
         end
+
+        it 'sets local path' do
+          Adyen::Admin::Skin.default_path = skin_fixtures
+          Skin.all_remote.first.path.should == "#{skin_fixtures}/example-7hFAQnmt"
+        end
       end
 
       describe ".all_local" do
