@@ -27,11 +27,21 @@ module Adyen
         raise ArgumentError unless code
       end
 
-      def self.all(path = nil)
-        all_remote + all_local(path)
+      # union remote and local skins. Local skins are frozen to
+      # indicate no availble remote counter part which avoid update
+      def self.all(path = nil, force_update = false)
+        {}.tap do |hash|
+          all_remote(force_update).each do |skin|
+            hash[skin.code] = skin unless hash[skin.code]
+          end
+          all_local(path).each do |skin|
+            hash[skin.code] = skin.freeze unless hash[skin.code]
+          end
+        end.values
       end
 
-      def self.all_remote
+      def self.all_remote(force_update = false)
+        @@skins_remote = nil if force_update
         @@skins_remote ||= begin
           page = Adyen::Admin.client.get(SKINS)
           page.search(".data tbody tr").map do |node|

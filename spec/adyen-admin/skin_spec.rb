@@ -15,7 +15,7 @@ module Adyen::Admin
       end
     end
 
-    describe ".all" do
+    describe ".all_remote" do
       it 'returns the skins' do
         Skin.all.should == [
           skin,
@@ -34,6 +34,23 @@ module Adyen::Admin
         ]
       end
     end
+
+    describe ".all" do
+      it 'returns the skins' do
+        Skin.all(skin_fixtures).should == [
+          skin,
+          Skin.new(:code => "Kx9axnRf", :name => "demo"),
+          Skin.new(:code => "base"),
+          Skin.new(:code => "DV3tf95f"),
+          Skin.new(:code => "JH0815")
+        ]
+      end
+
+      it 'freezes local skins' do
+        Skin.all(skin_fixtures).last.should be_frozen
+      end
+    end
+
 
     describe ".find" do
       it 'returns the skin' do
