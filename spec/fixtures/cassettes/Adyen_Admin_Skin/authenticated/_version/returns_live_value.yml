@@ -29,11 +29,11 @@ http_interactions:
       message: OK
     headers: 
       Date: 
-      - Wed, 11 Apr 2012 17:34:21 GMT
+      - Thu, 12 Apr 2012 15:12:43 GMT
       Server: 
       - Apache
       Set-Cookie: 
-      - JSESSIONID=AE08C4C8F265C65BA53E0BFCB667AB2C.live3e; Path=/hpp/; Secure; HttpOnly
+      - JSESSIONID=9A11143FA8014456DBFB847E446F7879.live7e; Path=/hpp/; Secure; HttpOnly
       P3p: 
       - policyref="/w3c/policy.xml", CP="NOI DSP COR CURa ADMa DEVa OUR NOR BUS FIN STA"
       Cache-Control: 
@@ -73,5 +73,5 @@ http_interactions:
         	</body>
         </html>
     http_version: 
-  recorded_at: Wed, 11 Apr 2012 17:34:21 GMT
+  recorded_at: Thu, 12 Apr 2012 15:12:42 GMT
 recorded_with: VCR 2.0.1

@@ -131,6 +131,12 @@ module Adyen::Admin
           skin.download
           File.should be_exists(zip_filename)
         end
+
+        it "is a zipfile" do
+          Zip::ZipFile.open(skin.download) do |zipfile|
+            zipfile.find_entry(File.join(skin_code, "inc", "cheader.txt")).should be_true
+          end
+        end
       end
 
       describe "#decompile"  do

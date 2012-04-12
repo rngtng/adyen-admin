@@ -5,7 +5,7 @@ module Adyen
   module Admin
     class Skin
       UPLOAD       = "https://ca-test.adyen.com/ca/ca/skin/uploadskin.shtml?skinCode=%s"
-      DOWNLOAD     = "https://ca-test.adyen.com/ca/ca/skin/downloadskinsubmit.shtml?skinCode=%s"
+      DOWNLOAD     = "https://ca-test.adyen.com/ca/ca/skin/downloadskinsubmit.shtml?downloadSkin=Download&skinCode=%s"
       TEST         = "https://ca-test.adyen.com/ca/ca/skin/testpayment.shtml?skinCode=%s"
 
       VERSION_TEST = "https://test.adyen.com/hpp/version.shtml?skinCode=%s"

@@ -18,7 +18,7 @@ http_interactions:
       Accept-Language: 
       - en-us,en;q=0.5
       Cookie: 
-      - JSESSIONID=90A4E71B7C6A54FEF7409AB3B2BFB7D4.test5e
+      - JSESSIONID=8C3D2F4728B757CCE97F3C32698E9008.test5e
       Host: 
       - ca-test.adyen.com
       Connection: 
@@ -31,7 +31,7 @@ http_interactions:
       message: OK
     headers: 
       Date: 
-      - Wed, 11 Apr 2012 17:34:21 GMT
+      - Thu, 12 Apr 2012 15:12:43 GMT
       Server: 
       - Apache
       Cache-Control: 
@@ -193,7 +193,7 @@ http_interactions:
         			</tr>
         			<tr>
         				<th class="row">Latest Version</th>
-        				<td>30</td>
+        				<td>31</td>
         			</tr>
         			<tr>
         				<td colspan="2">
@@ -219,7 +219,7 @@ http_interactions:
         					If the version on Test is not the same as the Latest version, it will be published automatically. Note that there is a few minutes delay after modifying the skin before it is deployed on the Test Hosted Payment Pages. 			</div>
         				</th>
         				<td>
-        					<iframe src="https://test.adyen.com/hpp/version.shtml?skinCode=7hFAQnmt&amp;version=30" height="50" width="450"></iframe>
+        					<iframe src="https://test.adyen.com/hpp/version.shtml?skinCode=7hFAQnmt&amp;version=31" height="50" width="450"></iframe>
         				</td>
         			</tr>
         			<tr>
@@ -237,7 +237,7 @@ http_interactions:
         					If the version on Live is not the same as the Latest version, you will have to Publish the Skin to Live via the Publish Tab. Note that there is a few minutes delay after publishing the skin before it is deployed on the Live Hosted Payment Pages. 			</div>
         				</th>
         				<td>
-        					<iframe src="https://live.adyen.com/hpp/version.shtml?skinCode=7hFAQnmt&amp;version=30" height="50" width="450"></iframe>
+        					<iframe src="https://live.adyen.com/hpp/version.shtml?skinCode=7hFAQnmt&amp;version=31" height="50" width="450"></iframe>
         				</td>
         			</tr>
         						<tr>
@@ -597,7 +597,7 @@ http_interactions:
         			<tr>
         				<th class="row">Merchant Reference</th>
         				<td>
-        					<input type="text" name="merchantReference" value="SKINTEST-1334165661643" size="20" />
+        					<input type="text" name="merchantReference" value="SKINTEST-1334243563369" size="20" />
         				</td>
         			</tr>	
         			<tr>
@@ -662,13 +662,13 @@ http_interactions:
         </html>
 
     http_version: 
-  recorded_at: Wed, 11 Apr 2012 17:34:21 GMT
+  recorded_at: Thu, 12 Apr 2012 15:12:43 GMT
 - request: 
     method: post
     uri: https://ca-test.adyen.com/ca/ca/skin/testpayment.shtml
     body: 
       encoding: UTF-8
-      string: paymentAmount=199&currencyCode=EUR&countryCode=&shopperLocale=en_GB&merchantReference=SKINTEST-1334165661643&merchantAccount=SoundCloudCOM&system=test&skinCode=7hFAQnmt
+      string: paymentAmount=199&currencyCode=EUR&countryCode=&shopperLocale=en_GB&merchantReference=SKINTEST-1334243563369&merchantAccount=SoundCloudCOM&system=test&skinCode=7hFAQnmt
     headers: 
       Accept: 
       - "*/*"
@@ -681,7 +681,7 @@ http_interactions:
       Accept-Language: 
       - en-us,en;q=0.5
       Cookie: 
-      - JSESSIONID=90A4E71B7C6A54FEF7409AB3B2BFB7D4.test5e
+      - JSESSIONID=8C3D2F4728B757CCE97F3C32698E9008.test5e
       Host: 
       - ca-test.adyen.com
       Referer: 
@@ -711,7 +711,7 @@ http_interactions:
       message: OK
     headers: 
       Date: 
-      - Wed, 11 Apr 2012 17:34:21 GMT
+      - Thu, 12 Apr 2012 15:12:43 GMT
       Server: 
       - Apache
       Cache-Control: 
@@ -888,11 +888,11 @@ http_interactions:
         			</tr>
         			<tr>
         				<th class="row">Signature String</th>
-        				<td>199EUR2012-04-17SKINTEST-13341656616437hFAQnmtSoundCloudCOM2012-04-11T18:04:21Z</td>
+        				<td>199EUR2012-04-18SKINTEST-13342435633697hFAQnmtSoundCloudCOM2012-04-12T15:42:43Z</td>
         			</tr>
         			<tr>
         				<th class="row">HMAC Signature</th>
-        				<td>7TdU3ba2fa4NZJezgYuQv4UnUOQ=</td>
+        				<td>fO1gOwHYMrpYm21rgss5cM3T2xY=</td>
         			</tr>
         			<tr>
         				<td colspan="2">&nbsp;</td>
@@ -900,17 +900,17 @@ http_interactions:
         			<tr>
         				<td colspan="2">
         				<form action="https://test.adyen.com/hpp/select.shtml" method="post" id="paymentform" target="myNewWin" onsubmit="return formValidate(this);">
-                         <input type="hidden" name="merchantSig" value="7TdU3ba2fa4NZJezgYuQv4UnUOQ=" />                 
-                         <input type="hidden" name="merchantReference" value="SKINTEST-1334165661643" />                 	
+                         <input type="hidden" name="merchantSig" value="fO1gOwHYMrpYm21rgss5cM3T2xY=" />                 
+                         <input type="hidden" name="merchantReference" value="SKINTEST-1334243563369" />                 	
                          <input type="hidden" name="paymentAmount" value="199" />                 
                          <input type="hidden" name="currencyCode" value="EUR" />                 
-                         <input type="hidden" name="shipBeforeDate" value="2012-04-17" />                 	
+                         <input type="hidden" name="shipBeforeDate" value="2012-04-18" />                 	
                          <input type="hidden" name="merchantAccount" value="SoundCloudCOM" />                 
                                         
                                          
                                         
                          <input type="hidden" name="shopperLocale" value="en_GB" />                 
-                         <input type="hidden" name="sessionValidity" value="2012-04-11T18:04:21Z" />                 
+                         <input type="hidden" name="sessionValidity" value="2012-04-12T15:42:43Z" />                 
                          <input type="hidden" name="countryCode" value="" />                
                        	               	
         					<input type="hidden" name="skinCode" value="7hFAQnmt" />
@@ -937,5 +937,5 @@ http_interactions:
         </html>
 
     http_version: 
-  recorded_at: Wed, 11 Apr 2012 17:34:21 GMT
+  recorded_at: Thu, 12 Apr 2012 15:12:43 GMT
 recorded_with: VCR 2.0.1

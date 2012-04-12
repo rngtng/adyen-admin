@@ -29,13 +29,13 @@ http_interactions:
       message: Moved Temporarily
     headers: 
       Date: 
-      - Wed, 11 Apr 2012 17:34:15 GMT
+      - Thu, 12 Apr 2012 15:12:33 GMT
       Server: 
       - Apache
       Set-Cookie: 
-      - JSESSIONID=0C617FF66E2DE96A96AF07119ACD3139.test5e; Path=/ca/; Secure; HttpOnly
+      - JSESSIONID=14B161A025DDDCA864B685B2B8936DF0.test5e; Path=/ca/; Secure; HttpOnly
       Location: 
-      - https://ca-test.adyen.com/ca/ca/login.shtml;jsessionid=0C617FF66E2DE96A96AF07119ACD3139.test5e
+      - https://ca-test.adyen.com/ca/ca/login.shtml;jsessionid=14B161A025DDDCA864B685B2B8936DF0.test5e
       Content-Length: 
       - "0"
       Keep-Alive: 
@@ -48,10 +48,10 @@ http_interactions:
       encoding: US-ASCII
       string: ""
     http_version: 
-  recorded_at: Wed, 11 Apr 2012 17:34:15 GMT
+  recorded_at: Thu, 12 Apr 2012 15:12:33 GMT
 - request: 
     method: get
-    uri: https://ca-test.adyen.com/ca/ca/login.shtml;jsessionid=0C617FF66E2DE96A96AF07119ACD3139.test5e
+    uri: https://ca-test.adyen.com/ca/ca/login.shtml;jsessionid=14B161A025DDDCA864B685B2B8936DF0.test5e
     body: 
       encoding: US-ASCII
       string: ""
@@ -67,7 +67,7 @@ http_interactions:
       Accept-Language: 
       - en-us,en;q=0.5
       Cookie: 
-      - JSESSIONID=0C617FF66E2DE96A96AF07119ACD3139.test5e
+      - JSESSIONID=14B161A025DDDCA864B685B2B8936DF0.test5e
       Host: 
       - ca-test.adyen.com
       Connection: 
@@ -80,7 +80,7 @@ http_interactions:
       message: OK
     headers: 
       Date: 
-      - Wed, 11 Apr 2012 17:34:15 GMT
+      - Thu, 12 Apr 2012 15:12:33 GMT
       Server: 
       - Apache
       Cache-Control: 
@@ -242,7 +242,7 @@ http_interactions:
         		 
         		  <tr>
         		    <td colspan="2"><br />
-        				<input type="hidden" name="j_formHash" value="271lVbzpKDQZwnZ5gmR45XtX+5/X84=" />
+        				<input type="hidden" name="j_formHash" value="204t93A+Vr9sLSS0lCB/zfNwdobM4A=" />
         				<input type="submit" class="button" value="Submit" /></td>
         		  </tr>
         		</table>
@@ -267,5 +267,5 @@ http_interactions:
         </html>
 
     http_version: 
-  recorded_at: Wed, 11 Apr 2012 17:34:15 GMT
+  recorded_at: Thu, 12 Apr 2012 15:12:33 GMT
 recorded_with: VCR 2.0.1
