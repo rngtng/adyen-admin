@@ -94,6 +94,10 @@ module Adyen::Admin
           Skin.new(:path => path).code.should == "7hFAQnmt"
         end
 
+        it "auto sets name from path" do
+          Skin.new(:path => path).name.should == "example"
+        end
+
         it "raises error on wrong code for path" do
           expect do
             Skin.new(:code => "different", :path => path).path.should == path
@@ -105,10 +109,20 @@ module Adyen::Admin
             Skin.new
           end.to raise_error
         end
+
+        context "slash in name" do
+          let(:path) { "#{skin_fixtures}/example-test-7hFAQnmt" }
+
+          it "sets name" do
+            Skin.stub(:is_skin_path?).and_return(true)
+            Skin.new(:path => path).name.should == "example-test"
+          end
+        end
       end
 
       describe "#download"  do
-        let(:zip_filename) { "#{skin.code}.zip"}
+        let(:zip_filename) { "#{skin.code}.zip" }
+
         after do
           `rm -rf #{zip_filename}`
         end
@@ -119,15 +133,50 @@ module Adyen::Admin
         end
       end
 
+      describe "#decompile"  do
+        let(:skin_code) { "DV3tf95f" }
+        let(:skin) { Skin.new(:path => "#{skin_fixtures}/#{skin_code}") }
+        let!(:zip_filename) { skin.compile(nil) }
+        let(:backup_filename) { File.join(skin.path, '.backup.zip') }
+
+        before do
+          `cp -r #{skin_fixtures}/#{skin_code} #{skin_fixtures}/_backup`
+        end
+
+        after do
+          `rm -rf #{zip_filename} #{backup_filename} #{skin_fixtures}/#{skin_code}`
+          `mv #{skin_fixtures}/_backup #{skin_fixtures}/#{skin_code}`
+        end
+
+        it "creates backup" do
+          skin.decompile(zip_filename)
+
+          File.should be_exists(backup_filename)
+        end
+
+        it "unzips files" do
+          `rm -rf #{skin.path}`
+
+          expect do
+            skin.decompile(zip_filename)
+          end.to change { File.exists?(File.join(skin.path, 'inc', 'order_data.txt')) }
+        end
+      end
+
       describe "#compile" do
         let(:skin_code) { "DV3tf95f" }
         let(:skin) { Skin.new(:path => "#{skin_fixtures}/#{skin_code}") }
+        let(:zip_filename) { skin.compile }
 
-        def zip_contains(zip_filename, file)
-          Zip::ZipFile.open(zip_filename, 'r') do |zipfile|
+        def zip_contains(file)
+          Zip::ZipFile.open(zip_filename) do |zipfile|
             return true if zipfile.find_entry(File.join(skin_code, file))
           end
           false
+        end
+
+        after do
+          `rm -f #{skin_code}.zip`
         end
 
         context "without base" do
@@ -140,32 +189,48 @@ module Adyen::Admin
           end
 
           it "includes screen file" do
-            zip_contains(skin.compile, "css/screen.css").should be_true
+            zip_contains("css/screen.css").should be_true
           end
 
           it "excludes print files" do
-            zip_contains(skin.compile, "css/print.css").should_not be_true
+            zip_contains("css/print.css").should_not be_true
           end
         end
 
         it "includes screen file" do
-          zip_contains(skin.compile, "css/screen.css").should be_true
+          zip_contains("css/screen.css").should be_true
         end
 
         it "includes print file" do
-          zip_contains(skin.compile, "css/print.css").should be_true
+          zip_contains("css/print.css").should be_true
         end
 
         it "excludes meta file" do
-          zip_contains(skin.compile, "metadata.yml").should_not be_true
+          zip_contains("metadata.yml").should_not be_true
         end
 
         it "excludes skin file" do
-          zip_contains(skin.compile, "skin.html.erb").should_not be_true
+          zip_contains("skin.html.erb").should_not be_true
+        end
+
+        context "no exlusion" do
+          let(:zip_filename) { skin.compile(nil) }
+
+          it "excludes meta file" do
+            zip_contains("metadata.yml").should be_true
+          end
+
+          it "excludes skin file" do
+            zip_contains("skin.html.erb").should be_true
+          end
         end
       end
 
       describe "#upload" do
+        after do
+          `rm -f #{skin_code}.zip`
+        end
+
         context "valid set" do
           it "increases version" do
             skin.path = "#{skin_fixtures}/example-7hFAQnmt"

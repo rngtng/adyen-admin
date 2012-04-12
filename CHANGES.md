@@ -7,6 +7,10 @@
   * add CLI binaries (to compile + upload) -> read from .adyenrc file
   * make compatible with Live system
 
+## v0.0.5
+  * fix name with multiple - issue
+  * added decompile with backup
+
 ## v0.0.4
   * get the default path right
   * add path to remote skins

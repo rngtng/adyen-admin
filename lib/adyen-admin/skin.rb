@@ -1,4 +1,4 @@
-require 'tmpdir'
+require 'tempfile'
 require 'zip/zip'
 
 module Adyen
@@ -22,7 +22,7 @@ module Adyen
 
         self.path ||= File.join(Skin.default_path, [name,code].compact.join("-"))
 
-        raise ArgumentError unless code
+        raise ArgumentError, "No Code given" unless code
       end
 
       def self.default_path
@@ -81,9 +81,9 @@ module Adyen
 
       def path=(new_path)
         if Skin.is_skin_path?(new_path)
-          new_code, new_name = File.basename(new_path).split("-").reverse
+          new_code, *new_name = File.basename(new_path).split("-").reverse
           self.code ||= new_code
-          self.name ||= new_name
+          self.name ||= new_name.reverse.join("-")
           raise ArgumentError if self.code && self.code != new_code
           @path = new_path
         end
@@ -124,33 +124,56 @@ module Adyen
       def download
         "#{code}.zip".tap do |filename|
           Adyen::Admin.client.download(DOWNLOAD % code, filename)
-
-          if path
-            # create backup of current
-            # compile
-          end
-          # unzip
         end
       end
 
-      def compile
-        raise ArgumentError unless path
+      def decompile(filename, backup = true)
+        # create backup of current, include any files
+        if self.path
+          if backup
+            compile(/(zip|lock)$/, ".backup.zip")
+          end
+        else
+          File.join(Skin.default_path, [name,code].compact.join("-")).tap do |p|
+            `mkdir -p #{p}`
+            self.path = p
+          end
+        end
 
-        File.join(Dir.tmpdir, "#{code}.zip").tap do |filename|
-          `rm -rf #{filename}`
-          Zip::ZipFile.open(filename, 'w') do |zipfile|
+        Zip::ZipFile.open(filename) do |zip_file|
+          zip_file.each do |file|
+            f_path = File.join(self.path, file.name.gsub("#{code}/", ""))
+            FileUtils.mkdir_p(File.dirname(f_path))
+            if File.directory?(f_path)
+              `mkdir -p #{f_path}`
+            else
+              `rm -f #{f_path}`
+              zip_file.extract(file, f_path)
+            end
+          end
+        end
+
+        if backup
+          `mv .backup.zip #{File.join(self.path, ".backup.zip")}`
+        end
+      end
+
+      def compile(exclude = /(yml|zip|erb)$/, outfile = "#{code}.zip")
+        raise ArgumentError, "No Path given" unless path
+
+        outfile.tap do |filename|
+          `rm -f #{filename}`
+          Zip::ZipFile.open(filename, Zip::ZipFile::CREATE) do |zip_file|
             Dir["#{path}/**/**"].each do |file|
-              next if file.include?(".yml")
-              next if file.include?(".erb")
-              zipfile.add(file.sub(path, code), file)
+              next if file =~ exclude
+              zip_file.add(file.sub(path, code), file)
             end
 
             dir = File.join(File.dirname(path), parent_skin_code)
             Dir["#{dir}/**/**"].each do |file|
               begin
-                next if file.include?(".yml")
-                next if file.include?(".erb")
-                zipfile.add(file.sub(dir, code), file)
+                next if file =~ exclude
+                zip_file.add(file.sub(dir, code), file)
               rescue Zip::ZipEntryExistsError
                 # NOOP
               end
@@ -175,8 +198,6 @@ module Adyen
       end
 
       def publish
-        raise ArgumentError unless code
-
         page = Adyen::Admin.get(PUBLISH % code)
         page = Adyen::Admin.client.submit(page.form.tap do |form|
         end)
