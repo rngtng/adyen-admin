@@ -18,7 +18,7 @@ http_interactions:
       Accept-Language: 
       - en-us,en;q=0.5
       Cookie: 
-      - JSESSIONID=8C3D2F4728B757CCE97F3C32698E9008.test5e
+      - JSESSIONID=BBA383BAB63B4A2D7A65D7989DB9AC63.test5e
       Host: 
       - ca-test.adyen.com
       Connection: 
@@ -31,7 +31,7 @@ http_interactions:
       message: OK
     headers: 
       Date: 
-      - Thu, 12 Apr 2012 15:12:35 GMT
+      - Thu, 12 Apr 2012 15:59:57 GMT
       Server: 
       - Apache
       Cache-Control: 
@@ -288,5 +288,5 @@ http_interactions:
         </html>
 
     http_version: 
-  recorded_at: Thu, 12 Apr 2012 15:12:34 GMT
+  recorded_at: Thu, 12 Apr 2012 15:59:57 GMT
 recorded_with: VCR 2.0.1

@@ -23,7 +23,7 @@ module Adyen::Admin
 
       describe ".all_remote" do
         it 'returns the skins' do
-          Skin.all.should == [
+          Skin.all_remote.should == [
             skin,
             Skin.new(:code => "Kx9axnRf", :name => "demo"),
             Skin.new(:code => "vQW0fEo8", :name => "test"),
@@ -142,30 +142,52 @@ module Adyen::Admin
       describe "#decompile"  do
         let(:skin_code) { "DV3tf95f" }
         let(:skin) { Skin.new(:path => "#{skin_fixtures}/#{skin_code}") }
-        let!(:zip_filename) { skin.compile(nil) }
-        let(:backup_filename) { File.join(skin.path, '.backup.zip') }
-
-        before do
-          `cp -r #{skin_fixtures}/#{skin_code} #{skin_fixtures}/_backup`
-        end
 
         after do
-          `rm -rf #{zip_filename} #{backup_filename} #{skin_fixtures}/#{skin_code}`
-          `mv #{skin_fixtures}/_backup #{skin_fixtures}/#{skin_code}`
+          `rm -rf #{zip_filename}`
         end
 
-        it "creates backup" do
-          skin.decompile(zip_filename)
+        context "existing skin" do
+          let(:backup_filename) { File.join(skin.path, '.backup.zip') }
+          let!(:zip_filename) { skin.compile(nil) }
 
-          File.should be_exists(backup_filename)
-        end
+          before do
+            `cp -r #{skin_fixtures}/#{skin_code} #{skin_fixtures}/_backup`
+          end
 
-        it "unzips files" do
-          `rm -rf #{skin.path}`
+          after do
+            `rm -rf #{backup_filename} #{skin_fixtures}/#{skin_code}`
+            `mv #{skin_fixtures}/_backup #{skin_fixtures}/#{skin_code}`
+          end
 
-          expect do
+          it "creates backup" do
             skin.decompile(zip_filename)
-          end.to change { File.exists?(File.join(skin.path, 'inc', 'order_data.txt')) }
+
+            File.should be_exists(backup_filename)
+          end
+
+          it "unzips files" do
+            `rm -rf #{skin.path}`
+
+            expect do
+              skin.decompile(zip_filename)
+            end.to change { File.exists?(File.join(skin.path, 'inc', 'order_data.txt')) }
+          end
+        end
+
+        context "new remote skin" do
+          let(:skin) { Skin.new(:name => "test", :code => "vQW0fEo8") }
+          let!(:zip_filename) { skin.download }
+
+          after do
+            `rm -rf #{skin.path}`
+          end
+
+          it "downloads and decompiles skin" do
+            expect do
+              skin.decompile(zip_filename)
+            end.to change { skin.path }
+          end
         end
       end
 

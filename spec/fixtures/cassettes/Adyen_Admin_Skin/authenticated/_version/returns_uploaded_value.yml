@@ -18,7 +18,7 @@ http_interactions:
       Accept-Language: 
       - en-us,en;q=0.5
       Cookie: 
-      - JSESSIONID=8C3D2F4728B757CCE97F3C32698E9008.test5e
+      - JSESSIONID=BBA383BAB63B4A2D7A65D7989DB9AC63.test5e
       Host: 
       - ca-test.adyen.com
       Connection: 
@@ -31,7 +31,7 @@ http_interactions:
       message: OK
     headers: 
       Date: 
-      - Thu, 12 Apr 2012 15:12:42 GMT
+      - Thu, 12 Apr 2012 16:00:36 GMT
       Server: 
       - Apache
       Cache-Control: 
@@ -597,7 +597,7 @@ http_interactions:
         			<tr>
         				<th class="row">Merchant Reference</th>
         				<td>
-        					<input type="text" name="merchantReference" value="SKINTEST-1334243562501" size="20" />
+        					<input type="text" name="merchantReference" value="SKINTEST-1334246436823" size="20" />
         				</td>
         			</tr>	
         			<tr>
@@ -662,5 +662,5 @@ http_interactions:
         </html>
 
     http_version: 
-  recorded_at: Thu, 12 Apr 2012 15:12:42 GMT
+  recorded_at: Thu, 12 Apr 2012 16:00:36 GMT
 recorded_with: VCR 2.0.1

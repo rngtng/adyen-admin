@@ -23,18 +23,26 @@ Adyen::Admin.login(<accountname>, <username>, <password>)
 
 Adyen::Admin::Skin.all  #returns all remote + local skins
 
+skin = Adyen::Admin::Skin.find("<skin code>")  #find (remote) skin by code
+
+zip_file = skin.download # get zip file
+
+skin.decompile(zip_file) # unzip file and move to skin path, backup + overwrite existing files
+
 ```
 
 ### Skins
 
-By now a Skin can be:
+Then Skin object represent an adyen skin is mapped to local folder, to a remote endpoint or both. Local only skins are `froozen` to indicate the missing endpoint.
+
+By now a Skin has following actions:
 
   * downloaded
+  * decompiled
   * uploaded
   * compiled
   * retrieve versions
   * retrieve test_url
-  * map to local or remote
 
 ## Dependencies
 

@@ -134,15 +134,14 @@ module Adyen
             compile(/(zip|lock)$/, ".backup.zip")
           end
         else
-          File.join(Skin.default_path, [name,code].compact.join("-")).tap do |p|
-            `mkdir -p #{p}`
-            self.path = p
-          end
+          backup = false
+          decompile_path = File.join(Skin.default_path, [name,code].compact.join("-"))
+          `mkdir -p #{decompile_path}`
         end
 
         Zip::ZipFile.open(filename) do |zip_file|
           zip_file.each do |file|
-            f_path = File.join(self.path, file.name.gsub("#{code}/", ""))
+            f_path = File.join(self.path || decompile_path, file.name.gsub("#{code}/", ""))
             FileUtils.mkdir_p(File.dirname(f_path))
             if File.directory?(f_path)
               `mkdir -p #{f_path}`
@@ -152,6 +151,7 @@ module Adyen
             end
           end
         end
+        self.path ||= decompile_path
 
         if backup
           `mv .backup.zip #{File.join(self.path, ".backup.zip")}`

@@ -7,10 +7,8 @@
   * add CLI binaries (to compile + upload) -> read from .adyenrc file
   * make compatible with Live system
 
-## v0.0.6
+## v0.0.7
   * fix download issue
-
-## v0.0.5
   * fix name with multiple - issue
   * added decompile with backup
 
