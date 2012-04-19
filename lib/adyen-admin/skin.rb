@@ -1,5 +1,6 @@
 require 'tempfile'
 require 'zip/zip'
+require 'yaml'
 
 module Adyen
   module Admin
@@ -81,43 +82,55 @@ module Adyen
 
       def path=(new_path)
         if Skin.is_skin_path?(new_path)
-          new_code, *new_name = File.basename(new_path).split("-").reverse
-          self.code ||= new_code
-          self.name ||= new_name.reverse.join("-")
-          raise ArgumentError if self.code && self.code != new_code
           @path = new_path
+          if skin_data
+            self.code = skin_data["code"]
+            self.name = skin_data["name"]
+          else
+            new_code, *new_name = File.basename(new_path).split("-").reverse
+            self.code ||= new_code
+            self.name ||= new_name.reverse.join("-")
+            raise ArgumentError if self.code && self.code != new_code
+          end
         end
       end
 
-      ##################################
-
-      def version(scope = :local)
-        case scope
-        when :test
-          page = Adyen::Admin.get(VERSION_TEST % code)
-          page.search("body p").first.content.scan(/Version:(\d+)/).flatten.first.to_i
-        when :live
-          page = Adyen::Admin.get(VERSION_LIVE % code)
-          page.search("body p").first.content.scan(/Version:(\d+)/).flatten.first.to_i
-        else
-          page = Adyen::Admin.get(TEST % code)
-          page.search(".data tr td")[2].content.to_i
-        end
+      def skin_data(force_update = false)
+        update if force_update
+        @skin_data ||= YAML.load_file(skin_data_file) rescue nil
       end
 
-      def test_url(options = {})
-        page = Adyen::Admin.get(TEST % code)
-        page = Adyen::Admin.client.submit(page.form.tap do |form|
-          #:amount => 199, :currency => :shopper_locale, :country_code, :merchant_reference, :merchant_account, :system, :skip, :one_page
-        end)
-        Addressable::URI.parse(page.form.action).tap do |uri|
-          uri.query_values = page.form.fields.inject({}) { |hash, node|
-            hash[node.name] = node.value; hash
-          }
-        end
+      def uploaded_at
+        skin_data["uploaded_at"]
+      end
+
+      def version
+        skin_data["version"]
+      end
+
+      def version_live
+        skin_data["version_live"]
+      end
+
+      def version_test
+        skin_data["version_test"]
       end
 
       ##########################################
+
+      def update
+        @skin_data = {
+          :name => name,
+          :code => code,
+          :uploaded_at => Time.now,
+          :version => remote_version,
+          :version_live => remote_version(:live),
+          :version_test => remote_version(:test),
+        }
+        File.open(skin_data_file, "w") do |file|
+          file.write @skin_data.to_yaml
+        end
+      end
 
       # http://stackoverflow.com/questions/4360043/using-wwwmechanize-to-download-a-file-to-disk-without-loading-it-all-in-memory
       # Adyen::Admin.client.pluggable_parser.default = Mechanize::FileSaver
@@ -125,6 +138,7 @@ module Adyen
         "#{code}.zip".tap do |filename|
           Adyen::Admin.client.download(DOWNLOAD % code, filename)
         end
+        update
       end
 
       def decompile(filename, backup = true)
@@ -195,6 +209,7 @@ module Adyen
         end)
         form = page.form
         page = form.submit(page.form.button_with(:name => 'submit'))
+        update
       end
 
       def publish
@@ -204,6 +219,18 @@ module Adyen
       end
 
       #################################
+
+      def test_url(options = {})
+        page = Adyen::Admin.get(TEST % code)
+        page = Adyen::Admin.client.submit(page.form.tap do |form|
+          #:amount => 199, :currency => :shopper_locale, :country_code, :merchant_reference, :merchant_account, :system, :skip, :one_page
+        end)
+        Addressable::URI.parse(page.form.action).tap do |uri|
+          uri.query_values = page.form.fields.inject({}) { |hash, node|
+            hash[node.name] = node.value; hash
+          }
+        end
+      end
 
       def to_s
         self.code
@@ -222,11 +249,33 @@ module Adyen
         @name = n
       end
 
+      def skin_data_file
+        File.join(path, 'skin.yml')
+      end
+
       def self.is_skin_path?(path)
-        %w(skin.html.erb inc css js).each do |sub_path|
+        %w(skin.html.erb skin.yml inc css js).each do |sub_path|
           return true if File.exists?(File.join(path.to_s, sub_path))
         end
         false
+      end
+
+      ##################################
+
+      def remote_version(scope = nil)
+        case scope
+        when :test
+          @version_local ||= begin
+            page = Adyen::Admin.get(VERSION_TEST % code)
+            page.search("body p").first.content.scan(/Version:(\d+)/).flatten.first.to_i
+          end
+        when :live
+          page = Adyen::Admin.get(VERSION_LIVE % code)
+          page.search("body p").first.content.scan(/Version:(\d+)/).flatten.first.to_i
+        else
+          page = Adyen::Admin.get(TEST % code)
+          page.search(".data tr td")[2].content.to_i
+        end
       end
     end
   end

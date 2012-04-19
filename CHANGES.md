@@ -2,10 +2,12 @@
 
 ## vx.x.x - ???
   * update Docu
-  * parse metafile
   * parent (instead of base)
   * add CLI binaries (to compile + upload) -> read from .adyenrc file
   * make compatible with Live system
+
+## v0.0.8 - ???
+  * parse metafile
 
 ## v0.0.7
   * fix download issue

@@ -118,6 +118,36 @@ module Adyen::Admin
             Skin.new(:path => path).name.should == "example-test"
           end
         end
+
+        context "with skin data file" do
+          let(:path) { "#{skin_fixtures}/DV3tf95f" }
+          let(:skin) { Skin.new(:path => path) }
+
+          it "sets name" do
+            skin.name.should == "from-file"
+          end
+
+          it "sets code" do
+            skin.code.should == "customCode"
+          end
+
+          it "sets version" do
+            skin.version.should == 12
+          end
+
+          it "sets version_test" do
+            skin.version_test.should == 3
+          end
+
+          it "sets version_live" do
+            skin.version_live.should == 2
+          end
+        end
+      end
+
+      describe "#update"  do
+        it "" do
+        end
       end
 
       describe "#download"  do
@@ -136,6 +166,12 @@ module Adyen::Admin
           Zip::ZipFile.open(skin.download) do |zipfile|
             zipfile.find_entry(File.join(skin_code, "inc", "cheader.txt")).should be_true
           end
+        end
+
+        it "updates skin data" do
+          skin.should_receive(:update)
+
+          skin.download
         end
       end
 
@@ -265,24 +301,31 @@ module Adyen::Admin
 
             expect do
               skin.upload
-            end.to change { skin.version }.by(1)
+            end.to change { skin.send(:remote_version) }.by(1)
+          end
+
+          it "updates skin data" do
+            skin.path = "#{skin_fixtures}/example-7hFAQnmt"
+            skin.should_receive(:update)
+
+            skin.upload
           end
         end
       end
 
-      describe "#version" do
+      describe "#remote_version" do
         let(:skin) { Skin.new(:code => "Kx9axnRf", :name => "demo") }
 
         it "returns uploaded value" do
-          skin.version.should == 14
+          skin.send(:remote_version).should == 14
         end
 
         it "returns test value" do
-          skin.version(:test).should == 14
+          skin.send(:remote_version, :test).should == 14
         end
 
         it "returns live value" do
-          skin.version(:live).should == 0
+          skin.send(:remote_version, :live).should == 0
         end
       end
 

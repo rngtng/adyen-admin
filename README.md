@@ -29,6 +29,14 @@ zip_file = skin.download # get zip file
 
 skin.decompile(zip_file) # unzip file and move to skin path, backup + overwrite existing files
 
+zip_file = skin.compile # unzip file and move to skin path, backup + overwrite existing files
+
+skin.upload(zip_file)
+
+skin.update # to get latest version
+
+skin.test_url # a URL which you can use to 'live' test you skin
+
 ```
 
 ### Skins
