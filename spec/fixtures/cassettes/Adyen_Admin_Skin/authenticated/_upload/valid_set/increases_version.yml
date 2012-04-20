@@ -18,7 +18,7 @@ http_interactions:
       Accept-Language: 
       - en-us,en;q=0.5
       Cookie: 
-      - JSESSIONID=BBA383BAB63B4A2D7A65D7989DB9AC63.test5e
+      - JSESSIONID=F2EEF8221C8C8DCFAC103BF99231FA3E.test5e
       Host: 
       - ca-test.adyen.com
       Connection: 
@@ -31,7 +31,7 @@ http_interactions:
       message: OK
     headers: 
       Date: 
-      - Thu, 12 Apr 2012 16:00:58 GMT
+      - Thu, 19 Apr 2012 17:35:16 GMT
       Server: 
       - Apache
       Cache-Control: 
@@ -193,7 +193,7 @@ http_interactions:
         			</tr>
         			<tr>
         				<th class="row">Latest Version</th>
-        				<td>37</td>
+        				<td>41</td>
         			</tr>
         			<tr>
         				<td colspan="2">
@@ -219,7 +219,7 @@ http_interactions:
         					If the version on Test is not the same as the Latest version, it will be published automatically. Note that there is a few minutes delay after modifying the skin before it is deployed on the Test Hosted Payment Pages. 			</div>
         				</th>
         				<td>
-        					<iframe src="https://test.adyen.com/hpp/version.shtml?skinCode=7hFAQnmt&amp;version=37" height="50" width="450"></iframe>
+        					<iframe src="https://test.adyen.com/hpp/version.shtml?skinCode=7hFAQnmt&amp;version=41" height="50" width="450"></iframe>
         				</td>
         			</tr>
         			<tr>
@@ -237,7 +237,7 @@ http_interactions:
         					If the version on Live is not the same as the Latest version, you will have to Publish the Skin to Live via the Publish Tab. Note that there is a few minutes delay after publishing the skin before it is deployed on the Live Hosted Payment Pages. 			</div>
         				</th>
         				<td>
-        					<iframe src="https://live.adyen.com/hpp/version.shtml?skinCode=7hFAQnmt&amp;version=37" height="50" width="450"></iframe>
+        					<iframe src="https://live.adyen.com/hpp/version.shtml?skinCode=7hFAQnmt&amp;version=41" height="50" width="450"></iframe>
         				</td>
         			</tr>
         						<tr>
@@ -597,7 +597,7 @@ http_interactions:
         			<tr>
         				<th class="row">Merchant Reference</th>
         				<td>
-        					<input type="text" name="merchantReference" value="SKINTEST-1334246458801" size="20" />
+        					<input type="text" name="merchantReference" value="SKINTEST-1334856916032" size="20" />
         				</td>
         			</tr>	
         			<tr>
@@ -662,7 +662,7 @@ http_interactions:
         </html>
 
     http_version: 
-  recorded_at: Thu, 12 Apr 2012 16:00:58 GMT
+  recorded_at: Thu, 19 Apr 2012 17:35:16 GMT
 - request: 
     method: get
     uri: https://ca-test.adyen.com/ca/ca/skin/uploadskin.shtml?skinCode=7hFAQnmt
@@ -681,7 +681,7 @@ http_interactions:
       Accept-Language: 
       - en-us,en;q=0.5
       Cookie: 
-      - JSESSIONID=BBA383BAB63B4A2D7A65D7989DB9AC63.test5e
+      - JSESSIONID=F2EEF8221C8C8DCFAC103BF99231FA3E.test5e
       Host: 
       - ca-test.adyen.com
       Connection: 
@@ -694,7 +694,7 @@ http_interactions:
       message: OK
     headers: 
       Date: 
-      - Thu, 12 Apr 2012 16:00:59 GMT
+      - Thu, 19 Apr 2012 17:35:17 GMT
       Server: 
       - Apache
       Cache-Control: 
@@ -843,16 +843,6 @@ http_interactions:
         	
         	
         		
-        			<table class="actionMessages">  	
-            	<tr>
-            	    <td colspan="2">
-            	        <b>Result:</b>
-            	        <ul>
-            	                	            <li><span class="actionMessage">Skin processed and submitted to the test system</span></li>
-            	                	        </ul>
-            	    </td>
-            	</tr>
-        		</table>
         		
         	
         
@@ -904,25 +894,25 @@ http_interactions:
         </html>
 
     http_version: 
-  recorded_at: Thu, 12 Apr 2012 16:00:58 GMT
+  recorded_at: Thu, 19 Apr 2012 17:35:17 GMT
 - request: 
     method: post
     uri: https://ca-test.adyen.com/ca/ca/skin/processkin.shtml
     body: 
       encoding: ASCII-8BIT
       base64_string: |
-        LS1iVHdoRXlwdmlDQWVxUGhYYlFyRw0KQ29udGVudC1EaXNwb3NpdGlvbjog
-        Zm9ybS1kYXRhOyBuYW1lPSJza2luQ29kZSINCg0KN2hGQVFubXQNCi0tYlR3
-        aEV5cHZpQ0FlcVBoWGJRckcNCkNvbnRlbnQtRGlzcG9zaXRpb246IGZvcm0t
+        LS1WdndCaUVnQkFvT2djYnZreGhpag0KQ29udGVudC1EaXNwb3NpdGlvbjog
+        Zm9ybS1kYXRhOyBuYW1lPSJza2luQ29kZSINCg0KN2hGQVFubXQNCi0tVnZ3
+        QmlFZ0JBb09nY2J2a3hoaWoNCkNvbnRlbnQtRGlzcG9zaXRpb246IGZvcm0t
         ZGF0YTsgbmFtZT0idXBsb2FkRmlsZSI7IGZpbGVuYW1lPSI3aEZBUW5tdC56
         aXAiDQpDb250ZW50LVRyYW5zZmVyLUVuY29kaW5nOiBiaW5hcnkNCkNvbnRl
-        bnQtVHlwZTogYXBwbGljYXRpb24vemlwDQoNClBLAwQUAAAACAAdkIxAAAAA
-        AAIAAAAAAAAADQAAADdoRkFRbm10L2Nzcy8DAFBLAwQUAAAACAAdkIxAd8nV
+        bnQtVHlwZTogYXBwbGljYXRpb24vemlwDQoNClBLAwQUAAAACABonJNAAAAA
+        AAIAAAAAAAAADQAAADdoRkFRbm10L2Nzcy8DAFBLAwQUAAAACABonJNAd8nV
         VYsAAADOAAAAFgAAADdoRkFRbm10L2Nzcy9wcmludC5jc3NljDEOwjAMRWdy
         iiBWWrVr2TgA4gqpmxSriR05ZgDE3UkFTB3f1/vvpinal9mNDpZZ+E7TYA8h
         hJPZAUeWSl3XVQpM2hR8+sH2fdb/ElzC+BisE3TxaIuj0hQvWANvY1pM83mT
         BwC7x5RZ1JGuYisePGa98FWQdH1MWHJ0tUxM/hv7SVtljAzL6nwAUEsDBBQA
-        AAAIAB2QjEB4b8kwZwoAAJ8pAAAXAAAAN2hGQVFubXQvY3NzL3NjcmVlbi5j
+        AAAIAGick0B4b8kwZwoAAJ8pAAAXAAAAN2hGQVFubXQvY3NzL3NjcmVlbi5j
         c3O9Wltv2zgWfh7/Cu0EA3SK2JEty7GdpzQXTIFegp3u7mNBS5RNVBIFSnaS
         Kfrf9/AqUqLtON0dB2ktXs75zuG5Utk0RR58H/yywWS9aZbBOAx/uxr8UqCn
         YWcoo2UzrMlfeBmEo8sYF3osQwXJn5dBgza0QOfBDrMUlfAFMYLy86BGZT2s
@@ -982,11 +972,11 @@ http_interactions:
         fjt0djKN2EPERpNs4TAKzBhUoNAwJbjvWl2aunXwAXsFudhHzobYkOQb/FPX
         WwhcKW+EXqi1OHbBnUgo9lDq4zpNX35IpynJD0aYOPSOZfK8x63OTli6j/QJ
         NjvvmMZJZGIPHRuTJAOYS0Vqn7DHF/bJqrbJnMph2sdWjxhOMKmaT/SBEfmn
-        c50/Z2rX7F/xX1BLAwQUAAAACAAdkIxAOlCJQl0AAAB8AAAAGwAAADdoRkFR
+        c50/Z2rX7F/xX1BLAwQUAAAACABonJNAOlCJQl0AAAB8AAAAGwAAADdoRkFR
         bm10L2Nzcy9zY3JlZW5faWU2LmNzc9PXUvB0VchJrMwvLVFIzi8qSk0uyczP
         U0jLL1IoyUgF0vklqUUKSaUlJfl5xQpa+lzKEKEkw5TMMoVqLs7cxKL0zDzd
-        nNS0EisFQ4OCCmuuWrgiI1RFRZnpGQhVAFBLAwQUAAAACAAdkIxAAAAAAAIA
-        AAAAAAAADQAAADdoRkFRbm10L2ltZy8DAFBLAwQUAAAACAAdkIxA5iFdXKwB
+        nNS0EisFQ4OCCmuuWrgiI1RFRZnpGQhVAFBLAwQUAAAACABonJNAAAAAAAIA
+        AAAAAAAADQAAADdoRkFRbm10L2ltZy8DAFBLAwQUAAAACABonJNA5iFdXKwB
         AACnAQAAGwAAADdoRkFRbm10L2ltZy9iYW5uZXJfdG9wLnBuZwGnAVj+iVBO
         Rw0KGgoAAAANSUhEUgAAABQAAACgCAIAAACDsNs5AAAACXBIWXMAAAsTAAAL
         EwEAmpwYAAAAB3RJTUUH1woRDQoch8yJ+gAAAUZJREFUaN7tWbsOwjAMNMhs
@@ -997,10 +987,10 @@ http_interactions:
         Ei7yJYa2947ZrC/2665mPfMUy4XCE82NJwDsg1WMIiV2uN8atN4O7uAO7uAO
         7uAOjj0asQHc6j+uTMnae1qRsKVLTU5SFlD+6pYJ+5kIaWYcpDjbFs94CE1e
         v6ytM83oTIF0BrnO4L9yMp28HmHhIkyWav+YkhXBh+PJDn4+BjP4BcaAxHWn
-        0UgIAAAAAElFTkSuQmCCUEsDBBQAAAAIAB2QjEA1KG2uRQAAAEgAAAATAAAA
+        0UgIAAAAAElFTkSuQmCCUEsDBBQAAAAIAGick0A1KG2uRQAAAEgAAAATAAAA
         N2hGQVFubXQvaW1nL2JnLmdpZnP3dLOwTBRgEGBoYGD49OnT////FX+yMICA
         DogAyTAwyffkL1jdceZOo7caV86Bm0V/K2XYJimFLlKfsin7S1gYI4M1AFBL
-        AwQUAAAACAAdkIxAhyBpUl4PAAC0DwAAGwAAADdoRkFRbm10L2ltZy9iZ19i
+        AwQUAAAACABonJNAhyBpUl4PAAC0DwAAGwAAADdoRkFRbm10L2ltZy9iZ19i
         dXR0b25zLnBuZz2XeThU7f/HhyGasQzGWJrMYNSkKZNsCdl3JdvTKDsxmOwZ
         GXv2NR5CZc2SLNkjxk41RM88EUJ4RCYhlSXpe/vj97uu+5xzXeec6z7353N/
         3q/35ySaXzbghYnDIBAIr5GhrgW4YsERyX0EnD1veomDy1FfQ1IABAIXOjzY
@@ -1088,7 +1078,7 @@ http_interactions:
         0NcYZDuScvw1U/XdnGxbu4qmgN56FgaSnaaV+NAqmky5eU7x1NcH7HTbCK3z
         Da6vBD90hAhx8UsAuXi/hFPhDj4RbA41XUWz7qr2JDrtQiwF9Fm8wqBVOL8u
         54FLRp3xzOU0ksoPiugpfe3yWS63ZviHyOGo7Oqe3ltf4uKWP6GoLc3ZYbBt
-        H140FcG2EXGUa2yrIyzEHPxxQ4z0LuvWajtG/w9QSwMEFAAAAAgAHZCMQHcx
+        H140FcG2EXGUa2yrIyzEHPxxQ4z0LuvWajtG/w9QSwMEFAAAAAgAaJyTQHcx
         5vMaBAAABAwAACAAAAA3aEZBUW5tdC9pbWcvYnV0dG9uX3RlbXBsYXRlLnhj
         Zu2TfUxbVRTAW/o1KiB02H+GSTGGsBgWmPvHaIxZJGowmdmMiSOLYY+2NHm0
         pJSPNaUwNreAyAbso0yDpPtIEcm68VEEwblp0emSDZAJOAhaBmz0u++1fV/X
@@ -1113,7 +1103,7 @@ http_interactions:
         GLtGp1dhHA/4Kfzx/IT1TGMVqixFBIi/VFVh+PLS+PRDHwznAS9DYuuLd0f7
         zBfOdrS3t3HbuO2BjvNdlsGJ2RVfmAYC+GTJoGdl7t5vt26MjwnH8Jv2OzNL
         6wGCBiKAwVce9LkerSwvO4SO4MO1dQ/GvmUxCEFPOITjmAgL48EwAaEAJMYm
-        MTaJsUmMTWJsEmPz/4/Nf1BLAwQUAAAACAAdkIxAHXa0LFAYAABLGAAAGQAA
+        MTaJsUmMTWJsEmPz/4/Nf1BLAwQUAAAACABonJNAHXa0LFAYAABLGAAAGQAA
         ADdoRkFRbm10L2ltZy9ncmFkaWVudC5wbmcBSxi054lQTkcNChoKAAAADUlI
         RFIAAAAUAAACWAgCAAAA7e5RZAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0
         SU1FB9cKEQwoIXnU6fwAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRo
@@ -1253,7 +1243,7 @@ http_interactions:
         jCP9bq+ejmxYx7n2ghWGvAbigJ/SekmIRmTekZ4mcwSyKoXTMauEtxy6POSd
         R0KyJ7K3KqMfNJkzWeCoPyeCaTxEQT9YgftwljMzqR/mPo6ireHED7zf+beG
         EZd/+23/D3zY/3/z/3/z/6Nv/r+cLxW8Ry/z/gAAAABJRU5ErkJgglBLAwQU
-        AAAACAAdkIxAFpVHqlQIAABSCAAAFQAAADdoRkFRbm10L2ltZy9sb2dvLnBu
+        AAAACABonJNAFpVHqlQIAABSCAAAFQAAADdoRkFRbm10L2ltZy9sb2dvLnBu
         ZzWWeTgU2hvHpx+PtRlX/YRhCiVLZbkJWRvMiMwwqJAl3JGx01zLjCWGccee
         NYSR7OsUIwkhuZbMuCZLtpBtNKY0DK7lRz2/9/m85/uc9zzf9/xx/jgvyQpp
         ChQCCwEAAKDZTRPrI604yrsCfEdrWioo9Ej43G6ZmgB+xo5xa9SRCAbctH8I
@@ -1301,7 +1291,7 @@ http_interactions:
         E3PsOT1KnhIsLhTC+aT/NY+wzr9XoMvkIcUQjs8W7ihsZo7+8EnvqlH9eXsB
         7Prm+AVRuckLpKTZoROrMiLA437l8bKjIEZJYVKhCi7+2WRUxMqX6aSf+1dm
         QmETj457uWeYMPzS+Ra77frudwkcf33PbcLTVNoz3J7gGO7ilm3RI/+C2/TE
-        MtZDXpkdjwZmMKRJndH9mP8BUEsDBBQAAAAIAB2QjEAMwRS3bAgAAAkdAAAV
+        MtZDXpkdjwZmMKRJndH9mP8BUEsDBBQAAAAIAGick0AMwRS3bAgAAAkdAAAV
         AAAAN2hGQVFubXQvaW1nL2xvZ28ueGNm7VgNbFvFHb+z/ezY8VdEl3asaU0H
         +ehU1kpbp2ljbjsxWFuWkEadAE0spI5raJzWNnGbZntO6Fa0rdBpQlSTNmkt
         AgSNmiUhCYkE2YdGNdDIl5MKxtC0gti0DRC0amq/u/3/7917PsduqTQmDSlP
@@ -1350,16 +1340,16 @@ http_interactions:
         nkE6FB6kUgr8AxTSkNHTQKU0+PrpmbCeClqcCpGPTJZK+fDO0Wx4jko5Cc5S
         yAuZpVJe/DMUcpPRc0Ol3Pim6HRYz4/LykyzlY86tZCFFsv7esvz3ZbT6y2H
         G5OHLVfr4t2Wl3WjBQdbLN/qLb92Wy6tt9xpHDhsOVLXr5Kz8wUfWqyrry9c
-        NTllXW3jzGHrCuum4EnBr/Sk+A9QSwMEFAAAAAgAHZCMQAAAAAACAAAAAAAA
-        AA0AAAA3aEZBUW5tdC9pbmMvAwBQSwMEFAAAAAgAHZCMQJMG1zIDAAAAAQAA
-        ABgAAAA3aEZBUW5tdC9pbmMvY2Zvb3Rlci50eHTjAgBQSwMEFAAAAAgAHZCM
+        NTllXW3jzGHrCuum4EnBr/Sk+A9QSwMEFAAAAAgAaJyTQAAAAAACAAAAAAAA
+        AA0AAAA3aEZBUW5tdC9pbmMvAwBQSwMEFAAAAAgAaJyTQJMG1zIDAAAAAQAA
+        ABgAAAA3aEZBUW5tdC9pbmMvY2Zvb3Rlci50eHTjAgBQSwMEFAAAAAgAaJyT
         QGsT41sEAAAAAgAAABgAAAA3aEZBUW5tdC9pbmMvY2hlYWRlci50eHTj4gIA
-        UEsDBBQAAAAIAB2QjECAja3KCAAAAAYAAAAZAAAAN2hGQVFubXQvaW5jL3Bt
-        Zm9vdGVyLnR4dLPRT8ksswMAUEsDBBQAAAAIAB2QjEBf6nEeKgAAADAAAAAZ
+        UEsDBBQAAAAIAGick0CAja3KCAAAAAYAAAAZAAAAN2hGQVFubXQvaW5jL3Bt
+        Zm9vdGVyLnR4dLPRT8ksswMAUEsDBBQAAAAIAGick0Bf6nEeKgAAADAAAAAZ
         AAAAN2hGQVFubXQvaW5jL3BtaGVhZGVyLnR4dLNJySxTyEyxVcrJT8/PSE1M
-        SS1SsrPRB4racdnA5Apyk/PzSlLzSpTsAFBLAwQUAAAACAAdkIxAAAAAAAIA
-        AAAAAAAADAAAADdoRkFRbm10L2pzLwMAUEsDBBQAAAAIAB2QjEAAAAAAAgAA
-        AAAAAAANAAAAN2hGQVFubXQvcmVzLwMAUEsDBBQAAAAIAB2QjEAIlEw46PQB
+        SS1SsrPRB4racdnA5Apyk/PzSlLzSpTsAFBLAwQUAAAACABonJNAAAAAAAIA
+        AAAAAAAADAAAADdoRkFRbm10L2pzLwMAUEsDBBQAAAAIAGick0AAAAAAAgAA
+        AAAAAAANAAAAN2hGQVFubXQvcmVzLwMAUEsDBBQAAAAIAGick0AIlEw46PQB
         AIkhAgA0AAAAN2hGQVFubXQvaW1nL0FpcmxpbmVyLmFpcmphbWFpY2EuYTM0
         MC5hcnAuNzUwcGl4LmpwZ+y8B1BUTdcuumcIA0gOisDACEgUBIQhZ4mSswhK
         VBiGnPMQRERyMIAkyfiSlIwkiYooOWeQPEOQKCBnQN/wne/77/lvqHvurfKp
@@ -4211,7 +4201,7 @@ http_interactions:
         71bCL0rQHuO+RjI2rguwG1Aen9uN2vudxSu1KEbmmA3W5XhpqpVh2C/xw815
         LxT4QKGhG3hTACil5alK0NT0PgPHDXJeTiFHetOn68QeiaDRQHetV608MQfm
         q301IrQVr1p44iXejhC3hsaDl4D2yV9F4ejvRHL/ACafZ+j9WC9qY0H/2VBL
-        AwQUAAAACAAdkIxAaBtbs1cBAADAAQAAFgAAADdoRkFRbm10L2ltZy9iZ19n
+        AwQUAAAACABonJNAaBtbs1cBAADAAQAAFgAAADdoRkFRbm10L2ltZy9iZ19n
         ci5qcGf7f+P/AwYBLzdPNwZGJgaGFCBk+P+GQdClNDm7koGRgYWBgSEYKPSO
         gc8xJT8plSHlAFCE8f9thhYGJkZGRiZGJiBgBmFmZhDBwgwCLKwsYMDKysbG
         zsbGysHBycnBwcPNzc2DACCtQDUcrKwc3JzsnNy8EACWg1I8vDx4wP8DDIIc
@@ -4219,15 +4209,15 @@ http_interactions:
         AKTZUTUECiYyCQmLiBYuTAIaiqqJgUFQiPH/LQYeoA4mQWZBBnuGHzdfnWNQ
         WnzkxYF1Dl4NsR4/E7T4HJY5eKdo53iZus27EhC0pviJv8/uc2HqrtWzWkwv
         VumVnxJYLL7zy0ZZrnstJzNXLVv/zO/rwtuZSbkuB8SDnqWFi3S+bHPVFtbe
-        +CTDqfLi8ZalxqdvRnhFWyRm6nQ99Tj1xYTrhbH9/5sAUEsDBBQAAAAIAB2Q
-        jEA3l7rbEgEAAKkBAAAYAAAAN2hGQVFubXQvaW1nL2Jsb2dfZ3IuanBnlY6x
+        +CTDqfLi8ZalxqdvRnhFWyRm6nQ99Tj1xYTrhbH9/5sAUEsDBBQAAAAIAGic
+        k0A3l7rbEgEAAKkBAAAYAAAAN2hGQVFubXQvaW1nL2Jsb2dfZ3IuanBnlY6x
         SgNBEEBndvb29rycl4FAfsHKQoOiFiJIQIk/oScKgiGCESsVtElvYS2SUgQ1
         aBWDXUCwM9HCxi76C+tcBEkawTe7s/BmZxj34t4hu1xcKgIqgEQCXA94cXdt
         ax8QNACURH3B6EJSXl2HpCkG3SscA6kUyaRJrqdJkvFSjDW+kWNtEIwEgc30
         iVLiX5CIjDGhtSFHYcS5VOa4X+OfJ+b4D1wT2Mre44QMipEY3SNsAiLCENaI
         UTTk0Mi2Wfmo/UGtdMF4N1V/eq/BKLPNYBdWHo7UxE5rUhc814UMyVQmhnl4
         Kuft22yr0776aLQ/ayunl2fnU/lSb/sQ/s3txdjGfTWeOeHnubvrerdWOXCd
-        b1BLAwQUAAAACAAdkIxAbQy29KANAADDDQAAGQAAADdoRkFRbm10L2ltZy9j
+        b1BLAwQUAAAACABonJNAbQy29KANAADDDQAAGQAAADdoRkFRbm10L2ltZy9j
         YXRlZ29yeS5naWadj/k/040DwD8bZsTMnNvIbIRIS5TpUea+Qo40kfsMzZWb
         GWWO2sbM5hxGnoqQR1PyjMoR1XIrObrIox4V9Sw9+b6+3z/h+/7h/f757eBk
         b04Ifg/sA6YBwDE03ej4yd3d3WM+54No11PLWkOyyys6hkpa+kjJxS6RuTGX
@@ -4305,8 +4295,8 @@ http_interactions:
         V2Kd0M/LrVOLwIYdYCUPLjudy+Fyq3q5NfPcOjGXh6xqJFTxSVUtvdzQUY6k
         GIbNt5ZkWO9dBqngq7tJ1T3p1QJu9d3e6r756n5xtRBZM0ioecitDv6Qc06G
         9bdVGV1c9VRcI0LWThBqp0i1M+m1c9zaF721C/O1i6Ram3nPUQJ6DMlqS69b
-        49at99ZtzNd9EtdtIuu/EOq3SPXfDOqzth3ejIKIAHDsP1BLAwQUAAAACAAd
-        kIxA/bz7SztXAAA6gwAAHAAAADdoRkFRbm10L2ltZy9FdXJvZmlnaHRlci5q
+        49at99ZtzNd9EtdtIuu/EOq3SPXfDOqzth3ejIKIAHDsP1BLAwQUAAAACABo
+        nJNA/bz7SztXAAA6gwAAHAAAADdoRkFRbm10L2ltZy9FdXJvZmlnaHRlci5q
         cGesvAdcU8n3Phy6IuKiAbEhCCKhl4TeIUDoCaGFIp2E3ktooQohtCS00HsT
         FQXLWlERsAIia18rAnYXdW2779wEFNvufn//V8+dz5Dkhmeeec6ZM3Nn+Pvq
         33dgv1hbYCxgXNwwGBf4D/v7zkaqtYWbG2yNsayCSjAwOZUAeeUgYArKRGCK
@@ -4803,7 +4793,7 @@ http_interactions:
         ooDamxoF1d5k8D+FEP8atLybxwbEawNpAhws1R+DQU1ijapjgPTxEXcW7itL
         sQVZF7R1LeLoyWKNDEBBQ1vDCiUAJCtAWWyQYSp4xDgWVTJ2wCixSWm2Vy4j
         QWlyGS5fZ1Eh/DmcH/QiKGUbaSyRZFNi9lTZDIkMHyZH+ujixgogVDISphAf
-        ZSPm37MR67bWh1v/A1BLAwQUAAAACAAdkIxAqSyfcySnAAAlqgAAFAAAADdo
+        ZSPm37MR67bWh1v/A1BLAwQUAAAACABonJNAqSyfcySnAAAlqgAAFAAAADdo
         RkFRbm10L2ltZy9taWcuanBnzLllWFTR1zd8ZughhCEEBBmGGlpK6Ri6O0bp
         LumWFpTukG4BRVpJQUpKGpHuLgXpfNB/3P/7fe/3et4Pz4dnndn77Nlr7bN+
         e511zv7t69xO3i4ChAoy8jIACAwC5O4O4HYPV0rN2tHN0dXa0QnGw/EI4EfK
@@ -5755,7 +5745,7 @@ http_interactions:
         EeP7yKHH412ocNoR4fEhxXYF2HzbO395VKn6S7FUhwCKHFBBUcF9ZU/D2kOP
         xocQhsOwbCuwLsKHAqld6+qjxP5UEePxVbOweZHihsOw8VTso7PMhx+JHgjx
         R7V2LvXb+8h8Pa2FdiKp4FfWCHD4kVT2IfS+JdiPbsHFfV2fWK7EeCCGwcfj
-        Xd50eC+sFVwX/9lQSwMEFAAAAAgAHZCMQHV9RfnRDwAANRAAABUAAAA3aEZB
+        Xd50eC+sFVwX/9lQSwMEFAAAAAgAaJyTQHV9RfnRDwAANRAAABUAAAA3aEZB
         UW5tdC9pbWcvdG9wMS5qcGd9VXk0lO/ffmasI5qQFkLKRDT2KNtYCjP2ZZA1
         u7HTINmybxWyTJYwGGPs+75mK0KyRaaIiJA9yfKO7/d3fue87x/vdZ/7fs75
         3M/5XNf1uT/P/Zx8OpkFzqFUkCoACAwAtpQBnKwCzPe8bZz9ABBADQCALiW0
@@ -5846,7 +5836,7 @@ http_interactions:
         unPqEqa0winAQEBiETv5qYO9z1P4E+faKlvq5l36XC4wTXS5+wmRJ0cbFs94
         KXpFts18KPGQ302twuNMfLJLzM5W5JMIQl7wuxthYURnrFxLELHsmsCNpMhZ
         NhL640gTdvjTckhhg0mZ5HSzzz2yoI0pWUBqzPXXmCNdwagva6meVv6Q5+QW
-        uheHEP618MgPu7+KOJn6H1BLAwQUAAAACAAdkIxAy2XFLZNOAADuTwAAFQAA
+        uheHEP618MgPu7+KOJn6H1BLAwQUAAAACABonJNAy2XFLZNOAADuTwAAFQAA
         ADdoRkFRbm10L2ltZy90b3AyLmpwZ5R3VVBcbbDt4AQN7u7u7iS4BRvcnWEg
         uBOCO8EJ7j64a5DgEFxmkGBJ0DB40Jv/P3Lr1Lkvt3fVfli1uvvrrtWfvKy9
         fAe8VlVUUQQgIAIAtn8/wMsJAO+ttw3IH4AAQAYAAGJ/oTMAjpytm7UdwPbL
@@ -6294,7 +6284,7 @@ http_interactions:
         /ntrnIqWMZMWKu2Ep8L9I9v28Sj4vMGC7nBNQImmOTNj0+u2bHVSMsss2QVv
         OYfBM+n/VcRMN0UMFyrxt9S/BkXDTZeLLSIn3mxUbR1fqBX7u+SookWAsMef
         ra+fHlv8I1NqN9PIq0M6M5mA8AMVpl+P7cHOAChRuvpI9J+GZbJyIQoxv0bf
-        Tz8s+X/T36IMq9PuGKxEnPhRjTHxf1BLAwQUAAAACAAdkIxA/O2i1KgMAABG
+        Tz8s+X/T36IMq9PuGKxEnPhRjTHxf1BLAwQUAAAACABonJNA/O2i1KgMAABG
         DQAAFQAAADdoRkFRbm10L2ltZy90b3AzLmpwZ31VeTyUbfe/Z7MzM2TJpJAs
         Q7YalDH2JVsh+5IsydgmWxSKrNkaki1LkS1rRiZSdiEh+5L1yZKsIzFZXp6e
         T7/f8/7xfu/Pua/r/l7nOudc51zncx8MH0wBCG2NSxoACAwADocPcPAdQKr5
@@ -6367,54 +6357,54 @@ http_interactions:
         v8JsQ7M/zg8s9ddOery/gz/OsbmlkeeC+7WCjEaQ6+l2ipiDGn72UW7c02rA
         LZicUt6mb5mhgss5p+aPczJI9X6NzZJUxEohNgI+tqrdb2qniBemJAPRXav1
         nx2C+y9ujP98XnNCspXC47+icEOajuw1Xi6/Bp7NV2ioHjVwavaef2OH7mD3
-        flhm3FEb9GFLsbAA70bwZpkg8pzqv2xz6mDkP1BLAwQUAAAACAAdkIxAAAAA
+        flhm3FEb9GFLsbAA70bwZpkg8pzqv2xz6mDkP1BLAwQUAAAACABonJNAAAAA
         AAIAAAAAAAAAIQAAADdoRkFRbm10L3Jlcy9yZXNvdXJjZXMucHJvcGVydGll
-        cwMAUEsBAjQDFAAAAAgAHZCMQAAAAAACAAAAAAAAAA0AAAAAAAAAAQAAAO1B
-        AAAAADdoRkFRbm10L2Nzcy9QSwECNAMUAAAACAAdkIxAd8nVVYsAAADOAAAA
+        cwMAUEsBAjQDFAAAAAgAaJyTQAAAAAACAAAAAAAAAA0AAAAAAAAAAQAAAO1B
+        AAAAADdoRkFRbm10L2Nzcy9QSwECNAMUAAAACABonJNAd8nVVYsAAADOAAAA
         FgAAAAAAAAABAAAApIEtAAAAN2hGQVFubXQvY3NzL3ByaW50LmNzc1BLAQI0
-        AxQAAAAIAB2QjEB4b8kwZwoAAJ8pAAAXAAAAAAAAAAEAAACkgewAAAA3aEZB
-        UW5tdC9jc3Mvc2NyZWVuLmNzc1BLAQI0AxQAAAAIAB2QjEA6UIlCXQAAAHwA
+        AxQAAAAIAGick0B4b8kwZwoAAJ8pAAAXAAAAAAAAAAEAAACkgewAAAA3aEZB
+        UW5tdC9jc3Mvc2NyZWVuLmNzc1BLAQI0AxQAAAAIAGick0A6UIlCXQAAAHwA
         AAAbAAAAAAAAAAEAAACkgYgLAAA3aEZBUW5tdC9jc3Mvc2NyZWVuX2llNi5j
-        c3NQSwECNAMUAAAACAAdkIxAAAAAAAIAAAAAAAAADQAAAAAAAAABAAAA7UEe
-        DAAAN2hGQVFubXQvaW1nL1BLAQI0AxQAAAAIAB2QjEDmIV1crAEAAKcBAAAb
+        c3NQSwECNAMUAAAACABonJNAAAAAAAIAAAAAAAAADQAAAAAAAAABAAAA7UEe
+        DAAAN2hGQVFubXQvaW1nL1BLAQI0AxQAAAAIAGick0DmIV1crAEAAKcBAAAb
         AAAAAAAAAAEAAACkgUsMAAA3aEZBUW5tdC9pbWcvYmFubmVyX3RvcC5wbmdQ
-        SwECNAMUAAAACAAdkIxANShtrkUAAABIAAAAEwAAAAAAAAABAAAApIEwDgAA
-        N2hGQVFubXQvaW1nL2JnLmdpZlBLAQI0AxQAAAAIAB2QjECHIGlSXg8AALQP
+        SwECNAMUAAAACABonJNANShtrkUAAABIAAAAEwAAAAAAAAABAAAApIEwDgAA
+        N2hGQVFubXQvaW1nL2JnLmdpZlBLAQI0AxQAAAAIAGick0CHIGlSXg8AALQP
         AAAbAAAAAAAAAAEAAACkgaYOAAA3aEZBUW5tdC9pbWcvYmdfYnV0dG9ucy5w
-        bmdQSwECNAMUAAAACAAdkIxAdzHm8xoEAAAEDAAAIAAAAAAAAAABAAAApIE9
+        bmdQSwECNAMUAAAACABonJNAdzHm8xoEAAAEDAAAIAAAAAAAAAABAAAApIE9
         HgAAN2hGQVFubXQvaW1nL2J1dHRvbl90ZW1wbGF0ZS54Y2ZQSwECNAMUAAAA
-        CAAdkIxAHXa0LFAYAABLGAAAGQAAAAAAAAABAAAApIGVIgAAN2hGQVFubXQv
-        aW1nL2dyYWRpZW50LnBuZ1BLAQI0AxQAAAAIAB2QjEAWlUeqVAgAAFIIAAAV
+        CABonJNAHXa0LFAYAABLGAAAGQAAAAAAAAABAAAApIGVIgAAN2hGQVFubXQv
+        aW1nL2dyYWRpZW50LnBuZ1BLAQI0AxQAAAAIAGick0AWlUeqVAgAAFIIAAAV
         AAAAAAAAAAEAAACkgRw7AAA3aEZBUW5tdC9pbWcvbG9nby5wbmdQSwECNAMU
-        AAAACAAdkIxADMEUt2wIAAAJHQAAFQAAAAAAAAABAAAApIGjQwAAN2hGQVFu
-        bXQvaW1nL2xvZ28ueGNmUEsBAjQDFAAAAAgAHZCMQAAAAAACAAAAAAAAAA0A
-        AAAAAAAAAQAAAO1BQkwAADdoRkFRbm10L2luYy9QSwECNAMUAAAACAAdkIxA
+        AAAACABonJNADMEUt2wIAAAJHQAAFQAAAAAAAAABAAAApIGjQwAAN2hGQVFu
+        bXQvaW1nL2xvZ28ueGNmUEsBAjQDFAAAAAgAaJyTQAAAAAACAAAAAAAAAA0A
+        AAAAAAAAAQAAAO1BQkwAADdoRkFRbm10L2luYy9QSwECNAMUAAAACABonJNA
         kwbXMgMAAAABAAAAGAAAAAAAAAABAAAApIFvTAAAN2hGQVFubXQvaW5jL2Nm
-        b290ZXIudHh0UEsBAjQDFAAAAAgAHZCMQGsT41sEAAAAAgAAABgAAAAAAAAA
+        b290ZXIudHh0UEsBAjQDFAAAAAgAaJyTQGsT41sEAAAAAgAAABgAAAAAAAAA
         AQAAAKSBqEwAADdoRkFRbm10L2luYy9jaGVhZGVyLnR4dFBLAQI0AxQAAAAI
-        AB2QjECAja3KCAAAAAYAAAAZAAAAAAAAAAEAAACkgeJMAAA3aEZBUW5tdC9p
-        bmMvcG1mb290ZXIudHh0UEsBAjQDFAAAAAgAHZCMQF/qcR4qAAAAMAAAABkA
+        AGick0CAja3KCAAAAAYAAAAZAAAAAAAAAAEAAACkgeJMAAA3aEZBUW5tdC9p
+        bmMvcG1mb290ZXIudHh0UEsBAjQDFAAAAAgAaJyTQF/qcR4qAAAAMAAAABkA
         AAAAAAAAAQAAAKSBIU0AADdoRkFRbm10L2luYy9wbWhlYWRlci50eHRQSwEC
-        NAMUAAAACAAdkIxAAAAAAAIAAAAAAAAADAAAAAAAAAABAAAA7UGCTQAAN2hG
-        QVFubXQvanMvUEsBAjQDFAAAAAgAHZCMQAAAAAACAAAAAAAAAA0AAAAAAAAA
-        AQAAAO1Brk0AADdoRkFRbm10L3Jlcy9QSwECNAMUAAAACAAdkIxACJRMOOj0
+        NAMUAAAACABonJNAAAAAAAIAAAAAAAAADAAAAAAAAAABAAAA7UGCTQAAN2hG
+        QVFubXQvanMvUEsBAjQDFAAAAAgAaJyTQAAAAAACAAAAAAAAAA0AAAAAAAAA
+        AQAAAO1Brk0AADdoRkFRbm10L3Jlcy9QSwECNAMUAAAACABonJNACJRMOOj0
         AQCJIQIANAAAAAAAAAABAAAApIHbTQAAN2hGQVFubXQvaW1nL0FpcmxpbmVy
-        LmFpcmphbWFpY2EuYTM0MC5hcnAuNzUwcGl4LmpwZ1BLAQI0AxQAAAAIAB2Q
-        jEBoG1uzVwEAAMABAAAWAAAAAAAAAAEAAACkgRVDAgA3aEZBUW5tdC9pbWcv
-        YmdfZ3IuanBnUEsBAjQDFAAAAAgAHZCMQDeXutsSAQAAqQEAABgAAAAAAAAA
+        LmFpcmphbWFpY2EuYTM0MC5hcnAuNzUwcGl4LmpwZ1BLAQI0AxQAAAAIAGic
+        k0BoG1uzVwEAAMABAAAWAAAAAAAAAAEAAACkgRVDAgA3aEZBUW5tdC9pbWcv
+        YmdfZ3IuanBnUEsBAjQDFAAAAAgAaJyTQDeXutsSAQAAqQEAABgAAAAAAAAA
         AQAAAKSBoEQCADdoRkFRbm10L2ltZy9ibG9nX2dyLmpwZ1BLAQI0AxQAAAAI
-        AB2QjEBtDLb0oA0AAMMNAAAZAAAAAAAAAAEAAACkgehFAgA3aEZBUW5tdC9p
-        bWcvY2F0ZWdvcnkuZ2lmUEsBAjQDFAAAAAgAHZCMQP28+0s7VwAAOoMAABwA
+        AGick0BtDLb0oA0AAMMNAAAZAAAAAAAAAAEAAACkgehFAgA3aEZBUW5tdC9p
+        bWcvY2F0ZWdvcnkuZ2lmUEsBAjQDFAAAAAgAaJyTQP28+0s7VwAAOoMAABwA
         AAAAAAAAAQAAAKSBv1MCADdoRkFRbm10L2ltZy9FdXJvZmlnaHRlci5qcGdQ
-        SwECNAMUAAAACAAdkIxAqSyfcySnAAAlqgAAFAAAAAAAAAABAAAApIE0qwIA
-        N2hGQVFubXQvaW1nL21pZy5qcGdQSwECNAMUAAAACAAdkIxAdX1F+dEPAAA1
+        SwECNAMUAAAACABonJNAqSyfcySnAAAlqgAAFAAAAAAAAAABAAAApIE0qwIA
+        N2hGQVFubXQvaW1nL21pZy5qcGdQSwECNAMUAAAACABonJNAdX1F+dEPAAA1
         EAAAFQAAAAAAAAABAAAApIGKUgMAN2hGQVFubXQvaW1nL3RvcDEuanBnUEsB
-        AjQDFAAAAAgAHZCMQMtlxS2TTgAA7k8AABUAAAAAAAAAAQAAAKSBjmIDADdo
-        RkFRbm10L2ltZy90b3AyLmpwZ1BLAQI0AxQAAAAIAB2QjED87aLUqAwAAEYN
+        AjQDFAAAAAgAaJyTQMtlxS2TTgAA7k8AABUAAAAAAAAAAQAAAKSBjmIDADdo
+        RkFRbm10L2ltZy90b3AyLmpwZ1BLAQI0AxQAAAAIAGick0D87aLUqAwAAEYN
         AAAVAAAAAAAAAAEAAACkgVSxAwA3aEZBUW5tdC9pbWcvdG9wMy5qcGdQSwEC
-        NAMUAAAACAAdkIxAAAAAAAIAAAAAAAAAIQAAAAAAAAABAAAApIEvvgMAN2hG
+        NAMUAAAACABonJNAAAAAAAIAAAAAAAAAIQAAAAAAAAABAAAApIEvvgMAN2hG
         QVFubXQvcmVzL3Jlc291cmNlcy5wcm9wZXJ0aWVzUEsFBgAAAAAdAB0A1wcA
-        AHC+AwAAAA0KLS1iVHdoRXlwdmlDQWVxUGhYYlFyRy0tDQo=
+        AHC+AwAAAA0KLS1WdndCaUVnQkFvT2djYnZreGhpai0tDQo=
 
     headers: 
       Accept: 
@@ -6428,7 +6418,7 @@ http_interactions:
       Accept-Language: 
       - en-us,en;q=0.5
       Cookie: 
-      - JSESSIONID=BBA383BAB63B4A2D7A65D7989DB9AC63.test5e
+      - JSESSIONID=F2EEF8221C8C8DCFAC103BF99231FA3E.test5e
       Host: 
       - ca-test.adyen.com
       Referer: 
@@ -6445,7 +6435,7 @@ http_interactions:
         scheme: https
         user: 
       Content-Type: 
-      - multipart/form-data; boundary=bTwhEypviCAeqPhXbQrG
+      - multipart/form-data; boundary=VvwBiEgBAoOgcbvkxhij
       Content-Length: 
       - "247670"
       Connection: 
@@ -6458,7 +6448,7 @@ http_interactions:
       message: Moved Temporarily
     headers: 
       Date: 
-      - Thu, 12 Apr 2012 16:00:59 GMT
+      - Thu, 19 Apr 2012 17:35:19 GMT
       Server: 
       - Apache
       Cache-Control: 
@@ -6485,7 +6475,7 @@ http_interactions:
       encoding: US-ASCII
       string: ""
     http_version: 
-  recorded_at: Thu, 12 Apr 2012 16:00:59 GMT
+  recorded_at: Thu, 19 Apr 2012 17:35:24 GMT
 - request: 
     method: get
     uri: https://ca-test.adyen.com/ca/ca/skin/uploadskin.shtml?activate=true&skinCode=7hFAQnmt
@@ -6504,7 +6494,7 @@ http_interactions:
       Accept-Language: 
       - en-us,en;q=0.5
       Cookie: 
-      - JSESSIONID=BBA383BAB63B4A2D7A65D7989DB9AC63.test5e
+      - JSESSIONID=F2EEF8221C8C8DCFAC103BF99231FA3E.test5e
       Host: 
       - ca-test.adyen.com
       Referer: 
@@ -6519,7 +6509,7 @@ http_interactions:
       message: OK
     headers: 
       Date: 
-      - Thu, 12 Apr 2012 16:00:59 GMT
+      - Thu, 19 Apr 2012 17:35:25 GMT
       Server: 
       - Apache
       Cache-Control: 
@@ -6758,7 +6748,7 @@ http_interactions:
         </html>
 
     http_version: 
-  recorded_at: Thu, 12 Apr 2012 16:00:59 GMT
+  recorded_at: Thu, 19 Apr 2012 17:35:25 GMT
 - request: 
     method: post
     uri: https://ca-test.adyen.com/ca/ca/skin/processkin.shtml
@@ -6777,7 +6767,7 @@ http_interactions:
       Accept-Language: 
       - en-us,en;q=0.5
       Cookie: 
-      - JSESSIONID=BBA383BAB63B4A2D7A65D7989DB9AC63.test5e
+      - JSESSIONID=F2EEF8221C8C8DCFAC103BF99231FA3E.test5e
       Host: 
       - ca-test.adyen.com
       Referer: 
@@ -6807,7 +6797,7 @@ http_interactions:
       message: Moved Temporarily
     headers: 
       Date: 
-      - Thu, 12 Apr 2012 16:00:59 GMT
+      - Thu, 19 Apr 2012 17:35:25 GMT
       Server: 
       - Apache
       Cache-Control: 
@@ -6834,7 +6824,7 @@ http_interactions:
       encoding: US-ASCII
       string: ""
     http_version: 
-  recorded_at: Thu, 12 Apr 2012 16:00:59 GMT
+  recorded_at: Thu, 19 Apr 2012 17:35:25 GMT
 - request: 
     method: get
     uri: https://ca-test.adyen.com/ca/ca/skin/skins.shtml
@@ -6853,7 +6843,7 @@ http_interactions:
       Accept-Language: 
       - en-us,en;q=0.5
       Cookie: 
-      - JSESSIONID=BBA383BAB63B4A2D7A65D7989DB9AC63.test5e
+      - JSESSIONID=F2EEF8221C8C8DCFAC103BF99231FA3E.test5e
       Host: 
       - ca-test.adyen.com
       Referer: 
@@ -6868,7 +6858,7 @@ http_interactions:
       message: OK
     headers: 
       Date: 
-      - Thu, 12 Apr 2012 16:01:00 GMT
+      - Thu, 19 Apr 2012 17:35:26 GMT
       Server: 
       - Apache
       Cache-Control: 
@@ -7097,7 +7087,7 @@ http_interactions:
                     	style="vertical-align: middle" title="skins.edit" src="/ca/img/icons/layout_content.png" alt="skins.edit" 
                         />	vQW0fEo8</a>
         					</td>
-            	<td>test</td>
+            	<td>gift</td>
         		    	<td align="center">
         			<a href="/ca/ca/skin/uploadskin.shtml?skinCode=vQW0fEo8"><img 
                     	style="vertical-align: middle" title="skins.upload" src="/ca/img/icons/disk.png" alt="skins.upload" 
@@ -7135,7 +7125,7 @@ http_interactions:
         </html>
 
     http_version: 
-  recorded_at: Thu, 12 Apr 2012 16:01:00 GMT
+  recorded_at: Thu, 19 Apr 2012 17:35:26 GMT
 - request: 
     method: get
     uri: https://ca-test.adyen.com/ca/ca/skin/testpayment.shtml?skinCode=7hFAQnmt
@@ -7154,7 +7144,7 @@ http_interactions:
       Accept-Language: 
       - en-us,en;q=0.5
       Cookie: 
-      - JSESSIONID=BBA383BAB63B4A2D7A65D7989DB9AC63.test5e
+      - JSESSIONID=F2EEF8221C8C8DCFAC103BF99231FA3E.test5e
       Host: 
       - ca-test.adyen.com
       Connection: 
@@ -7167,7 +7157,7 @@ http_interactions:
       message: OK
     headers: 
       Date: 
-      - Thu, 12 Apr 2012 16:01:00 GMT
+      - Thu, 19 Apr 2012 17:35:26 GMT
       Server: 
       - Apache
       Cache-Control: 
@@ -7329,7 +7319,7 @@ http_interactions:
         			</tr>
         			<tr>
         				<th class="row">Latest Version</th>
-        				<td>38</td>
+        				<td>42</td>
         			</tr>
         			<tr>
         				<td colspan="2">
@@ -7355,7 +7345,7 @@ http_interactions:
         					If the version on Test is not the same as the Latest version, it will be published automatically. Note that there is a few minutes delay after modifying the skin before it is deployed on the Test Hosted Payment Pages. 			</div>
         				</th>
         				<td>
-        					<iframe src="https://test.adyen.com/hpp/version.shtml?skinCode=7hFAQnmt&amp;version=38" height="50" width="450"></iframe>
+        					<iframe src="https://test.adyen.com/hpp/version.shtml?skinCode=7hFAQnmt&amp;version=42" height="50" width="450"></iframe>
         				</td>
         			</tr>
         			<tr>
@@ -7373,7 +7363,7 @@ http_interactions:
         					If the version on Live is not the same as the Latest version, you will have to Publish the Skin to Live via the Publish Tab. Note that there is a few minutes delay after publishing the skin before it is deployed on the Live Hosted Payment Pages. 			</div>
         				</th>
         				<td>
-        					<iframe src="https://live.adyen.com/hpp/version.shtml?skinCode=7hFAQnmt&amp;version=38" height="50" width="450"></iframe>
+        					<iframe src="https://live.adyen.com/hpp/version.shtml?skinCode=7hFAQnmt&amp;version=42" height="50" width="450"></iframe>
         				</td>
         			</tr>
         						<tr>
@@ -7733,7 +7723,7 @@ http_interactions:
         			<tr>
         				<th class="row">Merchant Reference</th>
         				<td>
-        					<input type="text" name="merchantReference" value="SKINTEST-1334246460395" size="20" />
+        					<input type="text" name="merchantReference" value="SKINTEST-1334856926912" size="20" />
         				</td>
         			</tr>	
         			<tr>
@@ -7798,5 +7788,816 @@ http_interactions:
         </html>
 
     http_version: 
-  recorded_at: Thu, 12 Apr 2012 16:01:00 GMT
+  recorded_at: Thu, 19 Apr 2012 17:35:27 GMT
+- request: 
+    method: get
+    uri: https://live.adyen.com/hpp/version.shtml?skinCode=7hFAQnmt
+    body: 
+      encoding: US-ASCII
+      string: ""
+    headers: 
+      Accept: 
+      - "*/*"
+      User-Agent: 
+      - Mechanize/2.3 Ruby/1.9.2p290 (http://github.com/tenderlove/mechanize/)
+      Accept-Encoding: 
+      - gzip,deflate,identity
+      Accept-Charset: 
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      Accept-Language: 
+      - en-us,en;q=0.5
+      Host: 
+      - live.adyen.com
+      Connection: 
+      - keep-alive
+      Keep-Alive: 
+      - 300
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Date: 
+      - Thu, 19 Apr 2012 17:35:27 GMT
+      Server: 
+      - Apache
+      Set-Cookie: 
+      - JSESSIONID=172BCFBF81F1FA5E846D04997E6A17E1.live8e; Path=/hpp/; Secure; HttpOnly
+      P3p: 
+      - policyref="/w3c/policy.xml", CP="NOI DSP COR CURa ADMa DEVa OUR NOR BUS FIN STA"
+      Cache-Control: 
+      - no-cache, no-store, must-revalidate, max-age=0, post-check=0, pre-check=0
+      Pragma: 
+      - no-cache
+      Expires: 
+      - "-1"
+      Keep-Alive: 
+      - timeout=15, max=100
+      Connection: 
+      - Keep-Alive
+      Transfer-Encoding: 
+      - chunked
+      Content-Type: 
+      - text/html;charset=UTF-8
+    body: 
+      encoding: US-ASCII
+      string: |-
+        <html>
+        	<head>
+        		<title>Version</title>
+        		<style type="text/css">
+        			body {
+        				font-family: sans-serif;
+        				font-size: 0.85em;
+        				font-weight: bold;
+        							}
+        		</style>
+        	</head>
+        	<body>	
+            <p>
+            Version:0
+            <br />
+            Modification Date:unknown
+            </p>
+        	</body>
+        </html>
+    http_version: 
+  recorded_at: Thu, 19 Apr 2012 17:35:27 GMT
+- request: 
+    method: get
+    uri: https://test.adyen.com/hpp/version.shtml?skinCode=7hFAQnmt
+    body: 
+      encoding: US-ASCII
+      string: ""
+    headers: 
+      Accept: 
+      - "*/*"
+      User-Agent: 
+      - Mechanize/2.3 Ruby/1.9.2p290 (http://github.com/tenderlove/mechanize/)
+      Accept-Encoding: 
+      - gzip,deflate,identity
+      Accept-Charset: 
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      Accept-Language: 
+      - en-us,en;q=0.5
+      Host: 
+      - test.adyen.com
+      Connection: 
+      - keep-alive
+      Keep-Alive: 
+      - 300
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Date: 
+      - Thu, 19 Apr 2012 17:35:28 GMT
+      Server: 
+      - Apache
+      Set-Cookie: 
+      - JSESSIONID=0FE8DDB71E1624E2D960AAF6596E9F38.test3e; Path=/hpp/; Secure; HttpOnly
+      P3p: 
+      - policyref="/w3c/policy.xml", CP="NOI DSP COR CURa ADMa DEVa OUR NOR BUS FIN STA"
+      Cache-Control: 
+      - no-cache, no-store, must-revalidate, max-age=0, post-check=0, pre-check=0
+      Pragma: 
+      - no-cache
+      Expires: 
+      - "-1"
+      Keep-Alive: 
+      - timeout=15, max=100
+      Connection: 
+      - Keep-Alive
+      Transfer-Encoding: 
+      - chunked
+      Content-Type: 
+      - text/html;charset=UTF-8
+    body: 
+      encoding: US-ASCII
+      string: |-
+        <html>
+        	<head>
+        		<title>Version</title>
+        		<style type="text/css">
+        			body {
+        				font-family: sans-serif;
+        				font-size: 0.85em;
+        				font-weight: bold;
+        							}
+        		</style>
+        	</head>
+        	<body>	
+            <p>
+            Version:41
+            <br />
+            Modification Date:2012-04-19T17:30:22.70Z
+            </p>
+        	</body>
+        </html>
+    http_version: 
+  recorded_at: Thu, 19 Apr 2012 17:35:28 GMT
+- request: 
+    method: get
+    uri: https://ca-test.adyen.com/ca/ca/skin/testpayment.shtml?skinCode=7hFAQnmt
+    body: 
+      encoding: US-ASCII
+      string: ""
+    headers: 
+      Accept: 
+      - "*/*"
+      User-Agent: 
+      - Mechanize/2.3 Ruby/1.9.2p290 (http://github.com/tenderlove/mechanize/)
+      Accept-Encoding: 
+      - gzip,deflate,identity
+      Accept-Charset: 
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      Accept-Language: 
+      - en-us,en;q=0.5
+      Cookie: 
+      - JSESSIONID=F2EEF8221C8C8DCFAC103BF99231FA3E.test5e
+      Host: 
+      - ca-test.adyen.com
+      Connection: 
+      - keep-alive
+      Keep-Alive: 
+      - 300
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Date: 
+      - Thu, 19 Apr 2012 17:35:29 GMT
+      Server: 
+      - Apache
+      Cache-Control: 
+      - no-cache, no-store, must-revalidate, max-age=0, post-check=0, pre-check=0
+      Pragma: 
+      - no-cache
+      Expires: 
+      - "-1"
+      X-Frame-Options: 
+      - SAMEORIGIN
+      Content-Language: 
+      - en-GB
+      Keep-Alive: 
+      - timeout=15, max=100
+      Connection: 
+      - Keep-Alive
+      Transfer-Encoding: 
+      - chunked
+      Content-Type: 
+      - text/html;charset=UTF-8
+    body: 
+      encoding: US-ASCII
+      string: |
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+        <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+        <head>
+        		
+        	<title>Adyen PSP System</title>
+        	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        	<meta http-equiv="content-style-type" content="text/css" />	
+        	<meta http-equiv="imagetoolbar" content="no" />
+        	<meta content="TRUE" name="MSSmartTagsPreventParsing" />
+        
+        	<link rel="shortcut icon" href="/ca/img/adyen/favicon.ico" type="image/ico"/>
+        	
+        	<script type="text/javascript" src="/ca/js/functions.js"></script>
+        	<script src="/ca/js/prototype.js" type="text/javascript"></script>
+        	<script src="/ca/js/scriptaculous.js" type="text/javascript"></script>
+        	
+        	<link rel="stylesheet" type="text/css" href="/ca/css/adyen/style.css" />
+        	<!--[if lt IE 7]>
+        	<link rel="stylesheet" type="text/css" href="/ca/css/adyen/style_ie6.css" />
+        	<![endif]-->
+        
+        		<link rel="alternate" title="Payments Per Hour RSS" href="https://ca-test.adyen.com/reports/token/rss/lasttx/Company/SoundCloud/?user=skinadmin%40Company.SoundCloud&amp;amp%3Bkey=1334075779504&amp;amp%3Btoken=KV7veoeR9GsL%2FH%2BZrgI1Yhiio5I%3D" type="application/rss+xml" />
+        	        <link rel="alternate" title="Authorised Volume RSS" href="https://ca-test.adyen.com/reports/token/rss/authorisedtxrss/Company/SoundCloud/?user=skinadmin%40Company.SoundCloud&amp;amp%3Bkey=1334075779504&amp;amp%3Btoken=KV7veoeR9GsL%2FH%2BZrgI1Yhiio5I%3D" type="application/rss+xml" />
+                    <link rel="alternate" title="System Messages RSS" href="https://ca-test.adyen.com/reports/token/rss/systemmessagesrss/Company/SoundCloud/?user=skinadmin%40Company.SoundCloud&amp;amp%3Bkey=1334075779504&amp;amp%3Btoken=KV7veoeR9GsL%2FH%2BZrgI1Yhiio5I%3D" type="application/rss+xml" />
+            
+        </head>
+        <body>
+        
+        	<div id="topbar"><div class="iefillerdiv"></div></div>
+        	<div id="middlebarcontainer">
+        			<div id="middlebar">
+        				<a href="/ca/ca/overview/default.shtml"><img id="mainlogo" src="/ca/img/adyen.png" alt="Logo"/>
+        				<img id="testsystemwarning" src="/ca/img/adyen_test.png" alt="test"/></a>
+        				<img id="maintagline" src="/ca/img/adyen_tagline.png" alt="Complex Finance, Online Insight" />
+        			</div>
+        	</div>
+        	<div id="bottombar"><div id="bottombar2"></div></div>
+        
+        	<div id="maincontent">
+        	<div id="boxleft">
+        		<div id="infobox">
+        			<ul class="nav">
+        			</ul>
+        			<div id="infoboxcontent">
+        								<div id="merchantlogo">
+        					<a href="/ca/ca/accounts/manage.shtml"><img src="/ca/ca/image.shtml?cachingId=Company.SoundCloud&amp;name=accountLogo&amp;mimeType=image%2Fpng" alt="merchantlogo"/></a>
+        				</div>
+        								<div>
+        															<div style="padding-left: 0px;">
+        												<a class="accountnav" href="/ca/ca/accounts/choose.shtml?setActiveAccountKey=Company.SoundCloud" 
+        							  style="text-decoration: underline; color: #666;" >SoundCloud</a>
+        							 						</div>
+        																		</div>
+        	
+        				<div style="text-align: left; margin-top: 5px">
+        					<!--a class="icon" href="/ca/ca/overview/default.shtml" title="Home"><img src="/ca/img/home.gif" alt="Home"/></a-->
+        				  				  <a class="icon" href="/ca/logoff.shtml" title="Sign Off"><img src="/ca/img/exit.png" alt="Sign Off"/> sign off</a>
+        				  				  <br/><a class="icon" href="/ca/ca/accounts/choose.shtml?chooseUserAccount=true"><img src="/ca/img/bookmark.png" alt="bookmarks"/> bookmarks</a>
+        				  				</div>
+        			</div>
+        		</div>
+        		
+        	
+        		<div class="bbarlmenu">
+        			<div class="bbarrmenu">
+        				<div class="bbarmenu">
+        				</div>
+        			</div>
+        		</div>
+        
+        				<div id="menu">
+        			<ul class="nav">
+        				<li class="navfirstli">&nbsp;</li>
+        				<li ><a href="/ca/ca/overview/default.shtml">Home</a></li>
+        								<li ><a href="/ca/ca/payments/showList.shtml">Payments</a></li>
+        																																								<li ><a href="/ca/ca/accounts/choose.shtml">Accounts</a></li>
+        												<li ><a href="/ca/ca/reports/choose.shtml">Reports</a></li>
+        																							        <li   class="activelink"  ><a href="/ca/ca/skin/skins.shtml">Skins</a></li>
+        							        								<li ><a href="/ca/ca/config/choose.shtml">Settings</a></li>
+        												<li ><a href="/ca/ca/support/start.shtml">Support</a></li>
+        							</ul>
+        		</div>
+        		<div class="bbarlmenu">
+        			<div class="bbarrmenu">
+        				<div class="bbarmenu">
+        				</div>
+        			</div>
+        		</div>
+        			</div>
+        	
+        	<div id="contentbg">
+        		<div id="content">
+        			<div id="contentwrapper">
+        			
+        
+        
+        <div id="toolbar">
+        	<ul id="tbtabs">
+            	<li id="tbbut1"  ><a href="/ca/ca/skin/skins.shtml">List</a></li>
+        		    	<li id="tbbut2"  ><a href="/ca/ca/skin/editskin.shtml?newSkin=true">New</a></li>
+        		<li id="tbbut3"  >
+        							<a href="/ca/ca/skin/editskin.shtml?skinCode=7hFAQnmt">
+        						Edit</a>
+        		</li>
+        		<li id="tbbut4"  >
+        							<a href="/ca/ca/skin/uploadskin.shtml?skinCode=7hFAQnmt">
+        						Upload</a>
+        		</li>
+        		<li id="tbbut5"  >
+        							<a href="/ca/ca/skin/publishskin.shtml?skinCode=7hFAQnmt">
+        						Publish</a>
+        		</li>
+        		<li id="tbbut6"  ><a href="/ca/ca/skin/testhmac.shtml">Test HMAC</a></li>
+        				<li id="tbbut7"  class="activelink" >
+        							<a href="/ca/ca/skin/testpayment.shtml?skinCode=7hFAQnmt">
+        						Test</a>
+        		</li>
+        	</ul>
+        </div><div id="subcontent">
+        	
+        		
+        		
+        	
+        	
+        	<h1 class="pagetitle">Do a Test Payment</h1>
+        	<form method="post" action="/ca/ca/skin/testpayment.shtml">
+        		<table class="data">
+        			<tr>
+        				<th class="row">Skin Code</th>
+        				<td>7hFAQnmt</td>
+        			</tr>
+        			<tr>
+        				<th class="row">Description</th>
+        				<td>example</td>
+        			</tr>
+        			<tr>
+        				<th class="row">Latest Version</th>
+        				<td>42</td>
+        			</tr>
+        			<tr>
+        				<td colspan="2">
+        										Below is the version information for this skin on the live and test payment pages. 
+        					<br />
+        					Note that there is a few minutes delay after saving or publishing before the skin 
+        					<br />
+        					is deployed on the payment pages.
+        									</td>
+        			</tr>
+        						<tr>
+        				<th class="row">
+        						<span class="floatLeft">Currently on Test</span>
+        	<span class="floatRight">
+        		<a id="versionOnTestInfo" onclick="return toggleTooltip($('versionOnTestInfo'), $('versionOnTestFrame'));" href="#">
+        			<img style="vertical-align: middle" src="/ca/img/icons/information.png" alt="information" />
+        		</a>	
+        	</span>
+        	<div id="versionOnTestFrame" class="popupMsg popupMsgHover" style="display: none;">
+        		<a class="closePopupButton" onclick="return toggleElementVisibility($('versionOnTestFrame'));" href="#">
+        			<img src="/ca/img/icons/cancel.png" alt="close_popup" />
+        		</a>
+        					If the version on Test is not the same as the Latest version, it will be published automatically. Note that there is a few minutes delay after modifying the skin before it is deployed on the Test Hosted Payment Pages. 			</div>
+        				</th>
+        				<td>
+        					<iframe src="https://test.adyen.com/hpp/version.shtml?skinCode=7hFAQnmt&amp;version=42" height="50" width="450"></iframe>
+        				</td>
+        			</tr>
+        			<tr>
+        				<th class="row">
+        						<span class="floatLeft">Currently on Live</span>
+        	<span class="floatRight">
+        		<a id="versionOnLiveInfo" onclick="return toggleTooltip($('versionOnLiveInfo'), $('versionOnLiveFrame'));" href="#">
+        			<img style="vertical-align: middle" src="/ca/img/icons/information.png" alt="information" />
+        		</a>	
+        	</span>
+        	<div id="versionOnLiveFrame" class="popupMsg popupMsgHover" style="display: none;">
+        		<a class="closePopupButton" onclick="return toggleElementVisibility($('versionOnLiveFrame'));" href="#">
+        			<img src="/ca/img/icons/cancel.png" alt="close_popup" />
+        		</a>
+        					If the version on Live is not the same as the Latest version, you will have to Publish the Skin to Live via the Publish Tab. Note that there is a few minutes delay after publishing the skin before it is deployed on the Live Hosted Payment Pages. 			</div>
+        				</th>
+        				<td>
+        					<iframe src="https://live.adyen.com/hpp/version.shtml?skinCode=7hFAQnmt&amp;version=42" height="50" width="450"></iframe>
+        				</td>
+        			</tr>
+        						<tr>
+        				<th class="row">Amount</th>
+        				<td>
+        					<input type="text" name="paymentAmount" size="7" value="199" />&nbsp;
+        					<select name="currencyCode">
+        						<option>CHF</option>
+        						<option selected="selected">EUR</option>
+        						<option>GBP</option>
+        						<option>USD</option>
+        						<option>DKK</option>
+        						<option>PLN</option>
+        						<option>SEK</option>
+        						<option>NOK</option>
+        						<option value="">--</option>
+        													<option value="AED">AED</option>
+        													<option value="ANG">ANG</option>
+        													<option value="ARS">ARS</option>
+        													<option value="AUD">AUD</option>
+        													<option value="BAM">BAM</option>
+        													<option value="BGL">BGL</option>
+        													<option value="BGN">BGN</option>
+        													<option value="BHD">BHD</option>
+        													<option value="BRL">BRL</option>
+        													<option value="CAD">CAD</option>
+        													<option value="CHF">CHF</option>
+        													<option value="CLP">CLP</option>
+        													<option value="CNY">CNY</option>
+        													<option value="COP">COP</option>
+        													<option value="CSD">CSD</option>
+        													<option value="CZK">CZK</option>
+        													<option value="DKK">DKK</option>
+        													<option value="EEK">EEK</option>
+        													<option value="EGP">EGP</option>
+        													<option value="EUR">EUR</option>
+        													<option value="FJD">FJD</option>
+        													<option value="GBP">GBP</option>
+        													<option value="HKD">HKD</option>
+        													<option value="HRK">HRK</option>
+        													<option value="HUF">HUF</option>
+        													<option value="IDR">IDR</option>
+        													<option value="ILS">ILS</option>
+        													<option value="INR">INR</option>
+        													<option value="ISK">ISK</option>
+        													<option value="JOD">JOD</option>
+        													<option value="JPY">JPY</option>
+        													<option value="KES">KES</option>
+        													<option value="KRW">KRW</option>
+        													<option value="KWD">KWD</option>
+        													<option value="KZT">KZT</option>
+        													<option value="LBP">LBP</option>
+        													<option value="LKR">LKR</option>
+        													<option value="LTL">LTL</option>
+        													<option value="LVL">LVL</option>
+        													<option value="MAD">MAD</option>
+        													<option value="MXN">MXN</option>
+        													<option value="MXP">MXP</option>
+        													<option value="MYR">MYR</option>
+        													<option value="NOK">NOK</option>
+        													<option value="NZD">NZD</option>
+        													<option value="OMR">OMR</option>
+        													<option value="PEN">PEN</option>
+        													<option value="PHP">PHP</option>
+        													<option value="PKR">PKR</option>
+        													<option value="PLN">PLN</option>
+        													<option value="QAR">QAR</option>
+        													<option value="ROL">ROL</option>
+        													<option value="RON">RON</option>
+        													<option value="RUB">RUB</option>
+        													<option value="SAR">SAR</option>
+        													<option value="SEK">SEK</option>
+        													<option value="SGD">SGD</option>
+        													<option value="SKK">SKK</option>
+        													<option value="THB">THB</option>
+        													<option value="TRY">TRY</option>
+        													<option value="TWD">TWD</option>
+        													<option value="UAH">UAH</option>
+        													<option value="USD">USD</option>
+        													<option value="UYU">UYU</option>
+        													<option value="VND">VND</option>
+        													<option value="XCD">XCD</option>
+        													<option value="ZAR">ZAR</option>
+        											</select>
+        				</td>
+        			</tr>
+        			<tr>
+        				<th class="row">Country Code</th>
+        				<td>
+        					<select name="countryCode">
+        						<option value="">Use IP countryCode</option>
+        						<option value="NL">NL</option>
+        						<option value="DE">DE</option>
+        						<option value="GB">GB</option>
+        						<option value="FR">FR</option>
+        						<option value="US">US</option>
+        						<option value="IT">IT</option>
+        						<option value="">--</option>
+        													<option value="AD">AD</option>
+        													<option value="AE">AE</option>
+        													<option value="AF">AF</option>
+        													<option value="AG">AG</option>
+        													<option value="AI">AI</option>
+        													<option value="AL">AL</option>
+        													<option value="AM">AM</option>
+        													<option value="AN">AN</option>
+        													<option value="AO">AO</option>
+        													<option value="AQ">AQ</option>
+        													<option value="AR">AR</option>
+        													<option value="AS">AS</option>
+        													<option value="AT">AT</option>
+        													<option value="AU">AU</option>
+        													<option value="AW">AW</option>
+        													<option value="AZ">AZ</option>
+        													<option value="BA">BA</option>
+        													<option value="BB">BB</option>
+        													<option value="BD">BD</option>
+        													<option value="BE">BE</option>
+        													<option value="BF">BF</option>
+        													<option value="BG">BG</option>
+        													<option value="BH">BH</option>
+        													<option value="BI">BI</option>
+        													<option value="BJ">BJ</option>
+        													<option value="BM">BM</option>
+        													<option value="BN">BN</option>
+        													<option value="BO">BO</option>
+        													<option value="BR">BR</option>
+        													<option value="BS">BS</option>
+        													<option value="BT">BT</option>
+        													<option value="BV">BV</option>
+        													<option value="BW">BW</option>
+        													<option value="BY">BY</option>
+        													<option value="BZ">BZ</option>
+        													<option value="CA">CA</option>
+        													<option value="CC">CC</option>
+        													<option value="CD">CD</option>
+        													<option value="CF">CF</option>
+        													<option value="CG">CG</option>
+        													<option value="CH">CH</option>
+        													<option value="CI">CI</option>
+        													<option value="CK">CK</option>
+        													<option value="CL">CL</option>
+        													<option value="CM">CM</option>
+        													<option value="CN">CN</option>
+        													<option value="CO">CO</option>
+        													<option value="CR">CR</option>
+        													<option value="CU">CU</option>
+        													<option value="CV">CV</option>
+        													<option value="CX">CX</option>
+        													<option value="CY">CY</option>
+        													<option value="CZ">CZ</option>
+        													<option value="DE">DE</option>
+        													<option value="DJ">DJ</option>
+        													<option value="DK">DK</option>
+        													<option value="DM">DM</option>
+        													<option value="DO">DO</option>
+        													<option value="DZ">DZ</option>
+        													<option value="EC">EC</option>
+        													<option value="EE">EE</option>
+        													<option value="EG">EG</option>
+        													<option value="EH">EH</option>
+        													<option value="ER">ER</option>
+        													<option value="ES">ES</option>
+        													<option value="ET">ET</option>
+        													<option value="FI">FI</option>
+        													<option value="FJ">FJ</option>
+        													<option value="FK">FK</option>
+        													<option value="FM">FM</option>
+        													<option value="FO">FO</option>
+        													<option value="FR">FR</option>
+        													<option value="FX">FX</option>
+        													<option value="GA">GA</option>
+        													<option value="GB">GB</option>
+        													<option value="GD">GD</option>
+        													<option value="GE">GE</option>
+        													<option value="GF">GF</option>
+        													<option value="GG">GG</option>
+        													<option value="GH">GH</option>
+        													<option value="GI">GI</option>
+        													<option value="GL">GL</option>
+        													<option value="GM">GM</option>
+        													<option value="GN">GN</option>
+        													<option value="GP">GP</option>
+        													<option value="GQ">GQ</option>
+        													<option value="GR">GR</option>
+        													<option value="GS">GS</option>
+        													<option value="GT">GT</option>
+        													<option value="GU">GU</option>
+        													<option value="GW">GW</option>
+        													<option value="GY">GY</option>
+        													<option value="HK">HK</option>
+        													<option value="HM">HM</option>
+        													<option value="HN">HN</option>
+        													<option value="HR">HR</option>
+        													<option value="HT">HT</option>
+        													<option value="HU">HU</option>
+        													<option value="ID">ID</option>
+        													<option value="IE">IE</option>
+        													<option value="IL">IL</option>
+        													<option value="IM">IM</option>
+        													<option value="IN">IN</option>
+        													<option value="IO">IO</option>
+        													<option value="IQ">IQ</option>
+        													<option value="IR">IR</option>
+        													<option value="IS">IS</option>
+        													<option value="IT">IT</option>
+        													<option value="JE">JE</option>
+        													<option value="JM">JM</option>
+        													<option value="JO">JO</option>
+        													<option value="JP">JP</option>
+        													<option value="KE">KE</option>
+        													<option value="KG">KG</option>
+        													<option value="KH">KH</option>
+        													<option value="KI">KI</option>
+        													<option value="KM">KM</option>
+        													<option value="KN">KN</option>
+        													<option value="KP">KP</option>
+        													<option value="KR">KR</option>
+        													<option value="KW">KW</option>
+        													<option value="KY">KY</option>
+        													<option value="KZ">KZ</option>
+        													<option value="LA">LA</option>
+        													<option value="LB">LB</option>
+        													<option value="LC">LC</option>
+        													<option value="LI">LI</option>
+        													<option value="LK">LK</option>
+        													<option value="LR">LR</option>
+        													<option value="LS">LS</option>
+        													<option value="LT">LT</option>
+        													<option value="LU">LU</option>
+        													<option value="LV">LV</option>
+        													<option value="LY">LY</option>
+        													<option value="MA">MA</option>
+        													<option value="MC">MC</option>
+        													<option value="MD">MD</option>
+        													<option value="ME">ME</option>
+        													<option value="MG">MG</option>
+        													<option value="MH">MH</option>
+        													<option value="MK">MK</option>
+        													<option value="ML">ML</option>
+        													<option value="MM">MM</option>
+        													<option value="MN">MN</option>
+        													<option value="MO">MO</option>
+        													<option value="MP">MP</option>
+        													<option value="MQ">MQ</option>
+        													<option value="MR">MR</option>
+        													<option value="MS">MS</option>
+        													<option value="MT">MT</option>
+        													<option value="MU">MU</option>
+        													<option value="MV">MV</option>
+        													<option value="MW">MW</option>
+        													<option value="MX">MX</option>
+        													<option value="MY">MY</option>
+        													<option value="MZ">MZ</option>
+        													<option value="NA">NA</option>
+        													<option value="NC">NC</option>
+        													<option value="NE">NE</option>
+        													<option value="NF">NF</option>
+        													<option value="NG">NG</option>
+        													<option value="NI">NI</option>
+        													<option value="NL">NL</option>
+        													<option value="NO">NO</option>
+        													<option value="NP">NP</option>
+        													<option value="NR">NR</option>
+        													<option value="NU">NU</option>
+        													<option value="NZ">NZ</option>
+        													<option value="OM">OM</option>
+        													<option value="PA">PA</option>
+        													<option value="PE">PE</option>
+        													<option value="PF">PF</option>
+        													<option value="PG">PG</option>
+        													<option value="PH">PH</option>
+        													<option value="PK">PK</option>
+        													<option value="PL">PL</option>
+        													<option value="PM">PM</option>
+        													<option value="PN">PN</option>
+        													<option value="PR">PR</option>
+        													<option value="PS">PS</option>
+        													<option value="PT">PT</option>
+        													<option value="PW">PW</option>
+        													<option value="PY">PY</option>
+        													<option value="QA">QA</option>
+        													<option value="RE">RE</option>
+        													<option value="RO">RO</option>
+        													<option value="RS">RS</option>
+        													<option value="RU">RU</option>
+        													<option value="RW">RW</option>
+        													<option value="SA">SA</option>
+        													<option value="SB">SB</option>
+        													<option value="SC">SC</option>
+        													<option value="SD">SD</option>
+        													<option value="SE">SE</option>
+        													<option value="SG">SG</option>
+        													<option value="SH">SH</option>
+        													<option value="SI">SI</option>
+        													<option value="SJ">SJ</option>
+        													<option value="SK">SK</option>
+        													<option value="SL">SL</option>
+        													<option value="SM">SM</option>
+        													<option value="SN">SN</option>
+        													<option value="SO">SO</option>
+        													<option value="SR">SR</option>
+        													<option value="ST">ST</option>
+        													<option value="SV">SV</option>
+        													<option value="SY">SY</option>
+        													<option value="SZ">SZ</option>
+        													<option value="TC">TC</option>
+        													<option value="TD">TD</option>
+        													<option value="TF">TF</option>
+        													<option value="TG">TG</option>
+        													<option value="TH">TH</option>
+        													<option value="TJ">TJ</option>
+        													<option value="TK">TK</option>
+        													<option value="TL">TL</option>
+        													<option value="TM">TM</option>
+        													<option value="TN">TN</option>
+        													<option value="TO">TO</option>
+        													<option value="TR">TR</option>
+        													<option value="TT">TT</option>
+        													<option value="TV">TV</option>
+        													<option value="TW">TW</option>
+        													<option value="TZ">TZ</option>
+        													<option value="UA">UA</option>
+        													<option value="UG">UG</option>
+        													<option value="UM">UM</option>
+        													<option value="US">US</option>
+        													<option value="UY">UY</option>
+        													<option value="UZ">UZ</option>
+        													<option value="VA">VA</option>
+        													<option value="VC">VC</option>
+        													<option value="VE">VE</option>
+        													<option value="VG">VG</option>
+        													<option value="VI">VI</option>
+        													<option value="VN">VN</option>
+        													<option value="VU">VU</option>
+        													<option value="WF">WF</option>
+        													<option value="WS">WS</option>
+        													<option value="YE">YE</option>
+        													<option value="YT">YT</option>
+        													<option value="ZA">ZA</option>
+        													<option value="ZM">ZM</option>
+        													<option value="ZW">ZW</option>
+        													<option value="ZZ">ZZ</option>
+        											</select>
+        				</td>
+        			</tr>
+        			<tr>
+        				<th class="row">Shopper Locale</th>
+        				<td>
+        					<input type="text" id="shopperLocale" name="shopperLocale" value="en_GB" size="8" /> 
+        					(<a href="#" onclick="document.getElementById('shopperLocale').value='en_GB'; return false;">en_GB</a>,
+        					 <a href="#" onclick="document.getElementById('shopperLocale').value='nl'; return false;">nl</a>, 
+        					 <a href="#" onclick="document.getElementById('shopperLocale').value='fr'; return false;">fr</a>, 
+        					 <a href="#" onclick="document.getElementById('shopperLocale').value='de'; return false;">de</a>)
+        				</td>
+        			</tr>
+        			<tr>
+        				<th class="row">Merchant Reference</th>
+        				<td>
+        					<input type="text" name="merchantReference" value="SKINTEST-1334856929062" size="20" />
+        				</td>
+        			</tr>	
+        			<tr>
+        				<th class="row">Merchant Account</th>
+        				<td>
+        					<select name="merchantAccount">
+        													<option>SoundCloudCOM</option>
+        											</select>
+        				</td>
+        			</tr>
+        
+        			
+        			<tr>
+        				<th class="row">System</th>
+        				<td>
+        										<input type="radio" id="testsystem" checked="checked" name="system" value="test" /><label for="testsystem">Test System</label> &nbsp;&nbsp;&nbsp;
+        					<input type="radio" id="livesystem" name="system" value="live" /><label for="livesystem">Live System</label>
+        									</td>
+        			</tr>
+        
+        			<tr>
+        				<th class="row">Skip if only one payment method available</th>
+        				<td>
+        					<input style="border: none;" type="checkbox" name="skipSelection" value="true"  /> Skip payment method selection if possible.
+        				</td>
+        			</tr>
+        
+        			<tr>
+        				<th class="row">One Page Payment page</th>
+        				<td>
+        					<input style="border: none;" type="checkbox" name="onePagePayment" value="true"  /> One Page Payment.
+        				</td>
+        			</tr>
+        
+        
+        			<tr>
+        				<td colspan="2">&nbsp;</td>
+        			</tr>
+        			<tr>
+        				<td colspan="2">
+        					<input type="hidden" name="skinCode" value="7hFAQnmt" />
+        					<input type="submit" name="test" value="Generate Payment Form" />
+        				</td>
+        			</tr>
+        		</table>
+        	</form>
+        </div>
+        
+        		<div class="bbarl">
+        		<div class="bbarr">
+        		<div class="bbar">
+        		</div>
+        		</div>
+        		</div>
+        		</div>
+        
+        		
+        		</div>
+        	</div>
+        	</div>
+        </body>
+        </html>
+
+    http_version: 
+  recorded_at: Thu, 19 Apr 2012 17:35:29 GMT
 recorded_with: VCR 2.0.1

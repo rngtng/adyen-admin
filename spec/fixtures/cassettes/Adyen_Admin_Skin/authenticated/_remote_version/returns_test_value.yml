@@ -17,6 +17,8 @@ http_interactions:
       - ISO-8859-1,utf-8;q=0.7,*;q=0.7
       Accept-Language: 
       - en-us,en;q=0.5
+      Cookie: 
+      - JSESSIONID=0FE8DDB71E1624E2D960AAF6596E9F38.test3e
       Host: 
       - test.adyen.com
       Connection: 
@@ -29,11 +31,9 @@ http_interactions:
       message: OK
     headers: 
       Date: 
-      - Thu, 12 Apr 2012 16:00:37 GMT
+      - Thu, 19 Apr 2012 17:35:36 GMT
       Server: 
       - Apache
-      Set-Cookie: 
-      - JSESSIONID=915387E85345B1A7AD8ECFC9481465FB.test3e; Path=/hpp/; Secure; HttpOnly
       P3p: 
       - policyref="/w3c/policy.xml", CP="NOI DSP COR CURa ADMa DEVa OUR NOR BUS FIN STA"
       Cache-Control: 
@@ -66,12 +66,12 @@ http_interactions:
         	</head>
         	<body>	
             <p>
-            Version:14
+            Version:15
             <br />
-            Modification Date:2012-04-10T22:51:05.99Z
+            Modification Date:2012-04-13T09:35:41.52Z
             </p>
         	</body>
         </html>
     http_version: 
-  recorded_at: Thu, 12 Apr 2012 16:00:37 GMT
+  recorded_at: Thu, 19 Apr 2012 17:35:36 GMT
 recorded_with: VCR 2.0.1

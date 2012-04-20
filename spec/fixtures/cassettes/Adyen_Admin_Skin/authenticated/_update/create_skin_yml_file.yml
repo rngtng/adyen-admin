@@ -2,7 +2,7 @@
 http_interactions: 
 - request: 
     method: get
-    uri: https://ca-test.adyen.com/ca/ca/skin/testpayment.shtml?skinCode=Kx9axnRf
+    uri: https://ca-test.adyen.com/ca/ca/skin/testpayment.shtml?skinCode=7hFAQnmt
     body: 
       encoding: US-ASCII
       string: ""
@@ -31,7 +31,7 @@ http_interactions:
       message: OK
     headers: 
       Date: 
-      - Thu, 19 Apr 2012 17:35:35 GMT
+      - Thu, 19 Apr 2012 17:42:05 GMT
       Server: 
       - Apache
       Cache-Control: 
@@ -157,20 +157,20 @@ http_interactions:
             	<li id="tbbut1"  ><a href="/ca/ca/skin/skins.shtml">List</a></li>
         		    	<li id="tbbut2"  ><a href="/ca/ca/skin/editskin.shtml?newSkin=true">New</a></li>
         		<li id="tbbut3"  >
-        							<a href="/ca/ca/skin/editskin.shtml?skinCode=Kx9axnRf">
+        							<a href="/ca/ca/skin/editskin.shtml?skinCode=7hFAQnmt">
         						Edit</a>
         		</li>
         		<li id="tbbut4"  >
-        							<a href="/ca/ca/skin/uploadskin.shtml?skinCode=Kx9axnRf">
+        							<a href="/ca/ca/skin/uploadskin.shtml?skinCode=7hFAQnmt">
         						Upload</a>
         		</li>
         		<li id="tbbut5"  >
-        							<a href="/ca/ca/skin/publishskin.shtml?skinCode=Kx9axnRf">
+        							<a href="/ca/ca/skin/publishskin.shtml?skinCode=7hFAQnmt">
         						Publish</a>
         		</li>
         		<li id="tbbut6"  ><a href="/ca/ca/skin/testhmac.shtml">Test HMAC</a></li>
         				<li id="tbbut7"  class="activelink" >
-        							<a href="/ca/ca/skin/testpayment.shtml?skinCode=Kx9axnRf">
+        							<a href="/ca/ca/skin/testpayment.shtml?skinCode=7hFAQnmt">
         						Test</a>
         		</li>
         	</ul>
@@ -185,15 +185,15 @@ http_interactions:
         		<table class="data">
         			<tr>
         				<th class="row">Skin Code</th>
-        				<td>Kx9axnRf</td>
+        				<td>7hFAQnmt</td>
         			</tr>
         			<tr>
         				<th class="row">Description</th>
-        				<td>soundcloud</td>
+        				<td>example</td>
         			</tr>
         			<tr>
         				<th class="row">Latest Version</th>
-        				<td>15</td>
+        				<td>43</td>
         			</tr>
         			<tr>
         				<td colspan="2">
@@ -219,7 +219,7 @@ http_interactions:
         					If the version on Test is not the same as the Latest version, it will be published automatically. Note that there is a few minutes delay after modifying the skin before it is deployed on the Test Hosted Payment Pages. 			</div>
         				</th>
         				<td>
-        					<iframe src="https://test.adyen.com/hpp/version.shtml?skinCode=Kx9axnRf&amp;version=15" height="50" width="450"></iframe>
+        					<iframe src="https://test.adyen.com/hpp/version.shtml?skinCode=7hFAQnmt&amp;version=43" height="50" width="450"></iframe>
         				</td>
         			</tr>
         			<tr>
@@ -237,7 +237,7 @@ http_interactions:
         					If the version on Live is not the same as the Latest version, you will have to Publish the Skin to Live via the Publish Tab. Note that there is a few minutes delay after publishing the skin before it is deployed on the Live Hosted Payment Pages. 			</div>
         				</th>
         				<td>
-        					<iframe src="https://live.adyen.com/hpp/version.shtml?skinCode=Kx9axnRf&amp;version=15" height="50" width="450"></iframe>
+        					<iframe src="https://live.adyen.com/hpp/version.shtml?skinCode=7hFAQnmt&amp;version=43" height="50" width="450"></iframe>
         				</td>
         			</tr>
         						<tr>
@@ -597,7 +597,7 @@ http_interactions:
         			<tr>
         				<th class="row">Merchant Reference</th>
         				<td>
-        					<input type="text" name="merchantReference" value="SKINTEST-1334856935837" size="20" />
+        					<input type="text" name="merchantReference" value="SKINTEST-1334857325482" size="20" />
         				</td>
         			</tr>	
         			<tr>
@@ -638,7 +638,7 @@ http_interactions:
         			</tr>
         			<tr>
         				<td colspan="2">
-        					<input type="hidden" name="skinCode" value="Kx9axnRf" />
+        					<input type="hidden" name="skinCode" value="7hFAQnmt" />
         					<input type="submit" name="test" value="Generate Payment Form" />
         				</td>
         			</tr>
@@ -662,5 +662,153 @@ http_interactions:
         </html>
 
     http_version: 
-  recorded_at: Thu, 19 Apr 2012 17:35:36 GMT
+  recorded_at: Thu, 19 Apr 2012 17:42:05 GMT
+- request: 
+    method: get
+    uri: https://live.adyen.com/hpp/version.shtml?skinCode=7hFAQnmt
+    body: 
+      encoding: US-ASCII
+      string: ""
+    headers: 
+      Accept: 
+      - "*/*"
+      User-Agent: 
+      - Mechanize/2.3 Ruby/1.9.2p290 (http://github.com/tenderlove/mechanize/)
+      Accept-Encoding: 
+      - gzip,deflate,identity
+      Accept-Charset: 
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      Accept-Language: 
+      - en-us,en;q=0.5
+      Host: 
+      - live.adyen.com
+      Connection: 
+      - keep-alive
+      Keep-Alive: 
+      - 300
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Date: 
+      - Thu, 19 Apr 2012 17:42:06 GMT
+      Server: 
+      - Apache
+      Set-Cookie: 
+      - JSESSIONID=BC96BB75DA39A7E9D8B23C5E396E6DEE.live7e; Path=/hpp/; Secure; HttpOnly
+      P3p: 
+      - policyref="/w3c/policy.xml", CP="NOI DSP COR CURa ADMa DEVa OUR NOR BUS FIN STA"
+      Cache-Control: 
+      - no-cache, no-store, must-revalidate, max-age=0, post-check=0, pre-check=0
+      Pragma: 
+      - no-cache
+      Expires: 
+      - "-1"
+      Keep-Alive: 
+      - timeout=15, max=100
+      Connection: 
+      - Keep-Alive
+      Transfer-Encoding: 
+      - chunked
+      Content-Type: 
+      - text/html;charset=UTF-8
+    body: 
+      encoding: US-ASCII
+      string: |-
+        <html>
+        	<head>
+        		<title>Version</title>
+        		<style type="text/css">
+        			body {
+        				font-family: sans-serif;
+        				font-size: 0.85em;
+        				font-weight: bold;
+        							}
+        		</style>
+        	</head>
+        	<body>	
+            <p>
+            Version:0
+            <br />
+            Modification Date:unknown
+            </p>
+        	</body>
+        </html>
+    http_version: 
+  recorded_at: Thu, 19 Apr 2012 17:42:06 GMT
+- request: 
+    method: get
+    uri: https://test.adyen.com/hpp/version.shtml?skinCode=7hFAQnmt
+    body: 
+      encoding: US-ASCII
+      string: ""
+    headers: 
+      Accept: 
+      - "*/*"
+      User-Agent: 
+      - Mechanize/2.3 Ruby/1.9.2p290 (http://github.com/tenderlove/mechanize/)
+      Accept-Encoding: 
+      - gzip,deflate,identity
+      Accept-Charset: 
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      Accept-Language: 
+      - en-us,en;q=0.5
+      Host: 
+      - test.adyen.com
+      Connection: 
+      - keep-alive
+      Keep-Alive: 
+      - 300
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Date: 
+      - Thu, 19 Apr 2012 17:42:07 GMT
+      Server: 
+      - Apache
+      Set-Cookie: 
+      - JSESSIONID=7F868EFCB2668BC0BF83EE3BC1D5502C.test3e; Path=/hpp/; Secure; HttpOnly
+      P3p: 
+      - policyref="/w3c/policy.xml", CP="NOI DSP COR CURa ADMa DEVa OUR NOR BUS FIN STA"
+      Cache-Control: 
+      - no-cache, no-store, must-revalidate, max-age=0, post-check=0, pre-check=0
+      Pragma: 
+      - no-cache
+      Expires: 
+      - "-1"
+      Keep-Alive: 
+      - timeout=15, max=100
+      Connection: 
+      - Keep-Alive
+      Transfer-Encoding: 
+      - chunked
+      Content-Type: 
+      - text/html;charset=UTF-8
+    body: 
+      encoding: US-ASCII
+      string: |-
+        <html>
+        	<head>
+        		<title>Version</title>
+        		<style type="text/css">
+        			body {
+        				font-family: sans-serif;
+        				font-size: 0.85em;
+        				font-weight: bold;
+        							}
+        		</style>
+        	</head>
+        	<body>	
+            <p>
+            Version:43
+            <br />
+            Modification Date:2012-04-19T17:35:34.68Z
+            </p>
+        	</body>
+        </html>
+    http_version: 
+  recorded_at: Thu, 19 Apr 2012 17:42:07 GMT
 recorded_with: VCR 2.0.1

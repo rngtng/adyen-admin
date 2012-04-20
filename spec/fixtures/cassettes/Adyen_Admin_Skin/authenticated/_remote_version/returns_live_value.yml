@@ -17,6 +17,8 @@ http_interactions:
       - ISO-8859-1,utf-8;q=0.7,*;q=0.7
       Accept-Language: 
       - en-us,en;q=0.5
+      Cookie: 
+      - JSESSIONID=172BCFBF81F1FA5E846D04997E6A17E1.live8e
       Host: 
       - live.adyen.com
       Connection: 
@@ -29,11 +31,9 @@ http_interactions:
       message: OK
     headers: 
       Date: 
-      - Thu, 12 Apr 2012 16:00:38 GMT
+      - Thu, 19 Apr 2012 17:35:37 GMT
       Server: 
       - Apache
-      Set-Cookie: 
-      - JSESSIONID=5936DE2FE3296D902062E7E45BBEC704.live5e; Path=/hpp/; Secure; HttpOnly
       P3p: 
       - policyref="/w3c/policy.xml", CP="NOI DSP COR CURa ADMa DEVa OUR NOR BUS FIN STA"
       Cache-Control: 
@@ -43,7 +43,7 @@ http_interactions:
       Expires: 
       - "-1"
       Keep-Alive: 
-      - timeout=10, max=250
+      - timeout=15, max=100
       Connection: 
       - Keep-Alive
       Transfer-Encoding: 
@@ -73,5 +73,5 @@ http_interactions:
         	</body>
         </html>
     http_version: 
-  recorded_at: Thu, 12 Apr 2012 16:00:37 GMT
+  recorded_at: Thu, 19 Apr 2012 17:35:37 GMT
 recorded_with: VCR 2.0.1

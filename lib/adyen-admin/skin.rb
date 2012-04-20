@@ -83,7 +83,7 @@ module Adyen
       def path=(new_path)
         if Skin.is_skin_path?(new_path)
           @path = new_path
-          if skin_data
+          if !skin_data.empty?
             self.code = skin_data["code"]
             self.name = skin_data["name"]
           else
@@ -97,7 +97,7 @@ module Adyen
 
       def skin_data(force_update = false)
         update if force_update
-        @skin_data ||= YAML.load_file(skin_data_file) rescue nil
+        @skin_data ||= YAML.load_file(skin_data_file) rescue {}
       end
 
       def uploaded_at
@@ -138,7 +138,6 @@ module Adyen
         "#{code}.zip".tap do |filename|
           Adyen::Admin.client.download(DOWNLOAD % code, filename)
         end
-        update
       end
 
       def decompile(filename, backup = true)
@@ -276,6 +275,8 @@ module Adyen
           page = Adyen::Admin.get(TEST % code)
           page.search(".data tr td")[2].content.to_i
         end
+      rescue
+        nil
       end
     end
   end

@@ -146,7 +146,45 @@ module Adyen::Admin
       end
 
       describe "#update"  do
-        it "" do
+        let(:path) { "#{skin_fixtures}/example-7hFAQnmt" }
+
+        before do
+          skin.path = path
+        end
+
+        after do
+          `rm -f #{path}/skin.yml`
+        end
+
+        it "create skin.yml file" do
+          expect do
+            skin.update
+          end.to change { File.exists?("#{path}/skin.yml") }
+        end
+
+        context "local skin" do
+          it "returns version" do
+            skin.version.should be_nil
+          end
+
+          it "returns version" do
+            skin.version_live.should be_nil
+          end
+
+          it "returns version" do
+            skin.version_test.should  be_nil
+          end
+        end
+
+        context "remote fails" do
+          before do
+            Adyen::Admin.stub(:get).and_raise(StandardError)
+          end
+
+          it "returns version" do
+            skin.update
+            skin.version.should be_nil
+          end
         end
       end
 
@@ -166,12 +204,6 @@ module Adyen::Admin
           Zip::ZipFile.open(skin.download) do |zipfile|
             zipfile.find_entry(File.join(skin_code, "inc", "cheader.txt")).should be_true
           end
-        end
-
-        it "updates skin data" do
-          skin.should_receive(:update)
-
-          skin.download
         end
       end
 
@@ -229,59 +261,70 @@ module Adyen::Admin
 
       describe "#compile" do
         let(:skin_code) { "DV3tf95f" }
-        let(:skin) { Skin.new(:path => "#{skin_fixtures}/#{skin_code}") }
+        let(:path) { "#{skin_fixtures}/#{skin_code}" }
+        let(:skin) { Skin.new(:path => path) }
         let(:zip_filename) { skin.compile }
 
         def zip_contains(file)
           Zip::ZipFile.open(zip_filename) do |zipfile|
-            return true if zipfile.find_entry(File.join(skin_code, file))
+            return true if zipfile.find_entry(File.join(skin.code, file))
           end
           false
         end
 
         after do
-          `rm -f #{skin_code}.zip`
+          `rm -f #{skin.code}.zip`
         end
 
-        context "without base" do
+        context "no skin.yml" do
           before do
-            `mv #{skin_fixtures}/base #{skin_fixtures}/base2`
+            `mv #{path}/skin.yml #{path}/skin2.yml`
           end
 
           after do
-            `mv #{skin_fixtures}/base2 #{skin_fixtures}/base`
+            `mv #{path}/skin2.yml #{path}/skin.yml`
+          end
+
+          context "without base" do
+            before do
+              `mv #{skin_fixtures}/base #{skin_fixtures}/base2`
+            end
+
+            after do
+              `mv #{skin_fixtures}/base2 #{skin_fixtures}/base`
+            end
+
+            it "includes screen file" do
+              zip_contains("css/screen.css").should be_true
+            end
+
+            it "excludes print files" do
+              zip_contains("css/print.css").should_not be_true
+            end
           end
 
           it "includes screen file" do
             zip_contains("css/screen.css").should be_true
           end
 
-          it "excludes print files" do
-            zip_contains("css/print.css").should_not be_true
+          it "includes print file" do
+            zip_contains("css/print.css").should be_true
           end
-        end
 
-        it "includes screen file" do
-          zip_contains("css/screen.css").should be_true
-        end
+          it "excludes meta file" do
+            zip_contains("skin2.yml").should_not be_true
+          end
 
-        it "includes print file" do
-          zip_contains("css/print.css").should be_true
-        end
-
-        it "excludes meta file" do
-          zip_contains("metadata.yml").should_not be_true
-        end
-
-        it "excludes skin file" do
-          zip_contains("skin.html.erb").should_not be_true
+          it "excludes skin file" do
+            zip_contains("skin.html.erb").should_not be_true
+          end
         end
 
         context "no exlusion" do
           let(:zip_filename) { skin.compile(nil) }
 
           it "excludes meta file" do
-            zip_contains("metadata.yml").should be_true
+            zip_contains("skin.yml").should be_true
           end
 
           it "excludes skin file" do
@@ -291,21 +334,25 @@ module Adyen::Admin
       end
 
       describe "#upload" do
+        let(:path) { "#{skin_fixtures}/example-7hFAQnmt" }
+
         after do
           `rm -f #{skin_code}.zip`
+          `rm -f #{path}/skin.yml`
         end
 
         context "valid set" do
-          it "increases version" do
-            skin.path = "#{skin_fixtures}/example-7hFAQnmt"
+          before do
+            skin.path = path
+          end
 
+          it "increases version" do
             expect do
               skin.upload
             end.to change { skin.send(:remote_version) }.by(1)
           end
 
           it "updates skin data" do
-            skin.path = "#{skin_fixtures}/example-7hFAQnmt"
             skin.should_receive(:update)
 
             skin.upload
@@ -315,13 +362,14 @@ module Adyen::Admin
 
       describe "#remote_version" do
         let(:skin) { Skin.new(:code => "Kx9axnRf", :name => "demo") }
+        let(:version) { 15 }
 
         it "returns uploaded value" do
-          skin.send(:remote_version).should == 14
+          skin.send(:remote_version).should == version
         end
 
         it "returns test value" do
-          skin.send(:remote_version, :test).should == 14
+          skin.send(:remote_version, :test).should == version
         end
 
         it "returns live value" do
