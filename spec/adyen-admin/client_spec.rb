@@ -31,9 +31,11 @@ describe Adyen::Admin::Client, :vcr  do
     end
 
     it 'sets authenticated to false on error' do
+      Adyen::Admin.instance_variable_set(:@authenticated, true)
+
       expect do
         Adyen::Admin.get(Adyen::Admin::Skin::SKINS) rescue nil
-      end.to change { Adyen::Admin.authenticated? }.from(nil).to(false)
+      end.to change { Adyen::Admin.authenticated? }.from(true).to(false)
     end
   end
 end
