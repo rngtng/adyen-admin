@@ -5,9 +5,15 @@ require "adyen-admin/skin"
 
 module Adyen::Admin
   describe Skin, :vcr  do
-    let(:skin_fixtures) { 'spec/fixtures/skins' }
+    let(:skin_fixtures) { File.expand_path 'spec/fixtures/skins' }
     let(:skin_code) { "7hFAQnmt" }
     let(:skin) { Skin.new(:code => skin_code, :name => "example") }
+
+    describe ".all" do
+      it 'returns all local skins' do
+        Skin.all.should == Skin.all_local
+      end
+    end
 
     context "authenticated" do
       before(:all) do
@@ -38,7 +44,7 @@ module Adyen::Admin
 
       describe ".all_local" do
         it 'returns the skins' do
-          Skin.all_local(skin_fixtures).should == [
+          Skin.all_local.should == [
             Skin.new(:code => "base"),
             Skin.new(:code => "DV3tf95f"),
             skin,
@@ -49,7 +55,7 @@ module Adyen::Admin
 
       describe ".all" do
         it 'returns the skins' do
-          Skin.all(skin_fixtures).should == [
+          Skin.all.should == [
             skin,
             Skin.new(:code => "Kx9axnRf", :name => "demo"),
             Skin.new(:code => "vQW0fEo8", :name => "test"),
@@ -60,10 +66,9 @@ module Adyen::Admin
         end
 
         it 'freezes local skins' do
-          Skin.all(skin_fixtures).last.should be_frozen
+          Skin.all.last.should be_frozen
         end
       end
-
 
       describe ".find" do
         it 'returns the skin' do

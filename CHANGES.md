@@ -6,11 +6,12 @@
   * add CLI binaries (to compile + upload) -> read from .adyenrc file
   * make compatible with Live system
 
-## v0.0.11 - 23-04-2012
+## v0.0.12 - 23-04-2012
   * renamed `compile` to `compress`
   * added `compile` which splits any given input to the inc/* file according to given pattern
   * parse metafile
   * log out on AuthError
+  * cache all skins, only load remote when authorized
 
 ## v0.0.7
   * fix download issue

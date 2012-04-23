@@ -21,7 +21,7 @@ module Adyen
           send("#{key}=", value)
         end
 
-        self.path ||= File.join(Skin.default_path, [name,code].compact.join("-"))
+        self.path ||= File.expand_path File.join(Skin.default_path, [name,code].compact.join("-"))
 
         raise ArgumentError, "No Code given" unless code
       end
@@ -36,12 +36,14 @@ module Adyen
 
       # union remote and local skins. Local skins are frozen to
       # indicate no availble remote counter part which avoid update
-      def self.all(path = Skin.default_path)
-        {}.tap do |hash|
-          self.all_remote.each do |skin|
-            hash[skin.code] = skin unless hash[skin.code]
+      def self.all
+        @all ||= {}.tap do |hash|
+          if Adyen::Admin.authenticated?
+            self.all_remote.each do |skin|
+              hash[skin.code] = skin unless hash[skin.code]
+            end
           end
-          self.all_local(path).each do |skin|
+          self.all_local.each do |skin|
             hash[skin.code] = skin unless hash[skin.code]
           end
         end.values
@@ -49,20 +51,18 @@ module Adyen
 
       # fetch all remote skins
       def self.all_remote
-        @skins_remote ||= begin
-          page = Adyen::Admin.get(SKINS)
-          page.search(".data tbody tr").map do |node|
-            Skin.new({
-              :code => node.search("a")[0].content.strip,
-              :name => node.search("td")[1].content.strip,
-            })
-          end
+        page = Adyen::Admin.get(SKINS)
+        page.search(".data tbody tr").map do |node|
+          Skin.new({
+            :code => node.search("a")[0].content.strip,
+            :name => node.search("td")[1].content.strip,
+          })
         end
       end
 
       # fetch all local skins
-      def self.all_local(path = Skin.default_path)
-        Dir[File.join(path.to_s, "*")].map do |path|
+      def self.all_local
+        Dir[File.join(default_path.to_s, "*")].map do |path|
           Skin.new(:path => path).freeze rescue nil
         end.compact
       end
@@ -75,7 +75,7 @@ module Adyen
       end
 
       def self.purge_cache
-        @skins_remote = nil
+        @all = nil
       end
 
       ##################################
