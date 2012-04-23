@@ -6,7 +6,7 @@
   * add CLI binaries (to compile + upload) -> read from .adyenrc file
   * make compatible with Live system
 
-## v0.0.8 - ???
+## v0.0.9 - 23-04-2012
   * parse metafile
 
 ## v0.0.7

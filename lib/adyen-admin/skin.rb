@@ -84,8 +84,8 @@ module Adyen
         if Skin.is_skin_path?(new_path)
           @path = new_path
           if !skin_data.empty?
-            self.code = skin_data["code"]
-            self.name = skin_data["name"]
+            self.code = skin_data[:code]
+            self.name = skin_data[:name]
           else
             new_code, *new_name = File.basename(new_path).split("-").reverse
             self.code ||= new_code
@@ -101,19 +101,19 @@ module Adyen
       end
 
       def uploaded_at
-        skin_data["uploaded_at"]
+        skin_data[:uploaded_at]
       end
 
       def version
-        skin_data["version"]
+        skin_data[:version]
       end
 
       def version_live
-        skin_data["version_live"]
+        skin_data[:version_live]
       end
 
       def version_test
-        skin_data["version_test"]
+        skin_data[:version_test]
       end
 
       ##########################################
