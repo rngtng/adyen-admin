@@ -29,5 +29,11 @@ describe Adyen::Admin::Client, :vcr  do
         Adyen::Admin.get(Adyen::Admin::Skin::SKINS)
       end.to raise_error Adyen::Admin::AuthenticationError
     end
+
+    it 'sets authenticated to false on error' do
+      expect do
+        Adyen::Admin.get(Adyen::Admin::Skin::SKINS) rescue nil
+      end.to change { Adyen::Admin.authenticated? }.from(nil).to(false)
+    end
   end
 end

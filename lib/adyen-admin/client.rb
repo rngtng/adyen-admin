@@ -20,7 +20,10 @@ module Adyen
 
       def get(url)
         client.get(url).tap do |page|
-          raise AuthenticationError unless page.uri.to_s.include?(url)
+          if !page.uri.to_s.include?(url)
+            @authenticated = false
+            raise AuthenticationError
+          end
         end
       end
 

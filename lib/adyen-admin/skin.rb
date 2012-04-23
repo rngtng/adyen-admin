@@ -144,7 +144,7 @@ module Adyen
         # create backup of current, include any files
         if self.path
           if backup
-            compile(/(zip|lock)$/, ".backup.zip")
+            compress(/(zip|lock)$/, ".backup.zip")
           end
         else
           backup = false
@@ -171,7 +171,19 @@ module Adyen
         end
       end
 
-      def compile(exclude = /(yml|zip|erb)$/, outfile = "#{code}.zip")
+      def compile(output, pattern = /<!-- ### inc\/([a-z]+) -->(.+?)<!-- ### -->/m)
+        raise ArgumentError, "No Path given" unless path
+
+        output.scan(pattern) do |name, content|
+          file = File.join(path, "inc/#{name}.txt")
+          `mkdir -p #{File.dirname(file)}`
+          File.open(file, "w") do |f|
+            f.write content.strip
+          end
+        end
+      end
+
+      def compress(exclude = /(yml|zip|erb)$/, outfile = "#{code}.zip")
         raise ArgumentError, "No Path given" unless path
 
         outfile.tap do |filename|
@@ -201,7 +213,7 @@ module Adyen
 
       # http://stackoverflow.com/questions/3420587/ruby-mechanize-multipart-form-with-file-upload-to-a-mediawiki
       def upload
-        file = self.compile
+        file = self.compress
         page = Adyen::Admin.get(UPLOAD % code)
         page = Adyen::Admin.client.submit(page.form.tap do |form|
           form.file_uploads.first.file_name = file
