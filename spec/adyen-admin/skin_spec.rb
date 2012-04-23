@@ -217,7 +217,7 @@ module Adyen::Admin
 
         context "existing skin" do
           let(:backup_filename) { File.join(skin.path, '.backup.zip') }
-          let!(:zip_filename) { skin.compile(nil) }
+          let!(:zip_filename) { skin.compress(nil) }
 
           before do
             `cp -r #{skin_fixtures}/#{skin_code} #{skin_fixtures}/_backup`
@@ -260,10 +260,40 @@ module Adyen::Admin
       end
 
       describe "#compile" do
+        let(:skin_code) { "JH0815" }
+        let(:skin) { Skin.new(:path => File.join(skin_fixtures, skin_code)) }
+        let(:output) { File.read File.join('spec/fixtures', 'output.html') }
+
+        before do
+          skin.compile(output)
+        end
+
+        after do
+          FileUtils.rm_rf( skin.path + '/inc')
+        end
+
+        it 'writes cheader' do
+          File.read( skin.path + '/inc/cheader.txt').should == "<!-- ### inc/cheader_[locale].txt or inc/cheader.txt (fallback) ### -->"
+        end
+
+        it 'writes pmheader' do
+          File.read( skin.path + '/inc/pmheader.txt').should == "<!-- ### inc/pmheader_[locale].txt or inc/pmheader.txt (fallback) ### -->"
+        end
+
+        it 'writes pmfooter' do
+          File.read( skin.path + '/inc/pmfooter.txt').should == "<!-- ### inc/pmfooter_[locale].txt or inc/pmfooter.txt (fallback) ### -->\n\n  <!-- ### inc/customfields_[locale].txt or inc/customfields.txt (fallback) ### -->"
+        end
+
+        it 'writes cfooter' do
+          File.read( skin.path + '/inc/cfooter.txt').should == "<!-- ### inc/cfooter_[locale].txt or inc/cfooter.txt (fallback) ### -->"
+        end
+      end
+
+      describe "#compress" do
         let(:skin_code) { "DV3tf95f" }
         let(:path) { "#{skin_fixtures}/#{skin_code}" }
         let(:skin) { Skin.new(:path => path) }
-        let(:zip_filename) { skin.compile }
+        let(:zip_filename) { skin.compress }
 
         def zip_contains(file)
           Zip::ZipFile.open(zip_filename) do |zipfile|
@@ -321,7 +351,7 @@ module Adyen::Admin
         end
 
         context "no exlusion" do
-          let(:zip_filename) { skin.compile(nil) }
+          let(:zip_filename) { skin.compress(nil) }
 
           it "excludes meta file" do
             zip_contains("skin.yml").should be_true
