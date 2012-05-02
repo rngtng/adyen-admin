@@ -397,7 +397,7 @@ module Adyen::Admin
 
       describe "#remote_version" do
         let(:skin) { Skin.new(:code => "Kx9axnRf", :name => "demo") }
-        let(:version) { 15 }
+        let(:version) { 17 }
 
         it "returns uploaded value" do
           skin.send(:remote_version).should == version

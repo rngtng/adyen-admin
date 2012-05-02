@@ -18,7 +18,7 @@ http_interactions:
       Accept-Language: 
       - en-us,en;q=0.5
       Cookie: 
-      - JSESSIONID=0FE8DDB71E1624E2D960AAF6596E9F38.test3e
+      - JSESSIONID=034F4C2E968F833532DFA5CF0B18F3E9.test4e
       Host: 
       - test.adyen.com
       Connection: 
@@ -31,7 +31,7 @@ http_interactions:
       message: OK
     headers: 
       Date: 
-      - Thu, 19 Apr 2012 17:35:36 GMT
+      - Wed, 02 May 2012 10:50:07 GMT
       Server: 
       - Apache
       P3p: 
@@ -66,12 +66,12 @@ http_interactions:
         	</head>
         	<body>	
             <p>
-            Version:15
+            Version:17
             <br />
-            Modification Date:2012-04-13T09:35:41.52Z
+            Modification Date:2012-04-23T16:43:07.74Z
             </p>
         	</body>
         </html>
     http_version: 
-  recorded_at: Thu, 19 Apr 2012 17:35:36 GMT
+  recorded_at: Wed, 02 May 2012 10:50:07 GMT
 recorded_with: VCR 2.0.1

@@ -18,7 +18,7 @@ http_interactions:
       Accept-Language: 
       - en-us,en;q=0.5
       Cookie: 
-      - JSESSIONID=172BCFBF81F1FA5E846D04997E6A17E1.live8e
+      - JSESSIONID=470A230A34C797A200756167B42B27B0.live6e
       Host: 
       - live.adyen.com
       Connection: 
@@ -31,7 +31,7 @@ http_interactions:
       message: OK
     headers: 
       Date: 
-      - Thu, 19 Apr 2012 17:35:37 GMT
+      - Wed, 02 May 2012 10:50:07 GMT
       Server: 
       - Apache
       P3p: 
@@ -73,5 +73,5 @@ http_interactions:
         	</body>
         </html>
     http_version: 
-  recorded_at: Thu, 19 Apr 2012 17:35:37 GMT
+  recorded_at: Wed, 02 May 2012 10:50:07 GMT
 recorded_with: VCR 2.0.1

@@ -18,7 +18,7 @@ http_interactions:
       Accept-Language: 
       - en-us,en;q=0.5
       Cookie: 
-      - JSESSIONID=F2EEF8221C8C8DCFAC103BF99231FA3E.test5e
+      - JSESSIONID=6B0311CC4E89FEA6AF12A8C4194D5FB9.test5e
       Host: 
       - ca-test.adyen.com
       Connection: 
@@ -31,7 +31,7 @@ http_interactions:
       message: OK
     headers: 
       Date: 
-      - Thu, 19 Apr 2012 17:35:35 GMT
+      - Wed, 02 May 2012 10:50:07 GMT
       Server: 
       - Apache
       Cache-Control: 
@@ -193,7 +193,7 @@ http_interactions:
         			</tr>
         			<tr>
         				<th class="row">Latest Version</th>
-        				<td>15</td>
+        				<td>17</td>
         			</tr>
         			<tr>
         				<td colspan="2">
@@ -219,7 +219,7 @@ http_interactions:
         					If the version on Test is not the same as the Latest version, it will be published automatically. Note that there is a few minutes delay after modifying the skin before it is deployed on the Test Hosted Payment Pages. 			</div>
         				</th>
         				<td>
-        					<iframe src="https://test.adyen.com/hpp/version.shtml?skinCode=Kx9axnRf&amp;version=15" height="50" width="450"></iframe>
+        					<iframe src="https://test.adyen.com/hpp/version.shtml?skinCode=Kx9axnRf&amp;version=17" height="50" width="450"></iframe>
         				</td>
         			</tr>
         			<tr>
@@ -237,7 +237,7 @@ http_interactions:
         					If the version on Live is not the same as the Latest version, you will have to Publish the Skin to Live via the Publish Tab. Note that there is a few minutes delay after publishing the skin before it is deployed on the Live Hosted Payment Pages. 			</div>
         				</th>
         				<td>
-        					<iframe src="https://live.adyen.com/hpp/version.shtml?skinCode=Kx9axnRf&amp;version=15" height="50" width="450"></iframe>
+        					<iframe src="https://live.adyen.com/hpp/version.shtml?skinCode=Kx9axnRf&amp;version=17" height="50" width="450"></iframe>
         				</td>
         			</tr>
         						<tr>
@@ -597,7 +597,7 @@ http_interactions:
         			<tr>
         				<th class="row">Merchant Reference</th>
         				<td>
-        					<input type="text" name="merchantReference" value="SKINTEST-1334856935837" size="20" />
+        					<input type="text" name="merchantReference" value="SKINTEST-1335955807279" size="20" />
         				</td>
         			</tr>	
         			<tr>
@@ -662,5 +662,5 @@ http_interactions:
         </html>
 
     http_version: 
-  recorded_at: Thu, 19 Apr 2012 17:35:36 GMT
+  recorded_at: Wed, 02 May 2012 10:50:07 GMT
 recorded_with: VCR 2.0.1
