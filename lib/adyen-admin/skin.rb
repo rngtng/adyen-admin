@@ -22,6 +22,8 @@ module Adyen
         end
 
         self.path ||= File.expand_path File.join(Skin.default_path, [name,code].compact.join("-"))
+        self.path ||= File.expand_path File.join(Skin.default_path, name.to_s)
+        self.path ||= File.expand_path File.join(Skin.default_path, code.to_s)
 
         raise ArgumentError, "No Code given" unless code
       end

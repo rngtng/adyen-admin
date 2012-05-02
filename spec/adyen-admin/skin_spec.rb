@@ -129,11 +129,15 @@ module Adyen::Admin
           let(:skin) { Skin.new(:path => path) }
 
           it "sets name" do
-            skin.name.should == "from-file"
+            skin.name.should == "DV3tf95f"
           end
 
           it "sets code" do
             skin.code.should == "customCode"
+          end
+
+          it "sets version_live" do
+            skin.path.should == "#{skin_fixtures}/DV3tf95f"
           end
 
           it "sets version" do
@@ -146,6 +150,18 @@ module Adyen::Admin
 
           it "sets version_live" do
             skin.version_live.should == 2
+          end
+
+          context "init by code" do
+            let(:skin) { Skin.new(:name => "DV3tf95f", :code => "customCode") }
+
+            it "sets name" do
+              skin.name.should == "DV3tf95f"
+            end
+
+            it "sets version_live" do
+              skin.path.should == "#{skin_fixtures}/DV3tf95f"
+            end
           end
         end
       end

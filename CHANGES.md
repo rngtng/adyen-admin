@@ -6,6 +6,9 @@
   * add CLI binaries (to compile + upload) -> read from .adyenrc file
   * make compatible with Live system
 
+## v0.0.12 - 2-05-2012
+  * fixed missing path when folder doesn't match `name-code` pattern
+
 ## v0.0.12 - 23-04-2012
   * renamed `compile` to `compress`
   * added `compile` which splits any given input to the inc/* file according to given pattern
