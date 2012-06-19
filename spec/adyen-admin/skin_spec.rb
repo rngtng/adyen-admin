@@ -29,7 +29,7 @@ module Adyen::Admin
 
       describe ".all_remote" do
         it 'returns the skins' do
-          Skin.all_remote.should == [
+          Skin.all_remote.should =~ [
             skin,
             Skin.new(:code => "Kx9axnRf", :name => "demo"),
             Skin.new(:code => "vQW0fEo8", :name => "test"),
@@ -44,10 +44,10 @@ module Adyen::Admin
 
       describe ".all_local" do
         it 'returns the skins' do
-          Skin.all_local.should == [
+          Skin.all_local.should =~ [
             Skin.new(:code => "base"),
-            Skin.new(:code => "DV3tf95f"),
             skin,
+            Skin.new(:code => "DV3tf95f"),
             Skin.new(:code => "JH0815"),
           ]
         end
@@ -55,7 +55,7 @@ module Adyen::Admin
 
       describe ".all" do
         it 'returns the skins' do
-          Skin.all.should == [
+          Skin.all.should =~ [
             skin,
             Skin.new(:code => "Kx9axnRf", :name => "demo"),
             Skin.new(:code => "vQW0fEo8", :name => "test"),
