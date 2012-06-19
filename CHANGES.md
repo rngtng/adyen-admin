@@ -2,11 +2,14 @@
 
 ## vx.x.x - ???
   * update Docu
-  * parent (instead of base)
   * add CLI binaries (to compile + upload) -> read from .adyenrc file
   * make compatible with Live system
 
-## v0.0.12 - 2-05-2012
+## v0.0.14 - 19-06-2012
+  * config parent_skin via skin file
+  * throw exception when including subdirectory of subdirectories.
+
+## v0.0.13 - 2-05-2012
   * fixed missing path when folder doesn't match `name-code` pattern
 
 ## v0.0.12 - 23-04-2012

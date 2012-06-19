@@ -201,7 +201,7 @@ module Adyen
               zip_file.add(file.sub(path, code), file)
             end
 
-            dir = File.join(File.dirname(path), parent_skin_code)
+            dir = File.join(File.dirname(path), parent_skin)
             Dir["#{dir}/**/**"].each do |file|
               begin
                 next if file =~ exclude
