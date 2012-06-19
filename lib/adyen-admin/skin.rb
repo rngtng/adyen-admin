@@ -32,8 +32,8 @@ module Adyen
         @default_path || "."
       end
 
-      def self.default_path=(path)
-        @default_path = path
+      def self.default_path=(default_path)
+        @default_path = default_path
       end
 
       # union remote and local skins. Local skins are frozen to
@@ -64,8 +64,8 @@ module Adyen
 
       # fetch all local skins
       def self.all_local
-        Dir[File.join(default_path.to_s, "*")].map do |path|
-          Skin.new(:path => path).freeze rescue nil
+        Dir[File.join(default_path.to_s, "*")].map do |skin_path|
+          Skin.new(:path => skin_path).freeze rescue nil
         end.compact
       end
 
@@ -179,7 +179,7 @@ module Adyen
       end
 
       def compile(output, pattern = /<!-- ### inc\/([a-z]+) -->(.+?)<!-- ### -->/m)
-        raise ArgumentError, "No Path given" unless path
+        raise ArgumentError, "No Path given" unless self.path
 
         output.scan(pattern) do |name, content|
           file = File.join(path, "inc/#{name}.txt")
@@ -206,7 +206,7 @@ module Adyen
             Dir["#{dir}/**/**"].each do |file|
               begin
                 next if file =~ exclude
-                raise if nested_subdirectory?(path, file)
+                raise if nested_subdirectory?(dir, file)
                 zip_file.add(file.sub(dir, code), file)
               rescue Zip::ZipEntryExistsError
                 # NOOP
@@ -269,15 +269,15 @@ module Adyen
         File.join(path, 'skin.yml')
       end
 
-      def self.is_skin_path?(path)
+      def self.is_skin_path?(skin_path)
         %w(skin.html.erb skin.yml inc css js).each do |sub_path|
-          return true if File.exists?(File.join(path.to_s, sub_path))
+          return true if File.exists?(File.join(skin_path.to_s, sub_path))
         end
         false
       end
 
-      def nested_subdirectory?(path, file)
-        (file.count("/") - path.count("/")) > 2
+      def nested_subdirectory?(skin_path, file)
+        (file.count("/") - skin_path.count("/")) > 2
       end
 
       ##################################
