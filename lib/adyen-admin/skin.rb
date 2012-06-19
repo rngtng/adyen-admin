@@ -97,6 +97,16 @@ module Adyen
         end
       end
 
+      def get_file(filename)
+        if self.path
+          File.join(self.path, filename).tap do |file|
+            if !File.exists?(file)
+              return File.join(File.dirname(self.path), parent_skin, filename)
+            end
+          end
+        end
+      end
+
       def skin_data(force_update = false)
         update if force_update
         @skin_data ||= YAML.load_file(skin_data_file) rescue {}

@@ -5,9 +5,10 @@
   * add CLI binaries (to compile + upload) -> read from .adyenrc file
   * make compatible with Live system
 
-## v0.0.14 - 19-06-2012
+## v0.0.16 - 19-06-2012
   * config parent_skin via skin file
   * throw exception when including subdirectory of subdirectories.
+  * added get_file to find files within skin, fall back to parent_skin
 
 ## v0.0.13 - 2-05-2012
   * fixed missing path when folder doesn't match `name-code` pattern
