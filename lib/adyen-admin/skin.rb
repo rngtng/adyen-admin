@@ -118,8 +118,8 @@ module Adyen
         skin_data[:version_test]
       end
 
-      def parent_skin_code
-        skin_data[:parent_skin_code] || "base"
+      def parent_skin
+        skin_data[:parent_skin] || "base"
       end
 
       ##########################################

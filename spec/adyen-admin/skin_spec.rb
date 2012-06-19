@@ -400,11 +400,11 @@ module Adyen::Admin
           end
         end
 
-        context "with parent_skin_code" do
+        context "with parent_skin" do
           let(:skin_code) { "JH0815" }
 
           before do
-            skin.stub(:parent_skin_code).and_return("example-7hFAQnmt")
+            skin.stub(:parent_skin).and_return("example-7hFAQnmt")
           end
 
           it "excludes meta file" do
