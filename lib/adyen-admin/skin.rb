@@ -197,6 +197,7 @@ module Adyen
           Zip::ZipFile.open(filename, Zip::ZipFile::CREATE) do |zip_file|
             Dir["#{path}/**/**"].each do |file|
               next if file =~ exclude
+              raise if nested_subdirectory?(path, file)
               zip_file.add(file.sub(path, code), file)
             end
 
@@ -204,6 +205,7 @@ module Adyen
             Dir["#{dir}/**/**"].each do |file|
               begin
                 next if file =~ exclude
+                raise if nested_subdirectory?(path, file)
                 zip_file.add(file.sub(dir, code), file)
               rescue Zip::ZipEntryExistsError
                 # NOOP
@@ -271,6 +273,10 @@ module Adyen
           return true if File.exists?(File.join(path.to_s, sub_path))
         end
         false
+      end
+
+      def nested_subdirectory?(path, file)
+        (file.count("/") - path.count("/")) > 2
       end
 
       ##################################

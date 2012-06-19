@@ -371,6 +371,23 @@ module Adyen::Admin
           end
         end
 
+        context "with sub subfolders" do
+          before do
+            `mkdir #{path}/css/vendor`
+            `touch #{path}/css/vendor/test.css`
+          end
+
+          after do
+            `rm -rf #{path}/css/vendor`
+          end
+
+          it "throws exception" do
+            expect do
+              skin.compress
+            end.to raise_error
+          end
+        end
+
         context "no exlusion" do
           let(:zip_filename) { skin.compress(nil) }
 
