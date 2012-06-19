@@ -118,6 +118,10 @@ module Adyen
         skin_data[:version_test]
       end
 
+      def parent_skin_code
+        skin_data[:parent_skin_code] || "base"
+      end
+
       ##########################################
 
       def update
@@ -207,10 +211,6 @@ module Adyen
             end
           end
         end
-      end
-
-      def parent_skin_code
-        "base"
       end
 
       # http://stackoverflow.com/questions/3420587/ruby-mechanize-multipart-form-with-file-upload-to-a-mediawiki

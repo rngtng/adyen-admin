@@ -382,6 +382,18 @@ module Adyen::Admin
             zip_contains("skin.html.erb").should be_true
           end
         end
+
+        context "with parent_skin_code" do
+          let(:skin_code) { "JH0815" }
+
+          before do
+            skin.stub(:parent_skin_code).and_return("example-7hFAQnmt")
+          end
+
+          it "excludes meta file" do
+            zip_contains("img/bg.gif").should be_true
+          end
+        end
       end
 
       describe "#upload" do
