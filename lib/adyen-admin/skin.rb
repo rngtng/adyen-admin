@@ -132,6 +132,7 @@ module Adyen
           :version => remote_version,
           :version_live => remote_version(:live),
           :version_test => remote_version(:test),
+          :parent_skin  => parent_skin,
         }
         File.open(skin_data_file, "w") do |file|
           file.write @skin_data.to_yaml
