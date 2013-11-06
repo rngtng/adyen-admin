@@ -1,5 +1,5 @@
 require 'tempfile'
-require 'zip/zip'
+require 'zip'
 require 'yaml'
 
 module Adyen
@@ -169,7 +169,7 @@ module Adyen
           `mkdir -p #{decompile_path}`
         end
 
-        Zip::ZipFile.open(filename) do |zip_file|
+        Zip::File.open(filename) do |zip_file|
           zip_file.each do |file|
             f_path = File.join(self.path || decompile_path, file.name.gsub("#{code}/", ""))
             FileUtils.mkdir_p(File.dirname(f_path))
@@ -205,7 +205,7 @@ module Adyen
 
         outfile.tap do |filename|
           `rm -f #{filename}`
-          Zip::ZipFile.open(filename, Zip::ZipFile::CREATE) do |zip_file|
+          Zip::File.open(filename, Zip::File::CREATE) do |zip_file|
             Dir["#{path}/**/**"].each do |file|
               next if file =~ exclude
               raise if nested_subdirectory?(path, file)

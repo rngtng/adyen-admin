@@ -222,7 +222,7 @@ module Adyen::Admin
         end
 
         it "is a zipfile" do
-          Zip::ZipFile.open(skin.download) do |zipfile|
+          Zip::File.open(skin.download) do |zipfile|
             zipfile.find_entry(File.join(skin_code, "inc", "cheader.txt")).should be_true
           end
         end
@@ -317,7 +317,7 @@ module Adyen::Admin
         let(:zip_filename) { skin.compress }
 
         def zip_contains(file)
-          Zip::ZipFile.open(zip_filename) do |zipfile|
+          Zip::File.open(zip_filename) do |zipfile|
             return true if zipfile.find_entry(File.join(skin.code, file))
           end
           false
