@@ -31,7 +31,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 14 Nov 2013 23:46:58 GMT
+      - Thu, 14 Nov 2013 23:47:07 GMT
       Server:
       - Apache
       Cache-Control:
@@ -108,19 +108,19 @@ http_interactions:
         \               \t\t\t</ul>\n\t\t\t\n\t\t\t\n\t\t\t\t\t</div>\n\t\t<div class=\"bbarlmenu\">\n\t\t\t<div
         class=\"bbarrmenu\">\n\t\t\t\t<div class=\"bbarmenu\">\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t\t</div>\n\t\n\t\t\t\n\t<div
         id=\"contentbg\">\n\t\t<div id=\"content\">\n\t\t\t<div id=\"contentwrapper\">\n\n<div
-        id=\"toolbar\">\n\t<ul id=\"tbtabs\">\n    \t<li id=\"tbbut1\"  ><a href=\"/ca/ca/skin/skins.shtml?formHash=755LPaNHcTMFJlKc1L%2FtT5yQQsqagU%3D\">List</a></li>\n\t\t
-        \   \t<li id=\"tbbut2\"  ><a href=\"/ca/ca/skin/editskin.shtml?newSkin=true&amp;formHash=577wy3RK5gPaRg2K6BX2Ikp9ER2ZyI%3D\">New</a></li>\n\t\t<li
-        id=\"tbbut3\"  >\n\t\t\t\t\t\t\t<a href=\"/ca/ca/skin/editskin.shtml?skinCode=<test_skin_code>&amp;formHash=997BSp3Kfnlz5yiKeVhmYJ3MWmy0d0%3D\">\n\t\t\t\t\t\tEdit</a>\n\t\t</li>\n\t\t<li
-        id=\"tbbut4\"  >\n\t\t\t\t\t\t\t<a href=\"/ca/ca/skin/uploadskin.shtml?skinCode=<test_skin_code>&amp;formHash=645v%2F7r5HmluUwQ8%2Fs16WrVBxmJjbU%3D\">\n\t\t\t\t\t\tUpload</a>\n\t\t</li>\n\t\t<li
-        id=\"tbbut5\"  >\n\t\t\t\t\t\t\t<a href=\"/ca/ca/skin/publishskin.shtml?skinCode=<test_skin_code>&amp;formHash=025Fb4ygD5vp6A2ZuVOc7vzzx2%2BplU%3D\">\n\t\t\t\t\t\tPublish</a>\n\t\t</li>\n\t\t<li
-        id=\"tbbut6\"  ><a href=\"/ca/ca/skin/testhmac.shtml?formHash=5694uMSSOgoIQAK8JS0Ny9%2Fc7oGnIA%3D\">Test
+        id=\"toolbar\">\n\t<ul id=\"tbtabs\">\n    \t<li id=\"tbbut1\"  ><a href=\"/ca/ca/skin/skins.shtml?formHash=271ow8aWDTBA0oQFOGFbijael2%2FxPU%3D\">List</a></li>\n\t\t
+        \   \t<li id=\"tbbut2\"  ><a href=\"/ca/ca/skin/editskin.shtml?newSkin=true&amp;formHash=269o4ReQd0HNJM3D%2BEYyJibh3RDe9A%3D\">New</a></li>\n\t\t<li
+        id=\"tbbut3\"  >\n\t\t\t\t\t\t\t<a href=\"/ca/ca/skin/editskin.shtml?skinCode=<test_skin_code>&amp;formHash=118hrOIshBqKMjZamfLUDNHDJ9bxLk%3D\">\n\t\t\t\t\t\tEdit</a>\n\t\t</li>\n\t\t<li
+        id=\"tbbut4\"  >\n\t\t\t\t\t\t\t<a href=\"/ca/ca/skin/uploadskin.shtml?skinCode=<test_skin_code>&amp;formHash=783dLKsiTOdUdE51iVafJK33bQiu1g%3D\">\n\t\t\t\t\t\tUpload</a>\n\t\t</li>\n\t\t<li
+        id=\"tbbut5\"  >\n\t\t\t\t\t\t\t<a href=\"/ca/ca/skin/publishskin.shtml?skinCode=<test_skin_code>&amp;formHash=962GuVz9ER6cXTt%2FE5TZ8bc%2FIb%2BmAg%3D\">\n\t\t\t\t\t\tPublish</a>\n\t\t</li>\n\t\t<li
+        id=\"tbbut6\"  ><a href=\"/ca/ca/skin/testhmac.shtml?formHash=797W0eJc4YL4VHeBZIn2OiGzPFkGFc%3D\">Test
         HMAC</a></li>\n\t\t\t\t<li id=\"tbbut7\"  class=\"activelink\" >\n\t\t\t\t\t\t\t<a
-        href=\"/ca/ca/skin/testpayment.shtml?skinCode=<test_skin_code>&amp;formHash=775ezZ8LTomoITTgTBQf4%2BtTU6vZbQ%3D\">\n\t\t\t\t\t\tTest</a>\n\t\t</li>\n\t</ul>\n</div><div
+        href=\"/ca/ca/skin/testpayment.shtml?skinCode=<test_skin_code>&amp;formHash=507NGKaHoigOPIoekhnvgQHnR8e2lU%3D\">\n\t\t\t\t\t\tTest</a>\n\t\t</li>\n\t</ul>\n</div><div
         id=\"subcontent\">\n\t\n\t\t\n\t\t\n\t\n\t\n\t<h1 class=\"pagetitle\">Do a
         Test Payment</h1>\n\t<form method=\"post\" action=\"/ca/ca/skin/testpayment.shtml\">\n\t\t<table
         class=\"data\">\n\t\t\t<tr>\n\t\t\t\t<th class=\"row\">Skin Code</th>\n\t\t\t\t<td><test_skin_code></td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<th
         class=\"row\">Description</th>\n\t\t\t\t<td>example</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<th
-        class=\"row\">Latest Version</th>\n\t\t\t\t<td>15</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td
+        class=\"row\">Latest Version</th>\n\t\t\t\t<td>17</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td
         colspan=\"2\">\n\t\t\t\t\t\t\t\t\t\tBelow is the version information for this
         skin on the live and test payment pages. \n\t\t\t\t\t<br />\n\t\t\t\t\tNote
         that there is a few minutes delay after saving or publishing before the skin
@@ -135,7 +135,7 @@ http_interactions:
         />\n\t\t</a>\n\t\t\t\t\tIf the version on Test is not the same as the Latest
         version, it will be published automatically. Note that there is a few minutes
         delay after modifying the skin before it is deployed on the Test Hosted Payment
-        Pages. \t\t\t</div>\n\t\t\t\t</th>\n\t\t\t\t<td>\n\t\t\t\t\t<iframe src=\"https://test.adyen.com/hpp/version.shtml?skinCode=<test_skin_code>&amp;version=15\"
+        Pages. \t\t\t</div>\n\t\t\t\t</th>\n\t\t\t\t<td>\n\t\t\t\t\t<iframe src=\"https://test.adyen.com/hpp/version.shtml?skinCode=<test_skin_code>&amp;version=17\"
         height=\"50\" width=\"450\"></iframe>\n\t\t\t\t</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<th
         class=\"row\">\n\t\t\t\t\t\t\t\t<span class=\"floatLeft\">Currently on Live</span>\n\t\t<span
         class=\"floatRight\">\n\t\t<a id=\"versionOnLiveInfo\" onclick=\"return toggleTooltip($('versionOnLiveInfo'),
@@ -148,7 +148,7 @@ http_interactions:
         version, you will have to Publish the Skin to Live via the Publish Tab. Note
         that there is a few minutes delay after publishing the skin before it is deployed
         on the Live Hosted Payment Pages. \t\t\t</div>\n\t\t\t\t</th>\n\t\t\t\t<td>\n\t\t\t\t\t<iframe
-        src=\"https://live.adyen.com/hpp/version.shtml?skinCode=<test_skin_code>&amp;version=15\"
+        src=\"https://live.adyen.com/hpp/version.shtml?skinCode=<test_skin_code>&amp;version=17\"
         height=\"50\" width=\"450\"></iframe>\n\t\t\t\t</td>\n\t\t\t</tr>\n\t\t\t\t\t\t<tr>\n\t\t\t\t<th
         class=\"row\">Amount</th>\n\t\t\t\t<td>\n\t\t\t\t\t<input type=\"text\" name=\"paymentAmount\"
         size=\"7\" value=\"199\" />&nbsp;\n\t\t\t\t\t<select name=\"currencyCode\">\n\t\t\t\t\t\t<option>CHF</option>\n\t\t\t\t\t\t<option
@@ -329,7 +329,7 @@ http_interactions:
         return false;\">fr</a>, \n\t\t\t\t\t <a href=\"#\" onclick=\"document.getElementById('shopperLocale').value='de';
         return false;\">de</a>)\n\t\t\t\t</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<th
         class=\"row\">Merchant Reference</th>\n\t\t\t\t<td>\n\t\t\t\t\t<input type=\"text\"
-        name=\"merchantReference\" value=\"SKINTEST-1384472818705\" size=\"20\" />\n\t\t\t\t</td>\n\t\t\t</tr>\t\n\t\t\t<tr>\n\t\t\t\t<th
+        name=\"merchantReference\" value=\"SKINTEST-1384472827084\" size=\"20\" />\n\t\t\t\t</td>\n\t\t\t</tr>\t\n\t\t\t<tr>\n\t\t\t\t<th
         class=\"row\">Merchant Account</th>\n\t\t\t\t<td>\n\t\t\t\t\t<select name=\"merchantAccount\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<option><account>POS</option>\n\t\t\t\t\t\t\t\t\t\t\t</select>\n\t\t\t\t</td>\n\t\t\t</tr>\n\n\t\t\t\n\t\t\t<tr>\n\t\t\t\t<th
         class=\"row\">System</th>\n\t\t\t\t<td>\n\t\t\t\t\t\t\t\t\t\t<input type=\"radio\"
         id=\"testsystem\" checked=\"checked\" name=\"system\" value=\"test\" /><label
@@ -356,19 +356,19 @@ http_interactions:
         Flow</option>\n\t\t\t\t\t\t<option value=\"multiPage\">Multiple Page Payment
         Flow</option>\n\t\t\t\t\t</select>\t\t\t\t\t\n\t\t\t\t</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td
         colspan=\"2\">&nbsp;</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td colspan=\"2\">\n\t\t\t\t\t<input
-        type=\"hidden\" name=\"formHash\" value=\"949AWGZD7+nbG4pFKk5HFF8fmjThVE=\"
+        type=\"hidden\" name=\"formHash\" value=\"094rMciH+Wyg8NiKOzyioc0Tg5S7YE=\"
         />\n\t\t\t\t\t<input type=\"hidden\" name=\"skinCode\" value=\"<test_skin_code>\"
         />\n\t\t\t\t\t<input type=\"submit\" name=\"test\" value=\"Generate Payment
         Form\" />\n\t\t\t\t</td>\n\t\t\t</tr>\n\t\t</table>\n\t</form>\n</div>\n\n\t\t<div
         class=\"bbarl\">\n\t\t<div class=\"bbarr\">\n\t\t<div class=\"bbar\">\n\t\t</div>\n\t\t</div>\n\t\t</div>\n\t\t</div>\n\n\t\t\n\t\t</div>\n\t</div>\n\t</div>\n</body>\n</html>\n"
     http_version: 
-  recorded_at: Thu, 14 Nov 2013 23:46:59 GMT
+  recorded_at: Thu, 14 Nov 2013 23:47:07 GMT
 - request:
-    method: get
-    uri: https://live.adyen.com/hpp/version.shtml?skinCode=<test_skin_code>
+    method: post
+    uri: https://ca-test.adyen.com/ca/ca/skin/testpayment.shtml
     body:
-      encoding: US-ASCII
-      string: ''
+      encoding: UTF-8
+      string: paymentAmount=199&currencyCode=EUR&countryCode=&shopperLocale=en_GB&merchantReference=SKINTEST-1384472827084&merchantAccount=<account>POS&system=test&landingPage=onePage&formHash=094rMciH%2BWyg8NiKOzyioc0Tg5S7YE%3D&skinCode=<test_skin_code>
     headers:
       Accept:
       - ! '*/*'
@@ -380,8 +380,27 @@ http_interactions:
       - ISO-8859-1,utf-8;q=0.7,*;q=0.7
       Accept-Language:
       - en-us,en;q=0.5
+      Cookie:
+      - JSESSIONID=2A880873CA6A74F7ACA2BC22EEE957BF.test5e
       Host:
-      - live.adyen.com
+      - ca-test.adyen.com
+      Referer:
+      - !ruby/object:URI::HTTPS
+        scheme: https
+        user: 
+        password: 
+        host: ca-test.adyen.com
+        port: 443
+        path: /ca/ca/skin/testpayment.shtml
+        query: skinCode=qaJKoAMQ
+        opaque: 
+        registry: 
+        fragment: 
+        parser: 
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '233'
       Connection:
       - keep-alive
       Keep-Alive:
@@ -392,20 +411,19 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 14 Nov 2013 23:46:58 GMT
+      - Thu, 14 Nov 2013 23:47:07 GMT
       Server:
       - Apache
-      Set-Cookie:
-      - JSESSIONID=47EB15549F595B4565022296356FB3F4.live8e; Path=/hpp/; Secure; HttpOnly
-      P3p:
-      - policyref="/w3c/policy.xml", CP="NOI DSP COR CURa ADMa DEVa OUR NOR BUS FIN
-        STA"
       Cache-Control:
       - no-cache, no-store, must-revalidate, max-age=0, post-check=0, pre-check=0
       Pragma:
       - no-cache
       Expires:
       - '-1'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Language:
+      - en-GB
       Keep-Alive:
       - timeout=15, max=100
       Connection:
@@ -416,69 +434,97 @@ http_interactions:
       - text/html;charset=UTF-8
     body:
       encoding: US-ASCII
-      string: ! "<html>\n\t<head>\n\t\t<title>Version</title>\n\t\t<style type=\"text/css\">\n\t\t\tbody
-        {\n\t\t\t\tfont-family: sans-serif;\n\t\t\t\tfont-size: 0.85em;\n\t\t\t\tfont-weight:
-        bold;\n\t\t\t\t\t\t\t}\n\t\t</style>\n\t</head>\n\t<body>\t\n    <p>\n    Version:0\n
-        \   <br />\n    Modification Date:unknown\n    </p>\n\t</body>\n</html>"
+      string: ! "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\"\n\t \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n<html
+        xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n<head>\n\t\t\n\t<title>Adyen
+        PSP System</title>\n\t<meta http-equiv=\"content-type\" content=\"text/html;
+        charset=UTF-8\" />\n\t<meta http-equiv=\"content-style-type\" content=\"text/css\"
+        />\t\n\t<meta http-equiv=\"imagetoolbar\" content=\"no\" />\n\t<meta content=\"TRUE\"
+        name=\"MSSmartTagsPreventParsing\" />\n\n\t<link rel=\"shortcut icon\" href=\"/ca/img/adyen/favicon.ico\"
+        type=\"image/ico\"/>\n\t\n\t<script type=\"text/javascript\" src=\"/ca/js/functions.js\"></script>\n\t<script
+        src=\"/ca/js/prototype.js\" type=\"text/javascript\"></script>\n\t<script
+        src=\"/ca/js/scriptaculous.js\" type=\"text/javascript\"></script>\n\t\n\t<link
+        rel=\"stylesheet\" type=\"text/css\" href=\"/ca/css/adyen/style.css\" />\n\t<!--[if
+        lt IE 7]>\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/ca/css/adyen/style_ie6.css\"
+        />\n\t<![endif]-->\n\n\t\t<link rel=\"alternate\" title=\"Payments Per Hour
+        RSS\" href=\"https://ca-test.adyen.com/reports/token/rss/lasttx/MerchantAccount/<account>DEV/?user=<user>%40Company.<account>&amp;amp%3Bkey=1334075779504&amp;amp%3Btoken=KV7veoeR9GsL%2FH%2BZrgI1Yhiio5I%3D\"
+        type=\"application/rss+xml\" />\n\t        <link rel=\"alternate\" title=\"Authorised
+        Volume RSS\" href=\"https://ca-test.adyen.com/reports/token/rss/authorisedtxrss/MerchantAccount/<account>DEV/?user=<user>%40Company.<account>&amp;amp%3Bkey=1334075779504&amp;amp%3Btoken=KV7veoeR9GsL%2FH%2BZrgI1Yhiio5I%3D\"
+        type=\"application/rss+xml\" />\n            <link rel=\"alternate\" title=\"System
+        Messages RSS\" href=\"https://ca-test.adyen.com/reports/token/rss/systemmessagesrss/MerchantAccount/<account>DEV/?user=<user>%40Company.<account>&amp;amp%3Bkey=1334075779504&amp;amp%3Btoken=KV7veoeR9GsL%2FH%2BZrgI1Yhiio5I%3D\"
+        type=\"application/rss+xml\" />\n    \n</head>\n<body>\n\n\t<div id=\"topbar\"><div
+        class=\"iefillerdiv\"></div></div>\n\t<div id=\"middlebarcontainer\">\n\t\t\t<div
+        id=\"middlebar\">\n\t\t\t\t<a href=\"/ca/ca/overview/default.shtml\"><img
+        id=\"mainlogo\" src=\"/ca/img/adyen.png\" alt=\"Logo\"/>\n\t\t\t\t<img id=\"testsystemwarning\"
+        src=\"/ca/img/adyen_test.png\" alt=\"test\"/></a>\n\t\t\t\t<img id=\"maintagline\"
+        src=\"/ca/img/adyen_tagline.png\" alt=\"Complex Finance, Online Insight\"
+        />\n\t\t\t</div>\n\t</div>\t\n\t<div id=\"bottombar\"><div id=\"bottombar2\"></div></div>\t\n\t<div
+        id=\"maincontent\">\t\t\t\n\t<div id=\"boxleft\">\n\t\t<div id=\"infobox\">\n\t\t\t<ul
+        class=\"nav\">\n\t\t\t</ul>\n\t\t\t<div id=\"infoboxcontent\">\n\t\t\t\t\t\t\t\t<div
+        id=\"merchantlogo\">\n\t\t\t\t\t<a href=\"/ca/ca/accounts/manage.shtml\"><img
+        src=\"/ca/ca/image.shtml?cachingId=MerchantAccount.<account>DEV&amp;name=accountLogo&amp;mimeType=image%2Fpng\"
+        alt=\"merchantlogo\"/></a>\n\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div id=\"accountnavigation\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div
+        style=\"padding-left: 0px;\">\n\t\t\t\t\t\t\t\t\t\t\t\t<a class=\"accountnav\"
+        href=\"/ca/ca/accounts/choose.shtml?setActiveAccountKey=Company.<account>\"
+        \n\t\t\t\t\t\t\t ><account></a>\n\t\t\t\t\t\t\t \t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div
+        style=\"padding-left: 4px;\">\n\t\t\t\t\t\t <img src=\"/ca/img/sublevel.png\"
+        alt=\"sub\"/> \t\t\t\t\t\t<a class=\"accountnav\" href=\"/ca/ca/accounts/choose.shtml?setActiveAccountKey=MerchantAccount.<account>DEV\"
+        \n\t\t\t\t\t\t\t  style=\"text-decoration: underline; color: #666;\" ><account>DEV</a>\n\t\t\t\t\t\t\t
+        \t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\n\t\t\t\t<div
+        id=\"loginadmin\" style=\"text-align: left; margin-top: 5px\">\n\t\t\t\t\t<!--a
+        class=\"icon\" href=\"/ca/ca/overview/default.shtml\" title=\"Home\"><img
+        src=\"/ca/img/home.gif\" alt=\"Home\"/></a-->\n\t\t\t\t  \t\t\t\t  <a class=\"icon\"
+        href=\"/ca/logoff.shtml\" title=\"Sign Off\"><img src=\"/ca/img/exit.png\"
+        alt=\"Sign Off\"/> sign off</a>\n\t\t\t\t  \t\t\t\t  <br/><a class=\"icon\"
+        href=\"/ca/ca/accounts/choose.shtml?chooseUserAccount=true\"><img src=\"/ca/img/bookmark.png\"
+        alt=\"bookmarks\"/> bookmarks</a>\n\t\t\t\t  \t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t\n\t\n\t\t<div
+        class=\"bbarlmenu\">\n\t\t\t<div class=\"bbarrmenu\">\n\t\t\t\t<div class=\"bbarmenu\">\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\n\t\t\t\t\t\n\t\t\t\t<div
+        id=\"menu\">\n\t\t\t<ul class=\"nav\">\n\t\t\t\t<li class=\"navfirstli\">&nbsp;</li>\n\t\t\t\t<li
+        ><a href=\"/ca/ca/overview/default.shtml\">Home</a></li>\n\t\t\t\t\t\t\t\t<li
+        ><a href=\"/ca/ca/payments/showList.shtml\">Payments</a></li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
+        \               \t\t\t\t\t\t\t\t\t\t\t        <li   class=\"activelink\"  ><a
+        href=\"/ca/ca/skin/skins.shtml\">Skins</a></li>\n\t\t\t\t\t\t\t        \t\t\t\t\t\t\t\t<li
+        ><a href=\"/ca/ca/config/choose.shtml\">Settings</a></li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li
+        ><a href=\"/ca/ca/support/start.shtml\">Support</a></li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\n
+        \               \t\t\t</ul>\n\t\t\t\n\t\t\t\n\t\t\t\t\t</div>\n\t\t<div class=\"bbarlmenu\">\n\t\t\t<div
+        class=\"bbarrmenu\">\n\t\t\t\t<div class=\"bbarmenu\">\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t\t</div>\n\t\n\t\t\t\n\t<div
+        id=\"contentbg\">\n\t\t<div id=\"content\">\n\t\t\t<div id=\"contentwrapper\">\n\n<div
+        id=\"toolbar\">\n\t<ul id=\"tbtabs\">\n    \t<li id=\"tbbut1\"  ><a href=\"/ca/ca/skin/skins.shtml?formHash=9258%2Fcu6o8RInoCSm0np2w%2B4SCXMrA%3D\">List</a></li>\n\t\t
+        \   \t<li id=\"tbbut2\"  ><a href=\"/ca/ca/skin/editskin.shtml?newSkin=true&amp;formHash=835YD1mhGQkvAkyy9BgjNfcnCRufaU%3D\">New</a></li>\n\t\t<li
+        id=\"tbbut3\"  >\n\t\t\t\t\t\t\t<a href=\"/ca/ca/skin/editskin.shtml?skinCode=<test_skin_code>&amp;formHash=055EuKUUxEdGVvuYjfrtQJWbd1lt0o%3D\">\n\t\t\t\t\t\tEdit</a>\n\t\t</li>\n\t\t<li
+        id=\"tbbut4\"  >\n\t\t\t\t\t\t\t<a href=\"/ca/ca/skin/uploadskin.shtml?skinCode=<test_skin_code>&amp;formHash=180oUm8dYWhAS171uuBSFNQAu8nZQs%3D\">\n\t\t\t\t\t\tUpload</a>\n\t\t</li>\n\t\t<li
+        id=\"tbbut5\"  >\n\t\t\t\t\t\t\t<a href=\"/ca/ca/skin/publishskin.shtml?skinCode=<test_skin_code>&amp;formHash=779ThI2Wi4N3lrUfQytAYtxkCYAPMM%3D\">\n\t\t\t\t\t\tPublish</a>\n\t\t</li>\n\t\t<li
+        id=\"tbbut6\"  ><a href=\"/ca/ca/skin/testhmac.shtml?formHash=467DljBQHbX8d3BFXKhMdxWeK7rNjY%3D\">Test
+        HMAC</a></li>\n\t\t\t\t<li id=\"tbbut7\"  class=\"activelink\" >\n\t\t\t\t\t\t\t<a
+        href=\"/ca/ca/skin/testpayment.shtml?skinCode=<test_skin_code>&amp;formHash=153urO2jESg%2FVr4J6f%2FodGnRq6ffug%3D\">\n\t\t\t\t\t\tTest</a>\n\t\t</li>\n\t</ul>\n</div><script
+        type=\"text/javascript\">\n\nfunction formValidate(form) \n{ \n\tif(document.getElementById('paymentform').target
+        != 'myNewWin') {\n\t\treturn true;\n\t}\n\n\tformvalidate = function (f) {\n\t\treturn
+        true;\n\t}\n\t\n\twindow.open(\"\",\"myNewWin\",\"width=650,height=580,menubar=no,location=yes,resizable=yes,scrollbars=yes,status=no,titlebar=no,toolbar=no\");
+        \n    var a = window.setTimeout(\"document.getElementById('paymentform').submit();\",500);\n
+        \   return false;\n} \n</script>\n<div id=\"subcontent\">\n\t\n\t\t\n\t\t\n\t\n\t<h1
+        class=\"pagetitle\">Do a Test Payment</h1>\n\t\t<table class=\"data\">\n\t\t\t<tr>\n\t\t\t\t<th
+        class=\"row\">Skin Code</th>\n\t\t\t\t<td><test_skin_code></td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<th
+        class=\"row\">Description</th>\n\t\t\t\t<td>example</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<th
+        class=\"row\">Signature String</th>\n\t\t\t\t<td>199EUR2013-11-21SKINTEST-1384472827084<test_skin_code><account>POS2013-11-15T00:17:07Z</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<th
+        class=\"row\">HMAC Signature</th>\n\t\t\t\t<td>wW7t/nffNDNjLRg91KNDArc66Ew=</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td
+        colspan=\"2\">&nbsp;</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td colspan=\"2\">\n\t\t\t\t<form
+        action=\"https://test.adyen.com/hpp/pay.shtml\" method=\"post\" id=\"paymentform\"
+        target=\"myNewWin\" onsubmit=\"return formValidate(this);\">\n                 <input
+        type=\"hidden\" name=\"merchantSig\" value=\"wW7t/nffNDNjLRg91KNDArc66Ew=\"
+        />                 \n                 <input type=\"hidden\" name=\"merchantReference\"
+        value=\"SKINTEST-1384472827084\" />                 \t\n                 <input
+        type=\"hidden\" name=\"paymentAmount\" value=\"199\" />                 \n
+        \                <input type=\"hidden\" name=\"currencyCode\" value=\"EUR\"
+        />                 \n                 <input type=\"hidden\" name=\"shipBeforeDate\"
+        value=\"2013-11-21\" />                 \t\n                 <input type=\"hidden\"
+        name=\"merchantAccount\" value=\"<account>POS\" />                 \n                                \n
+        \                                \n                                \n                 <input
+        type=\"hidden\" name=\"shopperLocale\" value=\"en_GB\" />                 \n
+        \                <input type=\"hidden\" name=\"sessionValidity\" value=\"2013-11-15T00:17:07Z\"
+        />                 \n                 <input type=\"hidden\" name=\"countryCode\"
+        value=\"\" />                \n               \t               \t\n\t\t\t\t\t<input
+        type=\"hidden\" name=\"skinCode\" value=\"<test_skin_code>\" />\n\t\t\t\t\t<input
+        type=\"submit\" name=\"test\" value=\"Test Now!\" />\n\t\t\t\t</form>\n\t\t\t\t</td>\n\t\t\t</tr>\n\t\t</table>\n</div>\n\n\t\t<div
+        class=\"bbarl\">\n\t\t<div class=\"bbarr\">\n\t\t<div class=\"bbar\">\n\t\t</div>\n\t\t</div>\n\t\t</div>\n\t\t</div>\n\n\t\t\n\t\t</div>\n\t</div>\n\t</div>\n</body>\n</html>\n"
     http_version: 
-  recorded_at: Thu, 14 Nov 2013 23:46:59 GMT
-- request:
-    method: get
-    uri: https://test.adyen.com/hpp/version.shtml?skinCode=<test_skin_code>
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - ! '*/*'
-      User-Agent:
-      - Mechanize/2.7.3 Ruby/1.9.3p448 (http://github.com/sparklemotion/mechanize/)
-      Accept-Encoding:
-      - gzip,deflate,identity
-      Accept-Charset:
-      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
-      Accept-Language:
-      - en-us,en;q=0.5
-      Host:
-      - test.adyen.com
-      Connection:
-      - keep-alive
-      Keep-Alive:
-      - 300
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Thu, 14 Nov 2013 23:46:59 GMT
-      Server:
-      - Apache
-      Set-Cookie:
-      - JSESSIONID=EE7B075D964A04CAE679B8CB2D02A1AA.test3e; Path=/hpp/; Secure; HttpOnly
-      P3p:
-      - policyref="/w3c/policy.xml", CP="NOI DSP COR CURa ADMa DEVa OUR NOR BUS FIN
-        STA"
-      Cache-Control:
-      - no-cache, no-store, must-revalidate, max-age=0, post-check=0, pre-check=0
-      Pragma:
-      - no-cache
-      Expires:
-      - '-1'
-      Keep-Alive:
-      - timeout=15, max=100
-      Connection:
-      - Keep-Alive
-      Transfer-Encoding:
-      - chunked
-      Content-Type:
-      - text/html;charset=UTF-8
-    body:
-      encoding: US-ASCII
-      string: ! "<html>\n\t<head>\n\t\t<title>Version</title>\n\t\t<style type=\"text/css\">\n\t\t\tbody
-        {\n\t\t\t\tfont-family: sans-serif;\n\t\t\t\tfont-size: 0.85em;\n\t\t\t\tfont-weight:
-        bold;\n\t\t\t\t\t\t\t}\n\t\t</style>\n\t</head>\n\t<body>\t\n    <p>\n    Version:15\n
-        \   <br />\n    Modification Date:2013-11-14T23:46:49.25Z\n    </p>\n\t</body>\n</html>"
-    http_version: 
-  recorded_at: Thu, 14 Nov 2013 23:46:59 GMT
+  recorded_at: Thu, 14 Nov 2013 23:47:07 GMT
 recorded_with: VCR 2.7.0

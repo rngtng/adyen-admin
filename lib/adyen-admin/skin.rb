@@ -5,14 +5,14 @@ require 'yaml'
 module Adyen
   module Admin
     class Skin
-      UPLOAD       = "https://ca-test.adyen.com/ca/ca/skin/uploadskin.shtml?skinCode=%s"
-      DOWNLOAD     = "https://ca-test.adyen.com/ca/ca/skin/downloadskinsubmit.shtml?downloadSkin=Download&skinCode=%s"
-      TEST         = "https://ca-test.adyen.com/ca/ca/skin/testpayment.shtml?skinCode=%s"
-
-      VERSION_TEST = "https://test.adyen.com/hpp/version.shtml?skinCode=%s"
-      VERSION_LIVE = "https://live.adyen.com/hpp/version.shtml?skinCode=%s"
-      PUBLISH      = "https://ca-test.adyen.com/ca/ca/skin/publishskin.shtml?skinCode=%s"
-      SKINS        = "https://ca-test.adyen.com/ca/ca/skin/skins.shtml"
+      UPLOAD_SELECT = "https://ca-test.adyen.com/ca/ca/skin/skins.shtml"
+      UPLOAD        = "uploadskin.shtml?skinCode=%s"
+      DOWNLOAD      = "https://ca-test.adyen.com/ca/ca/skin/downloadskinsubmit.shtml?downloadSkin=Download&skinCode=%s"
+      TEST          = "https://ca-test.adyen.com/ca/ca/skin/testpayment.shtml?skinCode=%s"
+      VERSION_TEST  = "https://test.adyen.com/hpp/version.shtml?skinCode=%s"
+      VERSION_LIVE  = "https://live.adyen.com/hpp/version.shtml?skinCode=%s"
+      PUBLISH       = "https://ca-test.adyen.com/ca/ca/skin/publishskin.shtml?skinCode=%s"
+      SKINS         = "https://ca-test.adyen.com/ca/ca/skin/skins.shtml"
 
       attr_reader :code, :name, :path
 
@@ -132,6 +132,10 @@ module Adyen
         skin_data[:parent_skin] || "base"
       end
 
+      def default_data
+        skin_data[:default_data] || {}
+      end
+
       ##########################################
 
       def update
@@ -229,12 +233,13 @@ module Adyen
       # http://stackoverflow.com/questions/3420587/ruby-mechanize-multipart-form-with-file-upload-to-a-mediawiki
       def upload
         file = self.compress
-        page = Adyen::Admin.get(UPLOAD % code)
+
+        page = Adyen::Admin.get(UPLOAD_SELECT)
+        page = page.link_with(:href => Regexp.new(Regexp.escape(UPLOAD % code))).click
         page = Adyen::Admin.client.submit(page.form.tap do |form|
           form.file_uploads.first.file_name = file
         end)
-        form = page.form
-        page = form.submit(page.form.button_with(:name => 'submit'))
+        page = page.form.submit(page.form.button_with(:name => 'submit'))
         update
       end
 

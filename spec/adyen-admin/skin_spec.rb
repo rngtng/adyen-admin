@@ -6,8 +6,15 @@ require "adyen-admin/skin"
 module Adyen::Admin
   describe Skin, :vcr  do
     let(:skin_fixtures) { File.expand_path 'spec/fixtures/skins' }
-    let(:skin_code) { "7hFAQnmt" }
+    let(:skin_code) { $adyen[:test_skin_code] }
+    let(:path) { "#{skin_fixtures}/#{skin_code}" }
     let(:skin) { Skin.new(:code => skin_code, :name => "example") }
+
+    let(:other_skins) do
+      $adyen[:other_skin_codes].map do |code|
+        Skin.new(:code => code, :name => "example")
+      end
+    end
 
     describe ".all" do
       it 'returns all local skins' do
@@ -19,7 +26,7 @@ module Adyen::Admin
       before(:all) do
         VCR.use_cassette("login") do
           Adyen::Admin.client.cookie_jar.clear!
-          Adyen::Admin.login("SoundCloud", "skinadmin", "12312311")
+          Adyen::Admin.login($adyen[:account], $adyen[:user], $adyen[:password])
         end
       end
 
@@ -31,14 +38,12 @@ module Adyen::Admin
         it 'returns the skins' do
           Skin.all_remote.should =~ [
             skin,
-            Skin.new(:code => "Kx9axnRf", :name => "demo"),
-            Skin.new(:code => "vQW0fEo8", :name => "test"),
-          ]
+          ] + other_skins
         end
 
         it 'sets local path' do
           Adyen::Admin::Skin.default_path = skin_fixtures
-          Skin.all_remote.first.path.should == "#{skin_fixtures}/example-7hFAQnmt"
+          Skin.find(skin_code).path.should == "#{skin_fixtures}/example-#{skin_code}"
         end
       end
 
@@ -46,9 +51,10 @@ module Adyen::Admin
         it 'returns the skins' do
           Skin.all_local.should =~ [
             Skin.new(:code => "base"),
-            skin,
             Skin.new(:code => "DV3tf95f"),
             Skin.new(:code => "JH0815"),
+            Skin.new(:code => "7hFAQnmt"),
+            skin,
           ]
         end
       end
@@ -56,13 +62,12 @@ module Adyen::Admin
       describe ".all" do
         it 'returns the skins' do
           Skin.all.should =~ [
-            skin,
-            Skin.new(:code => "Kx9axnRf", :name => "demo"),
-            Skin.new(:code => "vQW0fEo8", :name => "test"),
             Skin.new(:code => "base"),
             Skin.new(:code => "DV3tf95f"),
-            Skin.new(:code => "JH0815")
-          ]
+            Skin.new(:code => "JH0815"),
+            Skin.new(:code => "7hFAQnmt"),
+            skin,
+          ] + other_skins
         end
 
         it 'freezes local skins' do
@@ -81,7 +86,7 @@ module Adyen::Admin
       end
 
       describe "#new" do
-        let(:path) { "#{skin_fixtures}/example-7hFAQnmt" }
+        let(:path) { "#{skin_fixtures}/example-#{skin_code}" }
 
         it "sets code attribute" do
           Skin.new(:code => skin_code).code.should == skin_code
@@ -96,7 +101,7 @@ module Adyen::Admin
         end
 
         it "auto sets code from path" do
-          Skin.new(:path => path).code.should == "7hFAQnmt"
+          Skin.new(:path => path).code.should == skin_code
         end
 
         it "auto sets name from path" do
@@ -116,7 +121,7 @@ module Adyen::Admin
         end
 
         context "slash in name" do
-          let(:path) { "#{skin_fixtures}/example-test-7hFAQnmt" }
+          let(:path) { "#{skin_fixtures}/example-test-#{skin_code}" }
 
           it "sets name" do
             Skin.stub(:is_skin_path?).and_return(true)
@@ -167,7 +172,7 @@ module Adyen::Admin
       end
 
       describe "#update"  do
-        let(:path) { "#{skin_fixtures}/example-7hFAQnmt" }
+        let(:path) { "#{skin_fixtures}/example-#{skin_code}" }
 
         before do
           skin.path = path
@@ -229,8 +234,10 @@ module Adyen::Admin
       end
 
       describe "#decompile"  do
+        subject { skin.decompile(zip_filename) }
+
         let(:skin_code) { "DV3tf95f" }
-        let(:skin) { Skin.new(:path => "#{skin_fixtures}/#{skin_code}") }
+        let(:skin) { Skin.new(:path => path) }
 
         after do
           `rm -rf #{zip_filename}`
@@ -241,41 +248,23 @@ module Adyen::Admin
           let!(:zip_filename) { skin.compress(nil) }
 
           before do
-            `cp -r #{skin_fixtures}/#{skin_code} #{skin_fixtures}/_backup`
+            `cp -r #{path} #{skin_fixtures}/_backup`
           end
 
           after do
-            `rm -rf #{backup_filename} #{skin_fixtures}/#{skin_code}`
-            `mv #{skin_fixtures}/_backup #{skin_fixtures}/#{skin_code}`
+            `rm -rf #{backup_filename} #{path}`
+            `mv #{skin_fixtures}/_backup #{path}`
           end
 
           it "creates backup" do
-            skin.decompile(zip_filename)
-
+            subject
             File.should be_exists(backup_filename)
           end
 
           it "unzips files" do
             `rm -rf #{skin.path}`
 
-            expect do
-              skin.decompile(zip_filename)
-            end.to change { File.exists?(File.join(skin.path, 'inc', 'order_data.txt')) }
-          end
-        end
-
-        context "new remote skin" do
-          let(:skin) { Skin.new(:name => "test", :code => "vQW0fEo8") }
-          let!(:zip_filename) { skin.download }
-
-          after do
-            `rm -rf #{skin.path}`
-          end
-
-          it "downloads and decompiles skin" do
-            expect do
-              skin.decompile(zip_filename)
-            end.to change { skin.path }
+            expect { subject }.to change { File.exists?(File.join(skin.path, 'inc', 'order_data.txt')) }
           end
         end
       end
@@ -294,27 +283,27 @@ module Adyen::Admin
         end
 
         it 'writes cheader' do
-          File.read( skin.path + '/inc/cheader.txt').should == "<!-- ### inc/cheader_[locale].txt or inc/cheader.txt (fallback) ### -->"
+          File.read(skin.path + '/inc/cheader.txt').should == "<!-- ### inc/cheader_[locale].txt or inc/cheader.txt (fallback) ### -->"
         end
 
         it 'writes pmheader' do
-          File.read( skin.path + '/inc/pmheader.txt').should == "<!-- ### inc/pmheader_[locale].txt or inc/pmheader.txt (fallback) ### -->"
+          File.read(skin.path + '/inc/pmheader.txt').should == "<!-- ### inc/pmheader_[locale].txt or inc/pmheader.txt (fallback) ### -->"
         end
 
         it 'writes pmfooter' do
-          File.read( skin.path + '/inc/pmfooter.txt').should == "<!-- ### inc/pmfooter_[locale].txt or inc/pmfooter.txt (fallback) ### -->\n\n  <!-- ### inc/customfields_[locale].txt or inc/customfields.txt (fallback) ### -->"
+          File.read(skin.path + '/inc/pmfooter.txt').should == "<!-- ### inc/pmfooter_[locale].txt or inc/pmfooter.txt (fallback) ### -->\n\n  <!-- ### inc/customfields_[locale].txt or inc/customfields.txt (fallback) ### -->"
         end
 
         it 'writes cfooter' do
-          File.read( skin.path + '/inc/cfooter.txt').should == "<!-- ### inc/cfooter_[locale].txt or inc/cfooter.txt (fallback) ### -->"
+          File.read(skin.path + '/inc/cfooter.txt').should == "<!-- ### inc/cfooter_[locale].txt or inc/cfooter.txt (fallback) ### -->"
         end
       end
 
       describe "#compress" do
+        subject(:zip_filename){ skin.compress }
+
         let(:skin_code) { "DV3tf95f" }
-        let(:path) { "#{skin_fixtures}/#{skin_code}" }
         let(:skin) { Skin.new(:path => path) }
-        let(:zip_filename) { skin.compress }
 
         def zip_contains(file)
           Zip::File.open(zip_filename) do |zipfile|
@@ -401,10 +390,10 @@ module Adyen::Admin
         end
 
         context "with parent_skin" do
-          let(:skin_code) { "JH0815" }
+          let(:parent_skin_code) { $adyen[:test_skin_code] }
 
           before do
-            skin.stub(:parent_skin).and_return("example-7hFAQnmt")
+            skin.stub(:parent_skin).and_return("example-#{parent_skin_code}")
           end
 
           it "excludes meta file" do
@@ -414,7 +403,9 @@ module Adyen::Admin
       end
 
       describe "#upload" do
-        let(:path) { "#{skin_fixtures}/example-7hFAQnmt" }
+        subject { skin.upload }
+
+        let(:path) { "#{skin_fixtures}/example-#{skin_code}" }
 
         after do
           `rm -f #{skin_code}.zip`
@@ -427,40 +418,21 @@ module Adyen::Admin
           end
 
           it "increases version" do
-            expect do
-              skin.upload
-            end.to change { skin.send(:remote_version) }.by(1)
+            expect { subject }.to change { skin.send(:remote_version) }.by(1)
           end
 
           it "updates skin data" do
             skin.should_receive(:update)
 
-            skin.upload
+            subject
           end
         end
       end
 
-      describe "#remote_version" do
-        let(:skin) { Skin.new(:code => "Kx9axnRf", :name => "demo") }
-        let(:version) { 17 }
-
-        it "returns uploaded value" do
-          skin.send(:remote_version).should == version
-        end
-
-        it "returns test value" do
-          skin.send(:remote_version, :test).should == version
-        end
-
-        it "returns live value" do
-          skin.send(:remote_version, :live).should == 0
-        end
-      end
-
       describe "#test_url" do
-        it "returns url to test" do
-          skin.test_url.to_s.should include("https://test.adyen.com/hpp/select.shtml")
-        end
+        subject { skin.test_url.to_s }
+
+        it { should include("https://test.adyen.com/hpp/pay.shtml") }
         #todo test with options
       end
     end
