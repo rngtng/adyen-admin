@@ -1,8 +1,10 @@
 $:.unshift File.expand_path("../../lib", __FILE__)
-require "adyen-admin"
-# require "debugger"
 
-require 'vcr'
+require "adyen-admin"
+require "yaml"
+require "vcr"
+
+$adyen = YAML::load( (File.open('credentials.yml') rescue File.open('credentials.yml.example')) )
 
 VCR.configure do |c|
   c.cassette_library_dir = 'spec/fixtures/cassettes'
@@ -13,6 +15,17 @@ VCR.configure do |c|
     !http_message.body.valid_encoding?
   end
   c.allow_http_connections_when_no_cassette = true
+
+  $adyen.each do |key, value|
+    if value.is_a?(Array)
+      value.each_with_index do |v, index|
+        c.filter_sensitive_data("<#{key}-#{index}>") { v }
+      end
+    else
+      c.filter_sensitive_data("<#{key}>") { value }
+    end
+  end
+
 end
 
 RSpec.configure do |c|

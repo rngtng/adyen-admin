@@ -5,6 +5,12 @@
   * add CLI binaries (to compile + upload) -> read from .adyenrc file
   * make compatible with Live system
 
+## v0.0.17 - 15-11-2013
+  * fixed upload
+  * gem updates
+  * exclude + filter sensitive vcr data
+  * spec cleanup
+
 ## v0.0.16 - 19-06-2012
   * config parent_skin via skin file
   * throw exception when including subdirectory of subdirectories.

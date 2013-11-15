@@ -1,271 +1,173 @@
---- 
-http_interactions: 
-- request: 
+---
+http_interactions:
+- request:
     method: get
     uri: https://ca-test.adyen.com/ca/ca/skin/skins.shtml
-    body: 
+    body:
       encoding: US-ASCII
-      string: ""
-    headers: 
-      Accept: 
-      - "*/*"
-      User-Agent: 
-      - Mechanize/2.3 Ruby/1.9.2p290 (http://github.com/tenderlove/mechanize/)
-      Accept-Encoding: 
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Mechanize/2.7.3 Ruby/1.9.3p448 (http://github.com/sparklemotion/mechanize/)
+      Accept-Encoding:
       - gzip,deflate,identity
-      Accept-Charset: 
+      Accept-Charset:
       - ISO-8859-1,utf-8;q=0.7,*;q=0.7
-      Accept-Language: 
+      Accept-Language:
       - en-us,en;q=0.5
-      Host: 
+      Host:
       - ca-test.adyen.com
-      Connection: 
+      Connection:
       - keep-alive
-      Keep-Alive: 
+      Keep-Alive:
       - 300
-  response: 
-    status: 
+  response:
+    status:
       code: 302
-      message: Moved Temporarily
-    headers: 
-      Date: 
-      - Wed, 02 May 2012 10:49:55 GMT
-      Server: 
+      message: Found
+    headers:
+      Date:
+      - Thu, 14 Nov 2013 23:46:56 GMT
+      Server:
       - Apache
-      Set-Cookie: 
-      - JSESSIONID=4C66E80C8AF47018BB6A37427FECC264.test5e; Path=/ca/; Secure; HttpOnly
-      Location: 
-      - https://ca-test.adyen.com/ca/ca/login.shtml;jsessionid=4C66E80C8AF47018BB6A37427FECC264.test5e
-      Content-Length: 
-      - "0"
-      Keep-Alive: 
+      Set-Cookie:
+      - JSESSIONID=295A6EBE229E87EB49F288874CC89E38.test5e; Path=/ca/; Secure; HttpOnly
+      Location:
+      - https://ca-test.adyen.com/ca/ca/login.shtml;jsessionid=295A6EBE229E87EB49F288874CC89E38.test5e
+      Content-Length:
+      - '0'
+      Keep-Alive:
       - timeout=15, max=100
-      Connection: 
+      Connection:
       - Keep-Alive
-      Content-Type: 
+      Content-Type:
       - text/plain; charset=UTF-8
-    body: 
+    body:
       encoding: US-ASCII
-      string: ""
+      string: ''
     http_version: 
-  recorded_at: Wed, 02 May 2012 10:49:55 GMT
-- request: 
+  recorded_at: Thu, 14 Nov 2013 23:46:56 GMT
+- request:
     method: get
-    uri: https://ca-test.adyen.com/ca/ca/login.shtml;jsessionid=4C66E80C8AF47018BB6A37427FECC264.test5e
-    body: 
+    uri: https://ca-test.adyen.com/ca/ca/login.shtml;jsessionid=295A6EBE229E87EB49F288874CC89E38.test5e
+    body:
       encoding: US-ASCII
-      string: ""
-    headers: 
-      Accept: 
-      - "*/*"
-      User-Agent: 
-      - Mechanize/2.3 Ruby/1.9.2p290 (http://github.com/tenderlove/mechanize/)
-      Accept-Encoding: 
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Mechanize/2.7.3 Ruby/1.9.3p448 (http://github.com/sparklemotion/mechanize/)
+      Accept-Encoding:
       - gzip,deflate,identity
-      Accept-Charset: 
+      Accept-Charset:
       - ISO-8859-1,utf-8;q=0.7,*;q=0.7
-      Accept-Language: 
+      Accept-Language:
       - en-us,en;q=0.5
-      Cookie: 
-      - JSESSIONID=4C66E80C8AF47018BB6A37427FECC264.test5e
-      Host: 
+      Cookie:
+      - JSESSIONID=295A6EBE229E87EB49F288874CC89E38.test5e
+      Host:
       - ca-test.adyen.com
-      Connection: 
+      Connection:
       - keep-alive
-      Keep-Alive: 
+      Keep-Alive:
       - 300
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Date: 
-      - Wed, 02 May 2012 10:49:55 GMT
-      Server: 
+    headers:
+      Date:
+      - Thu, 14 Nov 2013 23:46:56 GMT
+      Server:
       - Apache
-      Cache-Control: 
+      Cache-Control:
       - no-cache, no-store, must-revalidate, max-age=0, post-check=0, pre-check=0
-      Pragma: 
+      Pragma:
       - no-cache
-      Expires: 
-      - "-1"
-      X-Frame-Options: 
+      Expires:
+      - '-1'
+      X-Frame-Options:
       - SAMEORIGIN
-      Content-Language: 
+      Content-Language:
       - en-GB
-      Keep-Alive: 
+      Keep-Alive:
       - timeout=15, max=100
-      Connection: 
+      Connection:
       - Keep-Alive
-      Transfer-Encoding: 
+      Transfer-Encoding:
       - chunked
-      Content-Type: 
+      Content-Type:
       - text/html;charset=UTF-8
-    body: 
+    body:
       encoding: US-ASCII
-      string: |
-        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-        	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-        <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-        <head>
-        		
-        	<title>Adyen PSP System</title>
-        	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-        	<meta http-equiv="content-style-type" content="text/css" />	
-        	<meta http-equiv="imagetoolbar" content="no" />
-        	<meta content="TRUE" name="MSSmartTagsPreventParsing" />
-        
-        	<link rel="shortcut icon" href="/ca/img/adyen/favicon.ico" type="image/ico"/>
-        	
-        	<script type="text/javascript" src="/ca/js/functions.js"></script>
-        	<script src="/ca/js/prototype.js" type="text/javascript"></script>
-        	<script src="/ca/js/scriptaculous.js" type="text/javascript"></script>
-        	
-        	<link rel="stylesheet" type="text/css" href="/ca/css/adyen/style.css" />
-        	<!--[if lt IE 7]>
-        	<link rel="stylesheet" type="text/css" href="/ca/css/adyen/style_ie6.css" />
-        	<![endif]-->
-        
-        	        
-        </head>
-        <body>
-        
-        	<div id="topbar"><div class="iefillerdiv"></div></div>
-        	<div id="middlebarcontainer">
-        			<div id="middlebar">
-        				<a href="/ca/ca/overview/default.shtml"><img id="mainlogo" src="/ca/img/adyen.png" alt="Logo"/>
-        				<img id="testsystemwarning" src="/ca/img/adyen_test.png" alt="test"/></a>
-        				<img id="maintagline" src="/ca/img/adyen_tagline.png" alt="Complex Finance, Online Insight" />
-        			</div>
-        	</div>
-        	<div id="bottombar"><div id="bottombar2"></div></div>
-        
-        	<div id="maincontent">
-        	<div id="boxleft">
-        		<div id="infobox">
-        			<ul class="nav">
-        			</ul>
-        			<div id="infoboxcontent">
-        								<div>
-        								</div>
-        	
-        				<div style="text-align: left; margin-top: 5px">
-        					<!--a class="icon" href="/ca/ca/overview/default.shtml" title="Home"><img src="/ca/img/home.gif" alt="Home"/></a-->
-        				  				  <a class="icon" href="/ca/ca/overview/default.shtml"><img src="/ca/img/home.png" alt="Home"/> home</a><br/>
-        				  				  <a class="icon" href="/ca/logoff.shtml" title="Sign Off"><img src="/ca/img/exit.png" alt="Sign Off"/> sign off</a>
-        				  				</div>
-        			</div>
-        		</div>
-        		
-        	
-        		<div class="bbarlmenu">
-        			<div class="bbarrmenu">
-        				<div class="bbarmenu">
-        				</div>
-        			</div>
-        		</div>
-        
-        			</div>
-        	
-        	<div id="contentbg">
-        		<div id="content">
-        			<div id="contentwrapper">
-        			
-            <div id="subcontent">
-             <ul id="help">
-             <li class="palette7">
-        	    <h3 class="bg">Signing On</h3>
-        	    <div class="border">
-        		All fields are case-sensitive. If you have trouble signing on, check that the "Caps Lock" isn't on.	    </div>
-        	    </li>
-             </ul>
-        
-        	<script type="text/javascript" language="javascript">
-        	function createCookie(name,value,days) {
-            	path = "/ca/";
-            	if (path == "") path = "/";
-            	if (days) {
-            		var date = new Date();
-            		date.setTime(date.getTime()+(days*24*60*60*1000));
-            		var expires = "; expires="+date.toGMTString();
-            	} else { 
-        		    var expires = "";
-        		}
-            	document.cookie = name+"="+value+expires+"; path="+path+(window.location.protocol.indexOf('https:')==0?'; Secure':'');
-        	}
-        
-            function eraseCookie(name) {
-            	createCookie(name,"",-1);
-            }
-        	
-        	function handleCookie() {
-        		if(document.getElementById("rememberMe").checked == true) {
-        		 if(document.getElementById("accountTextInput")) {
-        		  	createCookie("defaultAccount", document.getElementById("accountTextInput").value,7);
-        		  } else {
-        		  	createCookie("defaultAccount", document.getElementById("accountHiddenInput").value,7);
-        		  }
-        		} else { 
-        		  eraseCookie("defaultAccount")
-        		}
-        	}
-        	</script>
-                    <h1 class="pagetitle">Please Sign On</h1>
-            
-                <form method="post" autocomplete="off" onsubmit="handleCookie();" action="config/j_security_check">
-        		<table class="data">
-        		  <tr>
-        			<th class="row"><label for="accountTextInput">Account:</label></th>
-        		  			<td><input type="text" id="accountTextInput" name="j_account" /></td>
-        		  		  </tr>
-              	  <tr>
-        			<th class="row"><label for="j_username">User Name:</label></th>
-        			<td><input type="text" id="j_username" name="j_username" /></td>
-        		  </tr>
-        
-           	     <script type="text/javascript" language="javascript">
-        		    var elToFocus = document.getElementById("accountTextInput");
-        			if( null == elToFocus ) {
-            			elToFocus = document.getElementById("j_username");
-        			}
-        			elToFocus.focus();
-             	 </script>
-              	  <tr>
-        			<th class="row"><label for="j_password">Password:</label></th>
-        			<td><input type="password" id="j_password" name="j_password" /></td>
-        		  </tr>
-        		 		  
-        		  <tr>
-        			<td colspan="2"><label for="rememberMe">Remember my account on this computer</label> <input type="checkbox" 
-        				 id="rememberMe" name="rememberMe" /></td>
-        		  </tr>
-        		 
-        		  <tr>
-        		    <td colspan="2"><br />
-        				<input type="hidden" name="j_formHash" value="357HvwgaGfNcAVR/oRdRQScoVFPQg8=" />
-        				<input type="submit" class="button" value="Submit" /></td>
-        		  </tr>
-        		</table>
-                </form>
-        		<br/>
-        		<a href="/ca/forgotPassword.shtml">Forgot your password?</a>
-            </div>
-        
-        		<div class="bbarl">
-        		<div class="bbarr">
-        		<div class="bbar">
-        		</div>
-        		</div>
-        		</div>
-        		</div>
-        
-        		
-        		</div>
-        	</div>
-        	</div>
-        </body>
-        </html>
-
+      string: ! "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\"\n\t \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n<html
+        xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n<head>\n\t\t\n\t<title>Adyen
+        PSP System</title>\n\t<meta http-equiv=\"content-type\" content=\"text/html;
+        charset=UTF-8\" />\n\t<meta http-equiv=\"content-style-type\" content=\"text/css\"
+        />\t\n\t<meta http-equiv=\"imagetoolbar\" content=\"no\" />\n\t<meta content=\"TRUE\"
+        name=\"MSSmartTagsPreventParsing\" />\n\n\t<link rel=\"shortcut icon\" href=\"/ca/img/adyen/favicon.ico\"
+        type=\"image/ico\"/>\n\t\n\t<script type=\"text/javascript\" src=\"/ca/js/functions.js\"></script>\n\t<script
+        src=\"/ca/js/prototype.js\" type=\"text/javascript\"></script>\n\t<script
+        src=\"/ca/js/scriptaculous.js\" type=\"text/javascript\"></script>\n\t\n\t<link
+        rel=\"stylesheet\" type=\"text/css\" href=\"/ca/css/adyen/style.css\" />\n\t<!--[if
+        lt IE 7]>\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/ca/css/adyen/style_ie6.css\"
+        />\n\t<![endif]-->\n\n\t        \n</head>\n<body>\n\n\t<div id=\"topbar\"><div
+        class=\"iefillerdiv\"></div></div>\n\t<div id=\"middlebarcontainer\">\n\t\t\t<div
+        id=\"middlebar\">\n\t\t\t\t<a href=\"/ca/ca/overview/default.shtml\"><img
+        id=\"mainlogo\" src=\"/ca/img/adyen.png\" alt=\"Logo\"/>\n\t\t\t\t<img id=\"testsystemwarning\"
+        src=\"/ca/img/adyen_test.png\" alt=\"test\"/></a>\n\t\t\t\t<img id=\"maintagline\"
+        src=\"/ca/img/adyen_tagline.png\" alt=\"Complex Finance, Online Insight\"
+        />\n\t\t\t</div>\n\t</div>\t\n\t<div id=\"bottombar\"><div id=\"bottombar2\"></div></div>\t\n\t<div
+        id=\"maincontent\">\t\t\t\n\t<div id=\"boxleft\">\n\t\t<div id=\"infobox\">\n\t\t\t<ul
+        class=\"nav\">\n\t\t\t</ul>\n\t\t\t<div id=\"infoboxcontent\">\n\t\t\t\t\t\t\t\t<div
+        id=\"accountnavigation\">\n\t\t\t\t\t\t\t\t</div>\n\t\n\t\t\t\t<div id=\"loginadmin\"
+        style=\"text-align: left; margin-top: 5px\">\n\t\t\t\t\t<!--a class=\"icon\"
+        href=\"/ca/ca/overview/default.shtml\" title=\"Home\"><img src=\"/ca/img/home.gif\"
+        alt=\"Home\"/></a-->\n\t\t\t\t  \t\t\t\t  <a class=\"icon\" href=\"/ca/ca/overview/default.shtml\"><img
+        src=\"/ca/img/home.png\" alt=\"Home\"/> home</a><br/>\n\t\t\t\t  \t\t\t\t
+        \ <a class=\"icon\" href=\"/ca/logoff.shtml\" title=\"Sign Off\"><img src=\"/ca/img/exit.png\"
+        alt=\"Sign Off\"/> sign off</a>\n\t\t\t\t  \t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t\n\t\n\t\t<div
+        class=\"bbarlmenu\">\n\t\t\t<div class=\"bbarrmenu\">\n\t\t\t\t<div class=\"bbarmenu\">\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\n\t\t\t</div>\n\t\n\t\t\t\n\t<div
+        id=\"contentbg\">\n\t\t<div id=\"content\">\n\t\t\t<div id=\"contentwrapper\">
+        \   <div id=\"subcontent\">\n     <ul id=\"help\">\n     <li class=\"palette7\">\n\t
+        \   <h3 class=\"bg\">Signing On</h3>\n\t    <div class=\"border\">\n\t\tAll
+        fields are case-sensitive. If you have trouble signing on, check that the
+        \"Caps Lock\" isn't on.\t    </div>\n\t    </li>\n     </ul>\n\n\t<script
+        type=\"text/javascript\" language=\"javascript\">\n\tfunction createCookie(name,value,days)
+        {\n    \tpath = \"/ca/\";\n    \tif (path == \"\") path = \"/\";\n    \tif
+        (days) {\n    \t\tvar date = new Date();\n    \t\tdate.setTime(date.getTime()+(days*24*60*60*1000));\n
+        \   \t\tvar expires = \"; expires=\"+date.toGMTString();\n    \t} else { \n\t\t
+        \   var expires = \"\";\n\t\t}\n    \tdocument.cookie = name+\"=\"+value+expires+\";
+        path=\"+path+(window.location.protocol.indexOf('https:')==0?'; Secure':'');\n\t}\n\n
+        \   function eraseCookie(name) {\n    \tcreateCookie(name,\"\",-1);\n    }\n\t\n\tfunction
+        handleCookie() {\n\t\tif(document.getElementById(\"rememberMe\").checked ==
+        true) {\n\t\t if(document.getElementById(\"accountTextInput\")) {\n\t\t  \tcreateCookie(\"defaultAccount\",
+        document.getElementById(\"accountTextInput\").value,7);\n\t\t  } else {\n\t\t
+        \ \tcreateCookie(\"defaultAccount\", document.getElementById(\"accountHiddenInput\").value,7);\n\t\t
+        \ }\n\t\t} else { \n\t\t  eraseCookie(\"defaultAccount\")\n\t\t}\n\t}\n\t</script>\n
+        \           <h1 class=\"pagetitle\">Please Sign On</h1>\n    \n        <form
+        method=\"post\" autocomplete=\"off\" onsubmit=\"handleCookie();\" action=\"config/j_security_check\">\n\t\t<table
+        class=\"data\">\n\t\t  <tr>\n\t\t\t<th class=\"row\"><label for=\"accountTextInput\">Account:</label></th>\n\t\t
+        \ \t\t\t<td><input type=\"text\" id=\"accountTextInput\" name=\"j_account\"
+        /></td>\n\t\t  \t\t  </tr>\n      \t  <tr>\n\t\t\t<th class=\"row\"><label
+        for=\"j_username\">User Name:</label></th>\n\t\t\t<td><input type=\"text\"
+        id=\"j_username\" name=\"j_username\" /></td>\n\t\t  </tr>\n\n   \t     <script
+        type=\"text/javascript\" language=\"javascript\">\n\t\t    var elToFocus =
+        document.getElementById(\"accountTextInput\");\n\t\t\tif( null == elToFocus
+        ) {\n    \t\t\telToFocus = document.getElementById(\"j_username\");\n\t\t\t}\n\t\t\telToFocus.focus();\n
+        \    \t </script>\n      \t  <tr>\n\t\t\t<th class=\"row\"><label for=\"j_password\">Password:</label></th>\n\t\t\t<td><input
+        type=\"password\" id=\"j_password\" name=\"j_password\" /></td>\n\t\t  </tr>\n\t\t
+        \t\t  \n\t\t  <tr>\n\t\t\t<td colspan=\"2\"><label for=\"rememberMe\">Remember
+        my account on this computer</label> <input type=\"checkbox\" \n\t\t\t\t id=\"rememberMe\"
+        name=\"rememberMe\" /></td>\n\t\t  </tr>\n\t\t \n\t\t  <tr>\n\t\t    <td colspan=\"2\"><br
+        />\n\t\t\t\t<input type=\"hidden\" name=\"j_formHash\" value=\"564fLwNvAWOy9Y5mvrFBBWPMo9tgVg=\"
+        />\n\t\t\t\t<input type=\"submit\" class=\"button\" value=\"Submit\" /></td>\n\t\t
+        \ </tr>\n\t\t</table>\n        </form>\n\t\t<br/>\n\t\t<a href=\"/ca/forgotPassword.shtml\">Forgot
+        your password?</a>\n    </div>\n\n\t\t<div class=\"bbarl\">\n\t\t<div class=\"bbarr\">\n\t\t<div
+        class=\"bbar\">\n\t\t</div>\n\t\t</div>\n\t\t</div>\n\t\t</div>\n\n\t\t\n\t\t</div>\n\t</div>\n\t</div>\n</body>\n</html>\n"
     http_version: 
-  recorded_at: Wed, 02 May 2012 10:49:55 GMT
-recorded_with: VCR 2.0.1
+  recorded_at: Thu, 14 Nov 2013 23:46:56 GMT
+recorded_with: VCR 2.7.0

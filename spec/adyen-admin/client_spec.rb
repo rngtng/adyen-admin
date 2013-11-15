@@ -3,7 +3,7 @@ require "spec_helper"
 require "adyen-admin/client"
 
 describe Adyen::Admin::Client, :vcr  do
-  let(:login) { Adyen::Admin.login("SoundCloud", "skinadmin", "12312311") }
+  let(:login) { Adyen::Admin.login($adyen[:account], $adyen[:user], $adyen[:password]) }
 
   before do
     Adyen::Admin.client.cookie_jar.clear!

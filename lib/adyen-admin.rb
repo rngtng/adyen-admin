@@ -1,4 +1,4 @@
-# Copyright (c) 2012, SoundCloud Ltd., Tobias Bielohlawek
+# Copyright (c) 2013, SoundCloud Ltd., Tobias Bielohlawek
 
 require 'adyen-admin/client'
 require 'adyen-admin/skin'
