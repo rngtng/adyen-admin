@@ -140,13 +140,14 @@ module Adyen
 
       def update
         @skin_data = {
-          :name => name,
-          :code => code,
-          :uploaded_at => Time.now,
-          :version => remote_version,
+          :name         => name,
+          :code         => code,
+          :uploaded_at  => Time.now.iso8601,
+          :version      => remote_version,
           :version_live => remote_version(:live),
           :version_test => remote_version(:test),
           :parent_skin  => parent_skin,
+          :default_data => default_data,
         }
         File.open(skin_data_file, "w") do |file|
           file.write @skin_data.to_yaml
