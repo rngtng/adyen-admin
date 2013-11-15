@@ -5,6 +5,11 @@
   * add CLI binaries (to compile + upload) -> read from .adyenrc file
   * make compatible with Live system
 
+## v0.0.18 - 16-11-2013
+  * include default_data in skin
+  * explicit path or code+name
+  * code cleanup
+
 ## v0.0.17 - 15-11-2013
   * fixed upload
   * gem updates

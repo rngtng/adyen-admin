@@ -16,6 +16,10 @@ module Adyen::Admin
       end
     end
 
+    before do
+      Adyen::Admin::Skin.default_path = skin_fixtures
+    end
+
     describe ".all" do
       it 'returns all local skins' do
         Skin.all.should == Skin.all_local
@@ -42,7 +46,6 @@ module Adyen::Admin
         end
 
         it 'sets local path' do
-          Adyen::Admin::Skin.default_path = skin_fixtures
           Skin.find(skin_code).path.should == "#{skin_fixtures}/example-#{skin_code}"
         end
       end
@@ -134,11 +137,11 @@ module Adyen::Admin
           let(:skin) { Skin.new(:path => path) }
 
           it "sets name" do
-            skin.name.should == "DV3tf95f"
+            skin.name.should == "custom name"
           end
 
           it "sets code" do
-            skin.code.should == "customCode"
+            skin.code.should == "DV3tf95f"
           end
 
           it "sets version_live" do
@@ -165,7 +168,7 @@ module Adyen::Admin
             end
 
             it "sets version_live" do
-              skin.path.should == "#{skin_fixtures}/DV3tf95f"
+              skin.path.should == "#{skin_fixtures}/customCode-DV3tf95f"
             end
           end
         end
@@ -173,10 +176,7 @@ module Adyen::Admin
 
       describe "#update"  do
         let(:path) { "#{skin_fixtures}/example-#{skin_code}" }
-
-        before do
-          skin.path = path
-        end
+        let(:skin) { Skin.new(:path => path) }
 
         after do
           `rm -f #{path}/skin.yml`
@@ -413,9 +413,7 @@ module Adyen::Admin
         end
 
         context "valid set" do
-          before do
-            skin.path = path
-          end
+          let(:skin) { Skin.new(:path => path) }
 
           it "increases version" do
             expect { subject }.to change { skin.send(:remote_version) }.by(1)
